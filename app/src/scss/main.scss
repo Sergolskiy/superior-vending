@@ -1,0 +1,59 @@
+// import modules
+@import "./modules/_mixin";
+@import "./modules/_media";
+@import "./modules/_colors";
+@import "./modules/_flexbox";
+@import './modules/_reset.scss';
+@import "./modules/_fonts";
+@import "./modules/_ui";
+@import "./modules/_popup";
+
+// import templates
+@import './templates/header.scss';
+@import './templates/footer.scss';
+
+//import components
+// @import './components/.scss';
+
+
+.page__content {
+
+}
+
+.site-btn {
+
+  &:hover {
+
+  }
+
+  &--outline {
+
+
+    &:hover {
+
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

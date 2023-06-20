@@ -1,0 +1,13 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Homepage";
+  - var pageClass = "homepage";
+  - var pageActive = "homepage";
+  - var index = true;
+
+block content
+  div.main-wrap(style='display: flex;justify-content: center; align-items: center; min-height: 100vh; gap: 20px; flex-direction: column;')
+    a(href='home.html') home
+
+

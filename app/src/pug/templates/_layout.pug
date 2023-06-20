@@ -1,0 +1,36 @@
+//include _mixins
+
+block vars
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name="viewport" content="initial-scale=1.0, width=device-width")
+    title #{pageTitle}
+    meta(name="description" content='description content')
+
+    //favicon
+    link(rel="icon" href="./img/favicon/favicon.ico?v=2" type="image/x-icon")
+
+    link(rel='stylesheet' href='./libs/css/libs-styles.min.css?' + parseInt(Math.random()*1000))
+    link(rel='stylesheet' href='./css/style.min.css?' + parseInt(Math.random()*1000))
+
+  body(class="page " + pageClass)
+    if index
+      block content
+    else
+      .page__wrapper
+        include _header
+
+        main.page__content
+          block content
+
+        include _footer
+
+    include ../components/popups/_popup_add_review_product_single
+
+    block scripts
+      script(src='./libs/js/libs-bundle.min.js?' + parseInt(Math.random()*1000))
+      script(src='./js/index.js?' + parseInt(Math.random()*1000))

@@ -1,0 +1,154 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Homepage";
+  - var pageClass = "homepage";
+  - var pageActive = "homepage";
+
+block content
+  div.main-wrap
+    span(data-open="add-review-product") sad
+    section.section-top.lazyload
+      .section-top__left
+        .section-top__title
+          .site-title
+            .site-title
+              .site-title-outline Superior
+              | Vending
+          .site-sub-title Three Decades of Gaming Excellence - Superior Vending, Your Trusted
+            | Entertainment Partner. Our dedicated team provides outstanding customer
+            | service, ensuring your satisfaction every step of the way.
+
+          .site-title-btn
+            a(href="#").site-btn Contact Us
+            a(href="#").site-btn.site-btn--outline Learn more
+
+        .section-top__img
+          img(src="" alt='img')
+
+      .section-top__right
+        .section-top__img
+          img(src="" alt='img')
+        .section-top__img
+          img(src="" alt='img')
+
+
+    section.section-dart
+      .section-dart__left.site-left-block
+        .section-dart__img-top
+          img(src="" alt='img')
+        .section-dart__img-bottom
+          .section-dart__img-bottom-left
+            img(src="" alt='img')
+          .section-dart__img-bottom-right
+            img(src="" alt='img')
+
+      .section-dart__right.site-right-block.center-block
+        .block-title Dart Leagues:
+        .block-sub-title
+          p Bullseye Moments, Unleash Your Darting Skills - Superior Vending, Where
+          p Champions Rise. Participate in our dart leagues and gain recognition for your talent, opening doors to NADO and sanctioned tournaments with the NDA.
+
+        .section-dart__list.block-list
+          ul
+            li Upcoming Dart Leagues
+            li Upcoming Dart Tournaments
+            li Dart League Registration
+            li Dart Tournament Registration
+
+        .section-pool__btn
+          a(href="#").site-btn Learn more
+
+    section.section-pool
+      .section-pool__left.site-left-block.center-block
+        .block-title Pool Leagues:
+        .block-sub-title
+          p Rack 'Em Up, Shoot for Glory - Superior Vending, Elevating Pool Leagues to the Next Level. Join our leagues to improve your skills, compete with the best, have fun and pave the way for sanctioning in prestigious VNEA tournaments.
+
+
+        .section-pool__list.block-list
+          ul
+            li Upcoming Pool Leagues
+            li Upcoming Pool Tournaments
+            li Pool League Registration
+            li Pool Tournament Registration
+
+        .section-pool__btn
+          a(href="#").site-btn Learn more
+
+      .section-pool__right.site-right-block
+          .section-pool__img-bottom-left
+            .section-pool__img-top
+              img(src="" alt='img')
+            .section-pool__img-bottom
+              img(src="" alt='img')
+          .section-pool__img-bottom-right
+            img(src="" alt='img')
+
+
+
+    section.section-atm
+      .section-atm__left.site-left-block
+        .section-atm__img-left
+          img(src="" alt='img')
+        .section-atm__img-right
+          img(src="" alt='img')
+
+      .section-atm__right.site-right-block.center-block
+        .block-title ATMs:
+        .block-sub-title
+          p Convenience at Your Fingertips - Superior Vending ATMs, Making Transactions Seamless. Boost your business sales and customer satisfaction with our reliable ATMs, enhancing the overall experience for patrons.
+
+        .section-pool__btn
+          a(href="#").site-btn Learn more
+
+    section.section-atm
+      .section-atm__left.site-left-block
+        .section-atm__img-top
+          img(src="" alt='img')
+        .section-atm__img-bottom
+          img(src="" alt='img')
+
+      .section-atm__right.site-right-block.center-block
+        .block-title Amusement Services:
+        .block-sub-title
+          p Games that Unite, Fun that Excites - Superior Vending, Your Source for Unforgettable Entertainment. Stay ahead of the curve with our constantly updated selection, featuring the newest industry game releases.
+
+        .section-pool__btn
+          a(href="#").site-btn Learn more
+
+
+
+    section.section-contact
+      .section-contact__left.site-left-block
+        .block-title Contact us
+        .block-sub-title
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+
+        .section-contact__btn
+          a(href="#").site-btn Learn more
+
+      .section-contact__right.site-right-block
+        .section-contact__title Contact us
+        form.section-contact__form
+          .section-contact__form-item
+            input(type='text' placeholder='Name').section-contact__input
+          .section-contact__form-item
+            input(type='text' placeholder='Phone').section-contact__input
+          .section-contact__form-item
+            input(type='text' placeholder='E-mail').section-contact__input
+          .section-contact__form-item
+            label(for='select') Choose from the list:
+            select(id='select').section-contact__select
+              option(value='1') Select one...
+          .section-contact__form-item
+            label(for='textarea') Choose from the list:
+            textarea(id='textarea' placeholder='Type your message').section-contact__textarea
+          .section-contact__form-item
+            input(type='checkbox' placeholder='E-mail').section-contact__checkbox I accept the
+            a(href='#') Terms
+          .section-contact__form-item
+            button(type='submit').section-contact__checkbox Submit
+
+        
+    
