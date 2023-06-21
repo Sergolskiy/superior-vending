@@ -1,61 +1,62 @@
 @font-face {
-  font-family: 'OpenSans';
-  src: url('../../static/fonts/OpenSans-Regular.woff2') format('woff2'),
-      url('../../static/fonts/OpenSans-Regular.woff') format('woff');
+  font-family: 'Mazzard';
+  src: url('../../static/fonts/MazzardH-Light.woff2') format('woff2'),
+  url('../../static/fonts/MazzardH-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mazzard';
+  src: url('../../static/fonts/MazzardH-Regular.woff2') format('woff2'),
+      url('../../static/fonts/MazzardH-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'OpenSans';
-  src: url('../../static/fonts/OpenSans-Medium.woff2') format('woff2'),
-  url('../../static/fonts/OpenSans-Medium.woff') format('woff');
+  font-family: 'Mazzard';
+  src: url('../../static/fonts/MazzardH-Medium.woff2') format('woff2'),
+  url('../../static/fonts/MazzardH-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'OpenSans';
-  src: url('../../static/fonts/OpenSans-SemiBold.woff2') format('woff2'),
-  url('../../static/fonts/OpenSans-SemiBold.woff') format('woff');
+  font-family: 'Mazzard';
+  src: url('../../static/fonts/MazzardH-SemiBold.woff2') format('woff2'),
+  url('../../static/fonts/MazzardH-SemiBold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'OpenSans';
-  src: url('../../static/fonts/OpenSans-Bold.woff2') format('woff2'),
-  url('../../static/fonts/OpenSans-Bold.woff') format('woff');
+  font-family: 'JosefinSans';
+  src: url('../../static/fonts/JosefinSans-Bold.woff2') format('woff2'),
+  url('../../static/fonts/JosefinSans-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'OpenSans';
-  src: url('../../static/fonts/OpenSans-ExtraBold.woff2') format('woff2'),
-  url('../../static/fonts/OpenSans-ExtraBold.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
+//@font-face {
+//  font-family: 'Mazzard';
+//  src: url('../../static/fonts/MazzardH-ExtraBold.woff2') format('woff2'),
+//  url('../../static/fonts/MazzardH-ExtraBold.woff') format('woff');
+//  font-weight: 900;
+//  font-style: normal;
+//  font-display: swap;
+//}
 
-@font-face {
-  font-family: 'OpenSans';
-  src: url('../../static/fonts/OpenSans-Light.woff2') format('woff2'),
-  url('../../static/fonts/OpenSans-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
 
 //@font-face {
-//  font-family: 'OpenSans';
-//  src: url('../../static/fonts/OpenSans-ExtraLight.woff2') format('woff2'),
-//  url('../../static/fonts/OpenSans-ExtraLight.woff') format('woff');
+//  font-family: 'Mazzard';
+//  src: url('../../static/fonts/MazzardH-ExtraLight.woff2') format('woff2'),
+//  url('../../static/fonts/MazzardH-ExtraLight.woff') format('woff');
 //  font-weight: 200;
 //  font-style: normal;
 //  font-display: swap;

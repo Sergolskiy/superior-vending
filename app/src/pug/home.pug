@@ -7,83 +7,81 @@ block vars
 
 block content
   div.main-wrap
-    span(data-open="add-review-product") sad
     section.section-top.lazyload
       .section-top__left
-        .section-top__title
+        .section-top__title.dots-horizontal
           .site-title
-            .site-title
-              .site-title-outline Superior
-              | Vending
-          .site-sub-title Three Decades of Gaming Excellence - Superior Vending, Your Trusted
-            | Entertainment Partner. Our dedicated team provides outstanding customer
-            | service, ensuring your satisfaction every step of the way.
+            .site-title--outline Superior
+            .site-title--line2 Vending
+          .site-sub-title.site-sub-title--line2 Three Decades of Gaming Excellence - Superior Vending, Your Trusted Entertainment Partner. Our dedicated team provides outstanding customer service, ensuring your satisfaction every step of the way.
 
-          .site-title-btn
+          .site-title-btn.site-title-btn--line2
             a(href="#").site-btn Contact Us
             a(href="#").site-btn.site-btn--outline Learn more
 
         .section-top__img
-          img(src="" alt='img')
+          img(src="./img/home/home-top-2.jpg" alt='img')
 
       .section-top__right
-        .section-top__img
-          img(src="" alt='img')
-        .section-top__img
-          img(src="" alt='img')
+        .section-top__img.dots-vertical
+          img(src="./img/home/home-top.jpg" alt='img')
+        .section-top__img.dots-vertical.dots-horizontal
+          img(src="./img/home/home-top-3.jpg" alt='img')
 
 
     section.section-dart
-      .section-dart__left.site-left-block
-        .section-dart__img-top
-          img(src="" alt='img')
-        .section-dart__img-bottom
-          .section-dart__img-bottom-left
-            img(src="" alt='img')
-          .section-dart__img-bottom-right
-            img(src="" alt='img')
+      .section-dart__inner.site-block-inner
+        .section-dart__left.site-left-block
+          .section-dart__img-top.dots-horizontal
+            img(src="./img/home/dart.jpg" alt='img')
+          .section-dart__img-bottom
+            .section-dart__img-bottom-left.dots-vertical
+              img(src="./img/home/dart-2.jpg" alt='img')
+            .section-dart__img-bottom-right.dots-vertical
+              img(src="./img/home/dart-3.jpg" alt='img')
 
-      .section-dart__right.site-right-block.center-block
-        .block-title Dart Leagues:
-        .block-sub-title
-          p Bullseye Moments, Unleash Your Darting Skills - Superior Vending, Where
-          p Champions Rise. Participate in our dart leagues and gain recognition for your talent, opening doors to NADO and sanctioned tournaments with the NDA.
+        .section-dart__right.site-right-block.center-block
+          .block-title Dart Leagues:
+          .block-sub-title
+            p Bullseye Moments, Unleash Your Darting Skills - Superior Vending, Where
+            p Champions Rise. Participate in our dart leagues and gain recognition for your talent, opening doors to NADO and sanctioned tournaments with the NDA.
 
-        .section-dart__list.block-list
-          ul
-            li Upcoming Dart Leagues
-            li Upcoming Dart Tournaments
-            li Dart League Registration
-            li Dart Tournament Registration
+          .section-dart__list.block-list
+            ul
+              li Upcoming Dart Leagues
+              li Upcoming Dart Tournaments
+              li Dart League Registration
+              li Dart Tournament Registration
 
-        .section-pool__btn
-          a(href="#").site-btn Learn more
+          .section-dart__btn
+            a(href="#").site-btn Learn more
 
     section.section-pool
-      .section-pool__left.site-left-block.center-block
-        .block-title Pool Leagues:
-        .block-sub-title
-          p Rack 'Em Up, Shoot for Glory - Superior Vending, Elevating Pool Leagues to the Next Level. Join our leagues to improve your skills, compete with the best, have fun and pave the way for sanctioning in prestigious VNEA tournaments.
+      .section-pool__inner.site-block-inner
+        .section-pool__left.site-left-block.center-block
+          .block-title Pool Leagues:
+          .block-sub-title
+            p Rack 'Em Up, Shoot for Glory - Superior Vending, Elevating Pool Leagues to the Next Level. Join our leagues to improve your skills, compete with the best, have fun and pave the way for sanctioning in prestigious VNEA tournaments.
 
 
-        .section-pool__list.block-list
-          ul
-            li Upcoming Pool Leagues
-            li Upcoming Pool Tournaments
-            li Pool League Registration
-            li Pool Tournament Registration
+          .section-pool__list.block-list
+            ul
+              li Upcoming Pool Leagues
+              li Upcoming Pool Tournaments
+              li Pool League Registration
+              li Pool Tournament Registration
 
-        .section-pool__btn
-          a(href="#").site-btn Learn more
+          .section-pool__btn
+            a(href="#").site-btn Learn more
 
-      .section-pool__right.site-right-block
-          .section-pool__img-bottom-left
-            .section-pool__img-top
-              img(src="" alt='img')
-            .section-pool__img-bottom
-              img(src="" alt='img')
-          .section-pool__img-bottom-right
-            img(src="" alt='img')
+        .section-pool__right
+            .section-pool__img-left
+              .section-pool__img-top
+                img(src="./img/home/pool.jpg" alt='img')
+              .section-pool__img-bottom
+                img(src="./img/home/pool-2.jpg" alt='img')
+            .section-pool__img-right
+              img(src="./img/home/pool-3.jpg" alt='img')
 
 
 
@@ -145,7 +143,8 @@ block content
             label(for='textarea') Choose from the list:
             textarea(id='textarea' placeholder='Type your message').section-contact__textarea
           .section-contact__form-item
-            input(type='checkbox' placeholder='E-mail').section-contact__checkbox I accept the
+            input(type='checkbox' placeholder='E-mail').section-contact__checkbox
+            | I accept the
             a(href='#') Terms
           .section-contact__form-item
             button(type='submit').section-contact__checkbox Submit
