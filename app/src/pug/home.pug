@@ -109,7 +109,7 @@ block content
       section.section-services
         .section-services__inner.site-block-inner
           .section-services__left.site-left-block
-            .section-services__img-top
+            .section-services__img-top.dots-horizontal
               img(src="./img/home/services.jpg" alt='img')
             .section-services__img-bottom
               img(src="./img/home/services-2.jpg" alt='img')
@@ -125,36 +125,41 @@ block content
 
 
     section.section-contact
-      .section-contact__left.site-left-block
-        .block-title Contact us
-        .block-sub-title
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      .section-contact__inner
+        .section-contact__left.site-left-block
+          .section-contact__left-inner
+            .block-title Contact us
+            .block-sub-title
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
 
-        .section-contact__btn
-          a(href="#").site-btn Learn more
+            .section-contact__btn
+              a(href="#").site-btn Learn more
 
-      .section-contact__right.site-right-block
-        .section-contact__title Contact us
-        form.section-contact__form
-          .section-contact__form-item
-            input(type='text' placeholder='Name').section-contact__input
-          .section-contact__form-item
-            input(type='text' placeholder='Phone').section-contact__input
-          .section-contact__form-item
-            input(type='text' placeholder='E-mail').section-contact__input
-          .section-contact__form-item
-            label(for='select') Choose from the list:
-            select(id='select').section-contact__select
-              option(value='1') Select one...
-          .section-contact__form-item
-            label(for='textarea') Choose from the list:
-            textarea(id='textarea' placeholder='Type your message').section-contact__textarea
-          .section-contact__form-item
-            input(type='checkbox' placeholder='E-mail').section-contact__checkbox
-            | I accept the
-            a(href='#') Terms
-          .section-contact__form-item
-            button(type='submit').section-contact__checkbox Submit
+        .section-contact__right.site-right-block
+          .section-contact__title Contact us
+          form.section-contact__form
+            .section-contact__form-item
+              input(type='text' placeholder='Name').section-contact__input
+            .section-contact__form-item
+              input(type='text' placeholder='Phone').section-contact__input
+            .section-contact__form-item
+              input(type='text' placeholder='E-mail').section-contact__input
+            .section-contact__form-item
+              label(for='select') Choose from the list:
+              select(id='select').section-contact__select
+                option Select
+                option(value='1') Select one...
+                option(value='2') Select two...
+            .section-contact__form-item
+              label(for='textarea') Message
+              textarea(id='textarea' placeholder='Type your message').section-contact__textarea
+            .section-contact__form-item
+              input(type='checkbox' id='checkbox' placeholder='E-mail').section-contact__checkbox.custom-checkbox
+              label(for='checkbox') I accept the
+                a(href='#') Terms
+
+            .section-contact__form-item
+              button(type='submit').section-contact__button.site-btn Submit
 
         
     
