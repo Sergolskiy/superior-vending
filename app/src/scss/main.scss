@@ -31,6 +31,11 @@
   text-transform: uppercase;
   //letter-spacing: 3px;
 
+  @include for-1600 {
+    font-size: 84px;
+    line-height: 70px;
+  }
+
   &--outline {
     -webkit-text-stroke: 2px black;
     color: white;
@@ -38,11 +43,20 @@
     font-size: 100px;
     line-height: 85px;
     text-transform: uppercase;
+
+    @include for-1600 {
+      font-size: 84px;
+      line-height: 70px;
+    }
   }
 
   &--line2 {
     margin-top: 38px;
     padding-left: 271px;
+
+    @include for-1600 {
+      padding-left: 217px;
+    }
   }
 }
 
@@ -55,6 +69,12 @@
 
   &--line2 {
     margin-left: 271px;
+
+    @include for-1600 {
+      margin-left: 220px;
+      font-size: 16px;
+      line-height: 26px;
+    }
   }
 }
 
@@ -73,6 +93,10 @@
 
   &--line2 {
     padding-left: 271px;
+
+    @include for-1600 {
+      padding-left: 220px;
+    }
   }
 }
 
@@ -242,6 +266,14 @@
   max-width: 1835px;
   padding: 0 15px;
   margin: 0 auto;
+
+  @include for-1800 {
+    max-width: 1570px;
+  }
+
+  @include for-1600 {
+    max-width: 1380px;
+  }
 }
 
 .custom-checkbox + label {
@@ -281,6 +313,45 @@
 }
 
 
+.main-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+.homepage {
+  .page__content {
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 599px;
+      height: 4297.52px;
+      transform: rotate(33.496deg);
+      background: #EDEDED;
+      margin-right: 783px;
+      margin-top: 543px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin-right: 819px;
+      margin-bottom: -67px;
+      display: block;
+      width: 597.734px;
+      height: 2170.191px;
+      transform: rotate(123.989deg);
+      background: #EDEDED;
+    }
+  }
+}
 
 
 .section-top {
@@ -305,19 +376,44 @@
   &__title {
     position: relative;
 
+    &:before {
+      content: '';
+      position: absolute;
+      top: 257px;
+      left: 0;
+      margin-left: -100px;
+      display: block;
+      background: rgba(33, 33, 33, 0.30);
+      height: 1px;
+      width: 350px;
+
+      @include for-1600 {
+        width: 290px;
+        top: 225px;
+      }
+    }
+
     &::after {
       width: 305px;
       height: 1px;
+      margin-bottom: 23px;
+      margin-right: 9px;
+
+      @include for-1600 {
+        width: 235px;
+        margin-bottom: -18px;
+        margin-right: -2px;
+      }
     }
 
     .site-sub-title {
       max-width: 700px;
+
+      @include for-1600 {
+        max-width: 570px;
+      }
     }
 
-    &::after {
-      margin-bottom: 23px;
-      margin-right: 9px;
-    }
   }
 
   &__right {
@@ -387,6 +483,10 @@
 
   &__inner {
     display: flex;
+
+    @include for-1600 {
+      justify-content: space-between;
+    }
   }
 
   &__left {
@@ -394,6 +494,14 @@
     width: 100%;
     max-width: 794px;
     //max-width: 47%;
+
+    @include for-1800 {
+      max-width: 730px;
+    }
+
+    @include for-1600 {
+      max-width: 650px;
+    }
   }
 
   &__left-inner {
@@ -465,6 +573,11 @@
     //width: 100%;
     max-width: 798px;
     padding-left: 61px;
+
+    @include for-1600 {
+      max-width: 580px;
+      padding-left: 0;
+    }
   }
 
   &__right-inner {
@@ -493,6 +606,14 @@
     width: 100%;
     max-width: 794px;
     //max-width: 47%;
+
+    @include for-1800 {
+      max-width: 730px;
+    }
+
+    @include for-1600 {
+      max-width: 650px;
+    }
   }
 
   //&__left-inner {
@@ -511,6 +632,14 @@
   &__right {
     //max-width: 53%;
     //width: 100%;
+
+    @include for-1800 {
+      max-width: 700px;
+    }
+
+    @include for-1600 {
+      max-width: 580px;
+    }
   }
 
   &__right-inner {
@@ -538,10 +667,25 @@
       margin-left: -67px;
       margin-top: -90px;
       height: calc(100% + 90px);
+
+      @include for-1800 {
+        margin-left: -56px;
+        margin-top: -90px;
+        height: calc(100% + 90px);
+      }
+
+      @include for-1600 {
+        margin-left: -66px;
+        margin-top: -90px;
+      }
     }
 
     &:after {
       width: calc(100% + 65px);
+
+      @include for-1800 {
+        width: calc(100% + 56px);
+      }
     }
   }
 
@@ -571,29 +715,37 @@
 
 .home-bg-block {
   position: relative;
+  background: rgba(255, 255, 255, 0.77);
 
   &:after {
     content: '';
     position: absolute;
     top: 0;
-    right: 0;
-    margin-top: 125px;
+    left: 50%;
+    margin-left: -56px;
+    margin-top: 124px;
     display: block;
     width: 1000px;
     height: 1450px;
     background: url("../img/home/bg-dots.svg") center center no-repeat;
+
+    @include for-1800 {
+      background-position-y: -51px;
+      background-position-x: 8px;
+    }
   }
 }
 
 .section-atm {
   position: relative;
   z-index: 2;
-  margin-top: 110px;
-  padding-top: 120px;
-  margin-bottom: 64px;
+  margin-top: 89px;
+  padding-top: 119px;
+  margin-bottom: 57px;
 
   &__inner {
     display: flex;
+    justify-content: space-between;
     padding-bottom: 60px;
   }
 
@@ -603,6 +755,15 @@
     width: 100%;
     max-width: 845px;
     padding-right: 50px;
+
+    @include for-1800 {
+      max-width: 730px;
+      padding-right: 0;
+    }
+
+    @include for-1600 {
+      max-width: 650px;
+    }
   }
 
   &__img-left {
@@ -619,6 +780,14 @@
       margin-right: -52px;
       margin-bottom: -74px;
       background: url("../img/plus.svg") center center no-repeat;
+
+      @include for-1800 {
+        margin-right: -45px;
+      }
+    }
+
+    @include for-1800 {
+      max-width: 46%;
     }
 
     img {
@@ -641,6 +810,10 @@
       margin-right: -55px;
     }
 
+    @include for-1800 {
+      max-width: 46%;
+    }
+
     img {
       width: 100%;
       max-width: 100%;
@@ -651,6 +824,16 @@
     width: 100%;
     max-width: 745px;
     padding-left: 65px;
+
+    @include for-1800 {
+      max-width: 700px;
+      padding-left: 0;
+    }
+
+    @include for-1600 {
+      max-width: 580px;
+    }
+
   }
 
   &__btn {
@@ -665,6 +848,7 @@
 
   &__inner {
     display: flex;
+    justify-content: space-between;
 
     img {
       width: 100%;
@@ -675,10 +859,18 @@
   &__left {
     width: 100%;
     max-width: 794px;
+
+    @include for-1800 {
+      max-width: 730px;
+    }
+
+    @include for-1600 {
+      max-width: 650px;
+    }
   }
 
   &__img-top {
-    margin-bottom: 60px;
+    margin-bottom: 53px;
 
     &:after {
       width: 100%;
@@ -693,6 +885,16 @@
   &__right {
     max-width: 735px;
     margin-left: 115px;
+
+    @include for-1800 {
+      margin-left: 0;
+      max-width: 700px;
+    }
+
+    @include for-1600 {
+      max-width: 580px;
+    }
+
   }
 
   &__btn {
@@ -703,9 +905,10 @@
 
 
 .section-contact {
-  margin-top: 78px;
+  //background: rgba(255, 255, 255, 0.77);
+  padding-top: 96px;
 
-  background: url("../img/home/contacts-bg.svg") bottom left no-repeat;
+  background: rgba(255, 255, 255, 0.77) url("../img/home/contacts-bg.svg") bottom left no-repeat;
 
   &__inner {
     display: flex;
@@ -714,7 +917,7 @@
 
   &__left {
     width: 100%;
-    max-width: 763px;
+    max-width: 751px;
     justify-content: flex-start;
     padding-top: 82px;
   }
@@ -728,6 +931,7 @@
   }
 
   &__right {
+    position: relative;
     width: 100%;
     max-width: 1100px;
     background: #EDEDED;
@@ -743,7 +947,7 @@
 
   &__form {
     max-width: 690px;
-    margin-top: 30px;
+    margin-top: 26px;
   }
 
   &__form-item {
@@ -751,6 +955,10 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &:nth-child(5) {
+      margin-bottom: 14px;
     }
 
     label {
@@ -763,7 +971,7 @@
     background: transparent;
     border: 0;
     border-bottom: 1px solid #CECECE;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     font-size: 16px;
     line-height: 24px;
 
@@ -779,7 +987,7 @@
     background: transparent;
     border: 0;
     border-bottom: 1px solid #CECECE;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     font-size: 16px;
     line-height: 24px;
     margin-left: -4px;
@@ -791,7 +999,7 @@
     background: transparent;
     border: 0;
     border-bottom: 1px solid #CECECE;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     font-size: 14px;
     line-height: 24px;
     height: 32px;

@@ -179,10 +179,16 @@
 }
 
 @mixin for-1600 {
-  @media (max-width: 1610px) {
+  @media (max-width: 1580px) {
     @content;
   }
 }
+
+//@mixin for-1600 {
+//  @media (max-width: 1610px) {
+//    @content;
+//  }
+//}
 
 @mixin from-1600 {
   @media (min-width: 1611px) {
@@ -191,10 +197,16 @@
 }
 
 @mixin for-1800 {
-  @media (max-width: 1800px) {
+  @media (max-width: 1836px) {
     @content;
   }
 }
+
+//@mixin for-1800 {
+//  @media (max-width: 1800px) {
+//    @content;
+//  }
+//}
 
 @mixin from-1800 {
   @media (min-width: 1801px) {
