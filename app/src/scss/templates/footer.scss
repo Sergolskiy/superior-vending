@@ -6,6 +6,10 @@
   border-top: 1px solid #C3C3C3;
   overflow: hidden;
 
+  @include for-1300 {
+    padding: 20px 0 0;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
@@ -20,6 +24,10 @@
     justify-content: space-between;
     width: 100%;
     padding-bottom: 30px;
+
+    @include for-1300 {
+      padding-bottom: 20px;
+    }
   }
 
   &__left {
@@ -33,6 +41,14 @@
   &__center {
     width: 100%;
     max-width: 870px;
+
+    @include for-1600 {
+      max-width: 760px;
+    }
+
+    @include for-1300 {
+      max-width: 540px;
+    }
   }
 
   &__item-title {
@@ -74,15 +90,15 @@
   }
 
   &__contact {
-    width: 100px;
+    width: 100%;
     max-width: 290px;
-
     font-size: 16px;
     line-height: 40px;
+    margin-right: -80px;
   }
 
   &__right {
-    margin-left: 65px;
+    //margin-left: 65px;
   }
 
   &__social {
@@ -98,6 +114,8 @@
     justify-content: space-between;
     padding-top: 40px;
     padding-bottom: 42px;
+    font-size: 16px;
+    line-height: 40px;
 
     &:after {
       width: calc(100% + 110px);
@@ -110,8 +128,10 @@
       background-repeat: repeat-x;
     }
 
-    font-size: 16px;
-    line-height: 40px;
+    @include for-1300 {
+      padding-top: 25px;
+      padding-bottom: 28px;
+    }
   }
 
   &__bottom-left {

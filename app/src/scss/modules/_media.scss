@@ -112,6 +112,7 @@
   }
 }
 
+
 @mixin for-1100 {
   @media (max-width: 1100px) {
     @content;
@@ -120,6 +121,12 @@
 
 @mixin from-1100 {
   @media (min-width: 1101px) {
+    @content;
+  }
+}
+
+@mixin for-1180 {
+  @media (max-width: 1180px) {
     @content;
   }
 }
@@ -136,6 +143,12 @@
   }
 }
 
+@mixin for-1270 {
+  @media (max-width: 1270px) {
+    @content;
+  }
+}
+
 @mixin from-1200 {
   @media (min-width: 1221px) {
     @content;
@@ -144,6 +157,12 @@
 
 @mixin for-1300 {
   @media (max-width: 1320px) {
+    @content;
+  }
+}
+
+@mixin for-1340 {
+  @media (max-width: 1340px) {
     @content;
   }
 }
