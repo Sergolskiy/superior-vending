@@ -17,10 +17,18 @@
     max-width: 1830px;
     padding: 0 15px;
     margin: 0 auto;
+
+    @include for-550 {
+      height: 64px;
+    }
   }
 
   &__logo {
-
+    @include for-550 {
+      img {
+        max-width: 62px;
+      }
+    }
   }
 
   &__munu-wrap {
@@ -476,6 +484,10 @@
       margin-left: auto;
     }
 
+    @include for-550 {
+      display: none;
+    }
+
     .site-btn {
       font-size: 16px;
       line-height: 24px;
@@ -494,5 +506,208 @@
     }
   }
 
+
+}
+
+.page {
+  overflow: hidden;
+}
+
+.m-header {
+  position: fixed;
+  top: 88px;
+  width: 100%;
+  background: white;
+  z-index: 100;
+  height: calc(100vh - 88px);
+  overflow: hidden;
+  overflow-y: scroll;
+
+  &__inner {
+    padding: 0 15px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    border-top: 1px solid rgba(33, 33, 33, 0.30);
+    border-bottom: 1px solid rgba(33, 33, 33, 0.30);
+    padding-top: 20px;
+    padding-bottom: 9px;
+  }
+
+  .header__social,
+  .header__email,
+  .header__info {
+    display: block;
+    margin: 0;
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  &__munu-wrap {
+    margin-top: 15px;
+  }
+
+  &__menu {
+    a {
+      color: #222;
+    }
+  }
+
+  &__menu-item {
+    &.has-sub-menu {
+      .m-header__menu-link {
+        display: flex;
+        align-items: center;
+
+        &:after {
+          content: '';
+          position: relative;
+          top: 2px;
+          display: block;
+          width: 14px;
+          height: 8px;
+          transition: .3s;
+          background: url('../../img/arrow-black.svg') center center no-repeat;
+          margin-left: 10px;
+        }
+      }
+
+      &.open {
+        .m-header__menu-link {
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  &__menu-link {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 54px;
+  }
+
+  &__sub-menu {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 15px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 1px;
+      background: url('../../img/dots-horizontal.svg') top left repeat-x;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: url('../../img/dots-horizontal.svg') top left repeat-x;
+    }
+  }
+
+  &__sub-menu-item {
+    &.has-sub-menu-lv2 {
+      .m-header__sub-menu-link {
+        display: flex;
+        align-items: center;
+
+        &:after {
+          content: '';
+          position: relative;
+          top: 2px;
+          display: block;
+          width: 12px;
+          height: 8px;
+          transition: .3s;
+          background: url('../../img/arrow-black.svg') center center no-repeat;
+          margin-left: 10px;
+        }
+      }
+      
+      &.open {
+        .m-header__menu-link {
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  &__sub-menu-link {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__sub-menu-lv2 {
+
+  }
+
+  &__sub-menu-lv2-item {
+    &.has-sub-menu-lv3 {
+      .m-header__sub-menu-lv2-link {
+        display: flex;
+        align-items: center;
+
+        &:after {
+          content: '';
+          position: relative;
+          top: 2px;
+          display: block;
+          width: 11px;
+          height: 8px;
+          transition: .3s;
+          background: url('../../img/arrow-black.svg') center center no-repeat;
+          margin-left: 10px;
+        }
+      }
+
+      &.open {
+        .m-header__sub-menu-lv2-link {
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  &__sub-menu-lv2-link {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 48px;
+  }
+
+  &__sub-menu-lv3 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__sub-menu-lv3-item {
+    width: 50%;
+  }
+
+  &__sub-menu-lv3-link {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 48px;
+  }
 
 }

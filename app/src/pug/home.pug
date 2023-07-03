@@ -61,6 +61,7 @@ block content
 
     section.section-pool
       .section-pool__inner.site-block-inner
+        .block-title.block-title--mobile Pool Leagues:
         .section-pool__left.site-left-block.center-block
           .section-pool__left-inner
             .block-title Pool Leagues:
@@ -95,9 +96,13 @@ block content
         .section-atm__inner.site-block-inner
           .section-atm__left
             .section-atm__img-left
-              img(src="./img/home/atm.jpg" alt='img')
+              picture
+                source(srcset="./img/home/atm-mob.jpg" media="(max-width: 1180px)")
+                img(src="./img/home/atm.jpg" alt='img')
             .section-atm__img-right.dots-vertical.dots-horizontal
-              img(src="./img/home/atm-2.jpg" alt='img')
+              picture
+                source(srcset="./img/home/atm-2-mob.jpg" media="(max-width: 1180px)")
+                img(src="./img/home/atm-2.jpg" alt='img')
 
           .section-atm__right.site-right-block.center-block
             .block-title ATMs:

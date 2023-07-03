@@ -159,4 +159,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // placeholder: $(this).data('placeholder'),
     });
 
+    $('.footer__item-title').click(function () {
+        $(this).toggleClass('open')
+    });
+
 });

@@ -34,6 +34,13 @@
     background: url("../img/menu.svg") center center no-repeat;
     border: 1px solid #0014B8;
   }
+
+  @include for-550 {
+    min-width: 44px;
+    height: 44px;
+    margin-left: auto;
+    background-size: 25px;
+  }
 }
 
 .site-title {
@@ -47,6 +54,11 @@
   @include for-1600 {
     font-size: 84px;
     line-height: 70px;
+  }
+
+  @include for-550 {
+    font-size: 50px;
+    line-height: 60px;
   }
 
   &--outline {
@@ -66,6 +78,11 @@
       font-size: 75px;
       line-height: 60px;
     }
+
+    @include for-550 {
+      font-size: 50px;
+      line-height: 60px;
+    }
   }
 
   &--line2 {
@@ -81,6 +98,13 @@
       line-height: 60px;
       margin-top: 18px;
       padding-left: 105px;
+    }
+
+    @include for-550 {
+      font-size: 50px;
+      line-height: 60px;
+      margin-top: 0px;
+      padding-left: 31px;
     }
   }
 }
@@ -132,6 +156,11 @@
     @include for-1180 {
       padding-left: 105px;
     }
+
+    @include for-550 {
+      padding-left: 0;
+      margin-top: 8px;
+    }
   }
 }
 
@@ -173,6 +202,17 @@
 
   @include for-1600 {
     font-size: 16px;
+  }
+
+  @include for-1180 {
+    line-height: 28px;
+    padding: 10px 28px;
+  }
+
+  @include for-550 {
+    font-size: 12px;
+    line-height: 22px;
+    padding: 10px 20px;
   }
 
   &:hover {
@@ -252,6 +292,11 @@
     line-height: 70px;
   }
 
+  @include for-550 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+
   &--mobile {
     display: none;
 
@@ -277,8 +322,22 @@
     line-height: 22px;
   }
 
+  @include for-1180 {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  @include for-550 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
   p {
     margin-bottom: 20px;
+
+    @include for-768 {
+      margin-bottom: 0;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -295,7 +354,21 @@
     font-size: 16px;
   }
 
+  @include for-1180 {
+    font-size: 18px;
+  }
+
+  @include for-550 {
+    font-size: 14px;
+  }
+
   ul {
+
+    @include for-1180 {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
     li {
       position: relative;
       padding-left: 35px;
@@ -306,6 +379,17 @@
         margin-bottom: 15px;
       }
 
+      @include for-1180 {
+        width: 50%;
+        padding-left: 35px;
+        margin-bottom: 20px;
+      }
+
+      @include for-550 {
+        width: 100%;
+        padding-left: 25px;
+      }
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -313,12 +397,24 @@
       &:before {
         content: '';
         position: absolute;
-        top: 0;
+        top: -2px;
         left: 0;
         display: inline-block;
         width: 24px;
         height: 24px;
         background: url("../img/list-item.svg") center center no-repeat;
+
+        @include for-1400 {
+          width: 18px;
+          height: 18px;
+          background-size: cover;
+        }
+
+        @include for-1180 {
+          width: 24px;
+          height: 24px;
+          background-size: cover;
+        }
 
         @include for-1400 {
           width: 18px;
@@ -420,6 +516,23 @@
       background: #EDEDED;
       margin-right: 783px;
       margin-top: 543px;
+
+      @include for-1180 {
+        height: 4404px;
+        margin-right: 17px;
+        margin-top: 480px;
+        transform: rotate(25.83deg);
+      }
+
+      @include for-768 {
+        height: 3404px;
+      }
+
+      @include for-550 {
+        margin-right: 161px;
+        margin-top: -400px;
+        width: 216px;
+      }
     }
 
     &:after {
@@ -434,6 +547,10 @@
       height: 2170.191px;
       transform: rotate(123.989deg);
       background: #EDEDED;
+
+      @include for-1180 {
+        display: none;
+      }
     }
   }
 }
@@ -454,7 +571,6 @@
     padding-top: 93px;
     padding-left: 53px;
     padding-right: 43px;
-    //max-width: 1190px;
     max-width: 63%;
 
     @include for-1180 {
@@ -462,6 +578,12 @@
       max-width: 100%;
       padding-right: 20px;
       padding-top: 60px;
+    }
+
+    @include for-550 {
+      padding-top: 20px;
+      padding-left: 15px;
+      padding-right: 15px;
     }
 
     .section-top__img {
@@ -475,6 +597,10 @@
         img {
           width: 100%;
         }
+      }
+
+      @include for-550 {
+        padding-top: 15px;
       }
     }
   }
@@ -502,6 +628,12 @@
         width: 195px;
         top: 160px;
       }
+
+      @include for-550 {
+        width: 50px;
+        top: 130px;
+        margin-left: -60px;
+      }
     }
 
     &::after {
@@ -515,6 +647,10 @@
         margin-bottom: -18px;
         margin-right: -2px;
       }
+
+      @include for-1180 {
+        display: none;
+      }
     }
 
     .site-sub-title {
@@ -523,12 +659,19 @@
       @include for-1600 {
         max-width: 570px;
       }
+
+      @include for-550 {
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+        font-size: 12px;
+        line-height: 22px;
+      }
     }
 
   }
 
   &__right {
-    //padding-left: 50px;
     margin-top: -42px;
 
     @include for-1180 {
@@ -549,6 +692,18 @@
         width: 100%;
         height: 100%;
         background: url('../img/home/home-top-mobile-plus.svg') top left no-repeat;
+      }
+    }
+
+    @include for-550 {
+      margin-top: 35px;
+      padding: 0 15px;
+
+      &::after {
+        background: url('../img/home/home-top-mobile-plus-small.svg') top center no-repeat;
+        margin-top: -27px;
+        max-width: calc(100% - 30px);
+        margin-left: calc(-50% + 15px);
       }
     }
 
@@ -576,10 +731,7 @@
         padding-bottom: 45px;
 
         @include for-1180 {
-          padding-left: 0;
-          padding-bottom: 0;
-          padding-top: 0;
-          padding-right: 20px;
+          padding: 0 20px 0 0;
         }
 
         &:before {
@@ -674,6 +826,10 @@
 .section-dart {
   margin-top: 105px;
 
+  @include for-550 {
+    margin-top: 37px;
+  }
+
   &__inner {
     display: flex;
 
@@ -715,10 +871,18 @@
     @include for-1180 {
       max-width: calc(100% - 50px);
     }
+
+    @include for-550 {
+      max-width: calc(100% - 5px);
+    }
   }
 
   &__img-top {
     padding-bottom: 38px;
+
+    @include for-550 {
+      padding-bottom: 15px;
+    }
 
     &::before {
       content: '';
@@ -742,6 +906,11 @@
         width: 1px;
         background: url('../img/dots.svg') center center no-repeat;
       }
+
+      @include for-550 {
+        margin-right: -10px;
+        height: calc(100% - 15px);
+      }
     }
 
     &::after {
@@ -751,6 +920,10 @@
 
       @include for-1180 {
         width: calc(100% + 7px);
+      }
+
+      @include for-550 {
+        width: 100%;
       }
     }
 
@@ -778,6 +951,18 @@
         margin-right: -50px;
         margin-top: -19px;
         background: url("../img/plus.svg") center center no-repeat;
+      }
+    }
+
+    @include for-550 {
+      padding-top: 15px;
+
+      &::after {
+        margin-right: -17px;
+        margin-top: -9px;
+        width: 16px;
+        height: 16px;
+        background: url("../img/plus-mobile.svg") center center no-repeat;
       }
     }
 
@@ -841,13 +1026,16 @@
       @include for-1180 {
         margin-right: -33px;
       }
+
+      @include for-550 {
+        margin-right: -10px;
+        height: calc(100% + 5px);
+        margin-top: -5px;
+      }
     }
   }
 
   &__right {
-    //padding-left: 65px;
-    //max-width: 53%;
-    //width: 100%;
     max-width: 798px;
     padding-left: 61px;
 
@@ -859,9 +1047,22 @@
     @include for-1400 {
       max-width: 500px;
     }
+
+    @include for-1180 {
+      max-width: calc(100% - 50px);
+    }
+
+    @include for-550 {
+      max-width: calc(100% - 5px);
+    }
   }
 
   &__right-inner {
+
+    @include for-1180 {
+      margin-top: 22px;
+    }
+
     .block-title {
       @include for-1180 {
         display: none;
@@ -884,11 +1085,33 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include for-1180 {
+      flex-direction: column-reverse;
+      padding-top: 74px;
+
+      .block-title--mobile {
+        order: 3;
+      }
+    }
+
+    @include for-550 {
+      padding-top: 40px;
+    }
   }
 
   &__left-inner {
+
     @include for-1400 {
       padding-top: 90px;
+    }
+
+    @include for-1180 {
+      padding-top: 16px;
+
+      .block-title {
+        display: none;
+      }
     }
   }
 
@@ -896,7 +1119,6 @@
     margin-right: 50px;
     width: 100%;
     max-width: 794px;
-    //max-width: 47%;
 
     @include for-1800 {
       max-width: 730px;
@@ -909,12 +1131,15 @@
     @include for-1400 {
       max-width: 550px;
     }
-  }
 
-  //&__left-inner {
-  //  width: 100%;
-  //  max-width: 760px;
-  //}
+    @include for-1180 {
+      max-width: calc(100% - 50px);
+    }
+
+    @include for-550 {
+      max-width: 100%;
+    }
+  }
 
   &__list {
     margin-top: 20px;
@@ -925,8 +1150,6 @@
   }
 
   &__right {
-    //max-width: 53%;
-    //width: 100%;
 
     @include for-1800 {
       max-width: 700px;
@@ -939,6 +1162,24 @@
     @include for-1400 {
       max-width: 500px;
     }
+
+    @include for-1180 {
+      max-width: calc(100% - 50px);
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    @include for-550 {
+      max-width: 100%;
+    }
   }
 
   &__right-inner {
@@ -947,6 +1188,13 @@
     width: 100%;
     max-width: 955px;
     padding-top: 90px;
+
+    @include for-1180 {
+      max-width: 100%;
+      padding-top: 20px;
+      justify-content: flex-start;
+      flex-direction: row-reverse;
+    }
 
     img {
       width: 100%;
@@ -957,6 +1205,11 @@
   &__img-left {
     padding-right: 30px;
 
+    @include for-1180 {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 12px;
+    }
   }
 
   &__img-top {
@@ -972,6 +1225,15 @@
 
     @include for-1400 {
       padding-bottom: 15px;
+    }
+
+    @include for-1180 {
+      padding-bottom: 0;
+      margin-bottom: 50px;
+    }
+
+    @include for-550 {
+      margin-bottom: 20px;
     }
 
     &:before {
@@ -993,6 +1255,17 @@
       @include for-1400 {
         margin-left: -46px;
       }
+
+      @include for-1180 {
+        content: '';
+        position: static;
+        display: block;
+        padding: 0 0 68.42%;
+        width: auto;
+        height: auto;
+        background: 0 0;
+        margin: 0;
+      }
     }
 
     &:after {
@@ -1004,6 +1277,18 @@
 
       @include for-1400 {
         width: calc(100% + 46px);
+      }
+
+      @include for-1180 {
+        width: calc(100% - 30px);
+        margin-bottom: -25px;
+        margin-right: 30px;
+      }
+
+      @include for-550 {
+        width: 100%;
+        margin-bottom: -10px;
+        margin-right: 0;
       }
     }
   }
@@ -1024,6 +1309,10 @@
       padding-top: 15px;
     }
 
+    @include for-1180 {
+      padding-top: 0;
+    }
+
     &::before {
       content: '';
       display: block;
@@ -1035,13 +1324,55 @@
       margin-right: -44px;
       margin-top: -18px;
       background: url("../img/plus.svg") center center no-repeat;
+
+      @include for-1180 {
+        margin-right: -17px;
+        margin-top: -43px;
+      }
+
+      @include for-550 {
+        width: 17px;
+        height: 17px;
+        background: url("../img/plus-mobile.svg") center center no-repeat;
+        margin-right: -7px;
+        margin-top: -19px;
+      }
+    }
+
+    @include for-1180 {
+      &::after {
+        content: '';
+        position: static;
+        display: block;
+        padding: 0 0 68.42%;
+        width: auto;
+        height: auto;
+        background: 0 0;
+        margin: 0;
+      }
     }
   }
 
   &__img-right {
     padding-left: 28px;
-  }
 
+    @include for-1180 {
+      position: relative;
+      padding-left: 0;
+      width: 100%;
+
+      &::after {
+        content: '';
+        position: static;
+        display: block;
+        padding: 0 0 68.42%;
+        width: auto;
+        height: auto;
+        background: 0 0;
+        margin: 0;
+      }
+    }
+  }
 }
 
 .home-bg-block {
@@ -1073,6 +1404,10 @@
     @include for-1400 {
       background-position-y: -190px;
     }
+
+    @include for-1180 {
+      display: none;
+    }
   }
 }
 
@@ -1083,10 +1418,29 @@
   padding-top: 119px;
   margin-bottom: 57px;
 
+  @include for-1180 {
+    margin-top: 80px;
+    padding-top: 74px;
+  }
+
+  @include for-550 {
+    margin-top: 40px;
+    padding-top: 40px;
+    margin-bottom: 0;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
     padding-bottom: 60px;
+
+    @include for-1180 {
+      flex-direction: column-reverse;
+    }
+
+    @include for-550 {
+      padding-bottom: 50px;
+    }
   }
 
   &__left {
@@ -1107,6 +1461,11 @@
 
     @include for-1400 {
       max-width: 550px;
+    }
+
+    @include for-1180 {
+      max-width: 100%;
+      margin-top: 30px;
     }
   }
 
@@ -1132,10 +1491,31 @@
       @include for-1400 {
         margin-right: -39px;
       }
+
+      @include for-1180 {
+        margin-right: -43px;
+        bottom: auto;
+        top: 0;
+      }
+
+      @include for-550 {
+        background: url("../img/plus-mobile.svg") center center no-repeat;
+        margin-right: -28px;
+        margin-top: -9px;
+      }
     }
 
     @include for-1800 {
       max-width: 46%;
+    }
+
+    @include for-1180 {
+      width: 100%;
+      max-width: calc(50% - 25px);
+    }
+
+    @include for-550 {
+      max-width: calc(50% - 10px);
     }
 
     img {
@@ -1154,16 +1534,49 @@
       @include for-1400 {
         margin-left: -24px;
       }
+
+      @include for-1180 {
+        height: calc(100% - 20px);
+        margin-top: 60px;
+        margin-left: -26px;
+      }
+
+      @include for-550 {
+        height: calc(100% - 15px);
+        margin-top: 25px;
+        margin-left: -10px;
+      }
     }
 
     &:after {
       width: calc(100% + 67px);
       margin-bottom: -57px;
       margin-right: -55px;
+
+      @include for-1180 {
+        width: calc(100% + 32px);
+        margin-bottom: -44px;
+        margin-right: -9px;
+      }
+
+      @include for-550 {
+        width: calc(100% + 20px);
+        margin-bottom: -10px;
+        margin-right: -9px;
+      }
     }
 
     @include for-1800 {
       max-width: 46%;
+    }
+
+    @include for-1180 {
+      width: 100%;
+      max-width: calc(50% - 25px);
+    }
+
+    @include for-550 {
+      max-width: calc(50% - 10px);
     }
 
     img {
@@ -1190,6 +1603,9 @@
       max-width: 500px;
     }
 
+    @include for-1180 {
+      max-width: 100%;
+    }
   }
 
   &__btn {
@@ -1205,6 +1621,10 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include for-1180 {
+      flex-direction: column-reverse;
+    }
 
     img {
       width: 100%;
@@ -1227,14 +1647,49 @@
     @include for-1400 {
       max-width: 550px;
     }
+
+    @include for-1180 {
+      max-width: 100%;
+      margin-top: 30px;
+    }
   }
 
   &__img-top {
     margin-bottom: 53px;
 
+    @include for-1180 {
+      margin-bottom: 40px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -7px;
+        height: calc(100% + 20px);
+        width: 1px;
+        background: url('../img/dots.svg') top center no-repeat;
+      }
+    }
+
+    @include for-550 {
+      margin-bottom: 20px;
+
+      &:before {
+        height: calc(100% + 12px);
+      }
+    }
+
     &:after {
       width: 100%;
       margin-bottom: -30px;
+
+      @include for-1180 {
+        margin-bottom: -20px;
+      }
+
+      @include for-550 {
+        margin-bottom: -10px;
+      }
     }
   }
 
@@ -1259,6 +1714,27 @@
       max-width: 500px;
     }
 
+    @include for-1180 {
+      position: relative;
+      max-width: 100%;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: -69px;
+        right: -7px;
+        height: calc(100% + 100px);
+        width: 1px;
+        background: url('../img/dots.svg') top center no-repeat;
+      }
+    }
+
+    @include for-550 {
+      &:after {
+        top: -35px;
+        height: calc(100% + 65px);
+      }
+    }
   }
 
   &__btn {
@@ -1271,12 +1747,24 @@
 .section-contact {
   //background: rgba(255, 255, 255, 0.77);
   padding-top: 96px;
-
   background: rgba(255, 255, 255, 0.77) url("../img/home/contacts-bg.svg") bottom left no-repeat;
+
+  @include for-1180 {
+    padding-top: 72px;
+  }
+
+  @include for-550 {
+    padding-top: 38px;
+  }
 
   &__inner {
     display: flex;
     padding-left: 60px;
+
+    @include for-1180 {
+      flex-direction: column;
+      padding-left: 0;
+    }
   }
 
   &__left {
@@ -1284,10 +1772,20 @@
     max-width: 751px;
     justify-content: flex-start;
     padding-top: 82px;
+
+    @include for-1180 {
+      padding-top: 0;
+      max-width: 100%;
+    }
   }
 
   &__left-inner {
     max-width: 600px;
+
+    @include for-1180 {
+      max-width: 100%;
+      padding: 0 15px;
+    }
   }
 
   &__btn {
@@ -1300,22 +1798,53 @@
     max-width: 1100px;
     background: #EDEDED;
     padding: 50px 60px 60px;
+
+    @include for-1180 {
+      max-width: 100%;
+      padding: 40px 15px;
+      margin-top: 50px;
+    }
+
+    @include for-550 {
+      margin-top: 35px;
+    }
   }
 
   &__title {
     font-size: 43px;
     font-weight: 700;
     line-height: 45px;
-    font-family: JosefinSans;
+    font-family: 'JosefinSans';
+
+    @include for-550 {
+      font-size: 30px;
+    }
   }
 
   &__form {
     max-width: 690px;
     margin-top: 26px;
+
+    @include for-1180 {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+
+    @include for-550 {
+      margin-top: 10px;
+    }
   }
 
   &__form-item {
     margin-bottom: 40px;
+
+    @include for-550 {
+      margin-bottom: 16px;
+
+      &:nth-child(6) {
+        margin-bottom: 25px;
+      }
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -1323,6 +1852,10 @@
 
     &:nth-child(5) {
       margin-bottom: 14px;
+
+      @include for-550 {
+        margin-bottom: 0;
+      }
     }
 
     label {
@@ -1339,10 +1872,19 @@
     font-size: 16px;
     line-height: 24px;
 
+    @include for-550 {
+      font-size: 14px;
+      padding-bottom: 5px;
+    }
+
     &::placeholder {
       color: #1E1E1E;
       font-size: 16px;
       line-height: 24px;
+
+      @include for-550 {
+        font-size: 14px;
+      }
     }
   }
 
@@ -1356,6 +1898,11 @@
     line-height: 24px;
     margin-left: -4px;
     margin-top: 5px;
+
+    @include for-550 {
+      font-size: 14px;
+      padding-bottom: 5px;
+    }
   }
 
   &__textarea {
@@ -1366,8 +1913,13 @@
     padding-bottom: 10px;
     font-size: 14px;
     line-height: 24px;
-    height: 32px;
+    height: 37px;
     margin-left: -3px;
+
+    @include for-550 {
+      font-size: 14px;
+      padding-bottom: 5px;
+    }
   }
 
   &__checkbox {
@@ -1381,6 +1933,13 @@
 
   &__button {
     width: 172px;
+
+    @include for-550 {
+      font-size: 12px;
+      line-height: 22px;
+      width: 109px;
+      padding: 10px 20px;
+    }
   }
 
 }
