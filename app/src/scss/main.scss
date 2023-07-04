@@ -25,6 +25,7 @@
 
 .mobile-menu-btn {
   display: none;
+  transition: 0.1s;
 
   @include for-1180 {
     display: block;
@@ -40,6 +41,10 @@
     height: 44px;
     margin-left: auto;
     background-size: 25px;
+  }
+
+  &.open {
+    background: url("../img/menu-open.svg") center center no-repeat;
   }
 }
 

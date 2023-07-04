@@ -92,17 +92,17 @@ function initShowBlock() {
     })
 }
 
-function initShowMobileMenu() {
-    let btns = document.querySelectorAll('.mobile-menu-btn')
-    btns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault()
-            let block = document.querySelector('.header-mobile')
-            block.classList.toggle('open')
-
-        })
-    })
-}
+// function initShowMobileMenu() {
+//     let btns = document.querySelectorAll('.mobile-menu-btn')
+//     btns.forEach(btn => {
+//         btn.addEventListener('click', (e) => {
+//             e.preventDefault()
+//             let block = document.querySelector('.header-mobile')
+//             block.classList.toggle('open')
+//
+//         })
+//     })
+// }
 
 // function initFileBtn() {
 //     let input = document.getElementById("file-btn");
@@ -162,5 +162,21 @@ document.addEventListener('DOMContentLoaded', function() {
     $('.footer__item-title').click(function () {
         $(this).toggleClass('open')
     });
+
+
+    $('.mobile-menu-btn').click(function () {
+        $(this).toggleClass('open')
+        $('.m-header').toggleClass('open-menu')
+        $('.page').toggleClass('open-menu')
+    })
+
+    let submenuLink = '.has-sub-menu .m-header__menu-link'
+    let submenuLinkLevel2 = '.has-sub-menu-lv2 .m-header__sub-menu-link'
+    let submenuLinkLevel3 = '.has-sub-menu-lv3 .m-header__sub-menu-lv2-link'
+
+    $(`${submenuLink}, ${submenuLinkLevel2}, ${submenuLinkLevel3}`).click(function () {
+        $(this).toggleClass('open')
+        $(this).next().slideToggle()
+    })
 
 });
