@@ -1,0 +1,84 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Contact-us";
+  - var pageClass = "contact-us";
+  - var pageActive = "contact-us";
+
+block content
+  div.main-wrap
+
+    .breadcrumbs
+      .breadcrumbs__inner.site-block-inner
+        .breadcrumbs__items
+          .breadcrumbs__item
+            a(href='#').breadcrumbs__link Home Page
+          .breadcrumbs__item
+            a(href='#').breadcrumbs__link Contact us
+
+    .center-title
+      .center-title__inner.site-block-inner
+        .center-title__main Contact us
+        .center-title__sub Lorem ipsum dolor sit amet adipiscing elit.
+
+    section.contact-top
+      .contact-top__inner.site-block-inner
+        .contact-top__items
+          .contact-top__item
+            .contact-top__ico
+              include ../img/contacts/mail-c.svg
+            .contact-top__txt
+              .contact-top__name Email
+              a(href='#').contact-top__link hello@relume.io
+          .contact-top__item
+            .contact-top__ico
+              include ../img/contacts/phone-c.svg
+            .contact-top__txt
+              .contact-top__name Phone
+              a(href='#').contact-top__link +1 (555) 000-0000
+          .contact-top__item
+            .contact-top__ico
+              include ../img/contacts/pin.svg
+            .contact-top__txt
+              .contact-top__name Address
+              a(href='#').contact-top__link 123 Sample St, Sydney NSW 2000 AU
+
+    section.section-contact
+      .section-contact__inner
+        .section-contact__left.site-left-block
+          .section-contact__left-inner
+            .block-title Contact us
+            .block-sub-title
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+
+            .section-contact__btn
+              a(href="#").site-btn Learn more
+
+        .section-contact__right.site-right-block
+          .section-contact__title Contact us
+          form.section-contact__form
+            .section-contact__form-item
+              input(type='text' placeholder='Name').section-contact__input
+            .section-contact__form-item
+              input(type='text' placeholder='Phone').section-contact__input
+            .section-contact__form-item
+              input(type='text' placeholder='E-mail').section-contact__input
+            .section-contact__form-item
+              label(for='select') Choose from the list:
+              select(id='select').section-contact__select
+                option Select
+                option(value='1') Select one...
+                option(value='2') Select two...
+            .section-contact__form-item
+              label(for='textarea') Message
+              textarea(id='textarea' placeholder='Type your message').section-contact__textarea
+            .section-contact__form-item
+              input(type='checkbox' id='checkbox' placeholder='E-mail').section-contact__checkbox.custom-checkbox
+              label(for='checkbox') I accept the
+                a(href='#') Terms
+
+            .section-contact__form-item
+              button(type='submit').section-contact__button.site-btn Submit
+
+        
+    

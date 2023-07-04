@@ -21,6 +21,10 @@
 
 .page__content {
   padding-top: 90px;
+
+  @include for-550 {
+    padding-top: 65px;
+  }
 }
 
 .mobile-menu-btn {
@@ -47,6 +51,91 @@
     background: url("../img/menu-open.svg") center center no-repeat;
   }
 }
+
+.center-title {
+  margin-top: 55px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__main {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 85px;
+    text-transform: uppercase;
+    font-family: 'JosefinSans';
+
+    @include for-1180 {
+      font-size: 55px;
+      font-weight: 700;
+      line-height: 65px;
+    }
+
+    @include for-680 {
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+
+  &__sub {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: center;
+
+    @include for-1180 {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    @include for-680 {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+}
+
+
+.breadcrumbs {
+  margin-top: 17px;
+
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 15px;
+    margin-left: 9px;
+
+    &:nth-child(n + 2) {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 0;
+        display: block;
+        width: 9px;
+        height: 9px;
+        background: url("../img/breadcrumbs-arrow.svg") center center no-repeat;
+      }
+    }
+
+  }
+
+  &__link {
+    color: #353535;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+}
+
 
 .site-title {
   font-family: 'JosefinSans';
@@ -1594,10 +1683,12 @@
     width: 100%;
     max-width: 745px;
     padding-left: 65px;
+    margin-right: auto;
 
     @include for-1800 {
       max-width: 700px;
       padding-left: 0;
+      margin-right: 0;
     }
 
     @include for-1600 {
@@ -1705,10 +1796,12 @@
   &__right {
     max-width: 735px;
     margin-left: 115px;
+    margin-right: auto;
 
     @include for-1800 {
       margin-left: 0;
       max-width: 700px;
+      margin-right: 0;
     }
 
     @include for-1600 {
@@ -1785,7 +1878,7 @@
   }
 
   &__left-inner {
-    max-width: 600px;
+    max-width: 610px;
 
     @include for-1180 {
       max-width: 100%;
@@ -1827,7 +1920,7 @@
   }
 
   &__form {
-    max-width: 690px;
+    max-width: 895px;
     margin-top: 26px;
 
     @include for-1180 {
@@ -1951,6 +2044,108 @@
 
 
 
+.contact-top {
+  background: #FCFCFC;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-top: 40px;
+
+  @include for-1180 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+  }
+
+  @include for-550 {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin-top: 13px;
+  }
+
+  &__inner {
+
+  }
+
+  &__items {
+    display: flex;
+    gap: 20px;
+
+    @include for-680 {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 33%;
+    border: 1px dashed #C3C3C3;
+    background: white;
+    padding: 20px;
+
+    @include for-1180 {
+      padding: 10px;
+    }
+
+    @include for-680 {
+      width: 100%;
+    }
+  }
+
+  &__ico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 7px 9px 0 rgba(156, 156, 156, 0.30);
+    width: 80px;
+    min-width: 80px;
+    height: 80px;
+    margin-right: 20px;
+
+    @include for-1180 {
+      min-width: 58px;
+      width: 58px;
+      height: 58px;
+
+      svg {
+        scale: 0.7;
+      }
+    }
+  }
+
+  &__txt {
+
+  }
+
+  &__name {
+    color: #353535;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+
+    @include for-680 {
+      font-size: 16px;
+      line-height: 140%;
+    }
+  }
+
+  &__link {
+    color: #353535;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-decoration-line: underline;
+
+    @include for-680 {
+      font-size: 14px;
+      line-height: 150%;
+    }
+  }
+
+}
 
 
 
