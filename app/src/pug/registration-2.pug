@@ -1,0 +1,85 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Registration-2";
+  - var pageClass = "registration-page";
+  - var pageActive = "registration-2";
+
+block content
+  div.main-wrap
+
+    .breadcrumbs
+      .breadcrumbs__inner.site-block-inner
+        .breadcrumbs__items
+          .breadcrumbs__item
+            a(href='#').breadcrumbs__link Home Page
+          .breadcrumbs__item
+            a(href='#').breadcrumbs__link Registration
+
+    .center-title.registration-title
+      .center-title__inner.site-block-inner
+        .center-title__main Registration
+        .center-title__sub Lorem ipsum dolor sit amet adipiscing elit.
+
+
+    .registration
+      .registration__inner
+        .registration__form
+          form.site-form
+            .site-form__item
+              .site-form__title Select the competition:
+              .site-form__form-item
+                .site-form__radio
+                  input(type='radio' id='league' name='radio1')
+                  label(for='league') League
+                .site-form__radio
+                  input(type='radio' id='tournament' name='radio1')
+                  label(for='tournament') Tournament
+            .site-form__item
+              .site-form__title Select sport type:
+              .site-form__form-item
+                .site-form__radio
+                  input(type='radio' id='player' name='radio2')
+                  label(for='player') 1 Player
+                .site-form__radio
+                  input(type='radio' id='team' name='radio2')
+                  label(for='team') Team
+            .site-form__item
+              .site-form__title Select sport type:
+              .site-form__form-item
+                select(id='select').site-form__select.form-select
+                  option League’s Name
+                  option(value='1') Select one...
+                  option(value='2') Select two...
+            .site-form__item
+              .site-form__title Choose the number of players:
+              .site-form__form-item
+                .site-form__radio
+                  input(type='radio' id='player2' name='radio3')
+                  label(for='player2') 1 Player
+                .site-form__radio
+                  input(type='radio' id='team2' name='radio3')
+                  label(for='team2') Team
+
+            .site-form__section
+              .site-form__section-title Player’s Info
+              .site-form__row
+                .site-form__col.site-form__col--50.site-form__col--sm-100
+                  .site-form__form-input
+                    input(type='text' placeholder='Player’s First name').site-form__input
+                .site-form__col.site-form__col--50.site-form__col--sm-100
+                  .site-form__form-input
+                    input(type='text' placeholder='Player’s Last name').site-form__input
+                .site-form__col.site-form__col--50.site-form__col--sm-100
+                  .site-form__form-input
+                    input(type='text' placeholder='Player’s E-mail').site-form__input
+                .site-form__col.site-form__col--50.site-form__col--sm-100
+                  .site-form__form-input
+                    input(type='text' placeholder='Player’s Phone number').site-form__input
+
+            .site-form__price $ 55
+
+            .site-form__button
+              button Checkout
+
+

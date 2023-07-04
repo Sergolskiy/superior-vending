@@ -24,3 +24,20 @@
   display: flex;
   align-items: center;
 }
+
+@mixin dFlex {
+  display: flex;
+}
+
+
+.d-flex {
+  @include dFlex;
+}
+
+.flex-space-between {
+  @include flexBetween;
+}
+
+.align-center {
+  @include flexAlignCenter;
+}
