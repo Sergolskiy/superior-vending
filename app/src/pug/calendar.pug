@@ -1,0 +1,514 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Calendar";
+  - var pageClass = "calendar";
+  - var pageActive = "calendar";
+
+block content
+  div.main-wrap
+
+    .breadcrumbs
+      .breadcrumbs__inner.site-block-inner
+        .breadcrumbs__items
+          .breadcrumbs__item
+            a(href='#').breadcrumbs__link Home Page
+          .breadcrumbs__item
+            a(href='#').breadcrumbs__link Calendar of Events
+
+    .center-title
+      .center-title__inner.site-block-inner
+        .center-title__main Calendar of Events
+        .center-title__sub Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+    .calendar
+      .calendar__inner.site-block-inner
+        .calendar__head
+          .calendar__head-top
+            a(href='#').calendar__month.calendar__month--before
+              .calendar__month-before-arr
+              .calendar__month-txt April, 2023
+            a(href='#').calendar__month.calendar__month--after
+              .calendar__month-txt June, 2023
+              .calendar__month-after-arr
+
+          .calendar__head-center
+            .calendar__date
+              .calendar__date-ico
+              .calendar__date-month May, 2023
+              .calendar__date-month-sub 01.05 - 31.05
+          .calendar__head-bottom
+            .calendar__types
+              .calendar__type.calendar__type--blue Dart Leaque
+              .calendar__type.calendar__type--orange Dart Tournament
+              .calendar__type.calendar__type--green Pool League
+              .calendar__type.calendar__type--violet Pool Tournament
+            a(href='#').calendar__head-btn Show One Week Only
+
+        .calendar__table
+          table
+            thead
+              tr
+                td Sun
+                td Mon
+                td Tue
+                td WED
+                td THUR
+                td FRI
+                td SAT
+            tbody
+              tr
+                td
+                  .calendar__table-number 01.05
+                    .calendar__table-circle.calendar__table-circle--blue
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Dart Leaque
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Mama’s First Dart Leaque
+                    .calendar__table-item-desc 4 pm
+                    .calendar__table-item-link Read More
+                td
+                  .calendar__table-number 02.05
+                    .calendar__table-circle.calendar__table-circle--violet
+                    .calendar__table-circle.calendar__table-circle--blue
+
+                  .calendar__table-item.calendar__table-item--violet
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Lazy Pool Tournament
+                    .calendar__table-item-desc 9 am
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Weebles First Dart Leaque
+                    .calendar__table-item-desc 7 pm
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Sunset First Dart Leaque
+                    .calendar__table-item-desc 9 pm
+                    .calendar__table-item-link Read More
+                td
+                  .calendar__table-number 03.05
+                    .calendar__table-circle.calendar__table-circle--orange
+                    .calendar__table-circle.calendar__table-circle--orange
+
+                  .calendar__table-item.calendar__table-item--violet
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Third Base Dart Tournament
+                    .calendar__table-item-desc
+                      | Jul @ 7:00 pm <br>
+                      | Sign Up: 7:00 PM <br>
+                      | Darts Fly: 8: 00 PM <br><br>
+                      | <b>*Times may vary based on date-FB Bronco’s Dart Fun  will have updated weekly Info*</b> <br> <br>
+                      | $10 entry per person <br>
+                      | 01/cricket based on number of players <br>
+                      | <b>Triple Pot - 200% Payback!</b>
+                    .calendar__table-item-link Read More
+                td
+                  .calendar__table-number 04.05
+                td
+                  .calendar__table-number 05.05
+                td
+                  .calendar__table-number 06.05
+                    .calendar__table-circle.calendar__table-circle--violet
+                    .calendar__table-circle.calendar__table-circle--blue
+                    .calendar__table-circle.calendar__table-circle--blue
+
+                  .calendar__table-item.calendar__table-item--violet
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Lazy Pool Tournament
+                    .calendar__table-item-desc 9 am
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Weebles First Dart Leaque
+                    .calendar__table-item-desc 7 pm
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Sunset First Dart Leaque
+                    .calendar__table-item-desc 9 pm
+                    .calendar__table-item-link Read More
+                td
+                  .calendar__table-number 07.05
+              tr
+                td
+                  .calendar__table-number 08.05
+                    .calendar__table-circle.calendar__table-circle--blue
+                    .calendar__table-circle.calendar__table-circle--green
+                    .calendar__table-circle.calendar__table-circle--orange
+                    .calendar__table-circle.calendar__table-circle--violet
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Dart Leaque
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--green
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Mama’s First Dart Leaque
+                    .calendar__table-item-desc 4 pm
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--orange
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Dart Leaque
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--violet
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Mama’s First Dart Leaque
+                    .calendar__table-item-desc 4 pm
+                    .calendar__table-item-link Read More
+                td
+                  .calendar__table-number 09.05
+                td
+                  .calendar__table-number 10.05
+                    .calendar__table-circle.calendar__table-circle--orange
+                    .calendar__table-circle.calendar__table-circle--violet
+
+                  .calendar__table-item.calendar__table-item--violet
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Third Base Dart Tournament
+                    .calendar__table-item-desc
+                      | Jul @ 7:00 pm <br>
+                      | Sign Up: 7:00 PM <br>
+                      | Darts Fly: 8: 00 PM <br><br>
+                      | <b>*Times may vary based on date-FB Bronco’s Dart Fun  will have updated weekly Info*</b> <br> <br>
+                      | $10 entry per person <br>
+                      | 01/cricket based on number of players <br>
+                      | <b>Triple Pot - 200% Payback!</b>
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--violet
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Mama’s First Dart Leaque
+                    .calendar__table-item-desc 4 pm
+                    .calendar__table-item-link Read More
+                td
+                  .calendar__table-number 11.05
+                    .calendar__table-circle.calendar__table-circle--blue
+                    .calendar__table-circle.calendar__table-circle--violet
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Weebles First Dart Leaque
+                    .calendar__table-item-desc 7 pm
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--violet
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Lazy Pool Tournament
+                    .calendar__table-item-desc 9 am
+                    .calendar__table-item-link Read More
+                td
+                  .calendar__table-number 12.05
+                    .calendar__table-circle.calendar__table-circle--green
+
+                  .calendar__table-item.calendar__table-item--green
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Pool League
+                    .calendar__table-item-desc 7 pm
+                    .calendar__table-item-link Read More
+                td
+                  .calendar__table-number 13.05
+                td
+                  .calendar__table-number 14.05
+                    .calendar__table-circle.calendar__table-circle--blue
+                    .calendar__table-circle.calendar__table-circle--orange
+                    .calendar__table-circle.calendar__table-circle--green
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Dart Leaque
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--orange
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Third Base Dart Tournament
+                    .calendar__table-item-desc 10 am
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--green
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Pool League
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+              tr
+                td
+                  .calendar__table-number 15.05
+                    .calendar__table-circle.calendar__table-circle--blue
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Dart Leaque
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+
+                td
+                  .calendar__table-number 16.05
+                    .calendar__table-circle.calendar__table-circle--violet
+                    .calendar__table-circle.calendar__table-circle--blue
+                    .calendar__table-circle.calendar__table-circle--blue
+
+                  .calendar__table-item.calendar__table-item--violet
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Lazy Pool Tournament
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Dart Leaque
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Dart Leaque
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+                td
+                  .calendar__table-number 17.05
+
+                td
+                  .calendar__table-number 18.05
+                    .calendar__table-circle.calendar__table-circle--green
+                    .calendar__table-circle.calendar__table-circle--green
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Pool League
+                    .calendar__table-item-desc 7 pm
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--violet
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Pool League
+                    .calendar__table-item-desc 7 pm
+                    .calendar__table-item-link Read More
+                td
+                  .calendar__table-number 19.05
+                    .calendar__table-circle.calendar__table-circle--orange
+
+                  .calendar__table-item.calendar__table-item--orange
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Third Base Dart Tournament
+                    .calendar__table-item-desc 10 pm
+                    .calendar__table-item-link Read More
+                td
+                  .calendar__table-number 20.05
+                    .calendar__table-circle.calendar__table-circle--green
+                    .calendar__table-circle.calendar__table-circle--orange
+
+                  .calendar__table-item.calendar__table-item--green
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Pool League
+                    .calendar__table-item-desc 7 pm
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--orange
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Third Base Dart Tournament
+                    .calendar__table-item-desc 10 pm
+                    .calendar__table-item-link Read More
+                td
+                  .calendar__table-number 21.05
+              tr
+                td
+                  .calendar__table-number 22.05
+                td
+                  .calendar__table-number 23.05
+                    .calendar__table-circle.calendar__table-circle--green
+                    .calendar__table-circle.calendar__table-circle--green
+
+                  .calendar__table-item.calendar__table-item--green
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Pool League
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--green
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Pool League
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+                td
+                  .calendar__table-number 24.05
+                    .calendar__table-circle.calendar__table-circle--blue
+                    .calendar__table-circle.calendar__table-circle--violet
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Dart Leaque
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--violet
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Lazy Pool Tournament
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Dart Leaque
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+
+                td
+                  .calendar__table-number 25.05
+                    .calendar__table-circle.calendar__table-circle--blue
+                    .calendar__table-circle.calendar__table-circle--orange
+                    .calendar__table-circle.calendar__table-circle--green
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Pool League
+                    .calendar__table-item-desc 7 pm
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--orange
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Third Base Dart Tournament
+                    .calendar__table-item-desc 10 pm
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--green
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Pool League
+                    .calendar__table-item-desc 7 pm
+                    .calendar__table-item-link Read More
+                td
+                  .calendar__table-number 26.05
+                td
+                  .calendar__table-number 27.05
+                    .calendar__table-circle.calendar__table-circle--orange
+                    .calendar__table-circle.calendar__table-circle--violet
+
+                  .calendar__table-item.calendar__table-item--orange
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Third Base Dart Tournament
+                    .calendar__table-item-desc 10 pm
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--violet
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Lazy Pool Tournament
+                    .calendar__table-item-desc 9 pm
+                    .calendar__table-item-link Read More
+                td
+                  .calendar__table-number 28.05
+                    .calendar__table-circle.calendar__table-circle--violet
+                    .calendar__table-circle.calendar__table-circle--blue
+
+                  .calendar__table-item.calendar__table-item--violet
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Lazy Pool Tournament
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Dart Leaque
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+              tr
+                td
+                  .calendar__table-number 29.05
+                    .calendar__table-circle.calendar__table-circle--blue
+                    .calendar__table-circle.calendar__table-circle--blue
+
+                  .calendar__table-item.calendar__table-item--violet
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Lazy Pool Tournament
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Dart Leaque
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Dart Leaque
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+                td
+                  .calendar__table-number 30.05
+                    .calendar__table-circle.calendar__table-circle--violet
+                    .calendar__table-circle.calendar__table-circle--blue
+
+                  .calendar__table-item.calendar__table-item--violet
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Lazy Pool Tournament
+                    .calendar__table-item-desc 9 am
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Dart Leaque
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--blue
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Long Bridge Dart Leaque
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+                td
+                  .calendar__table-number 31.05
+                    .calendar__table-circle.calendar__table-circle--orange
+
+                  .calendar__table-item.calendar__table-item--orange
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Third Base Dart Tournament
+                    .calendar__table-item-desc 10 am
+                    .calendar__table-item-link Read More
+
+                td.calendar__table-gray
+                  .calendar__table-number 01.06
+                td
+                  .calendar__table-number 02.06
+                td
+                  .calendar__table-number 03.06
+                    .calendar__table-circle.calendar__table-circle--orange
+                    .calendar__table-circle.calendar__table-circle--violet
+
+                  .calendar__table-item.calendar__table-item--orange
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Third Base Dart Tournament
+                    .calendar__table-item-desc 10 pm
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--violet
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Lazy Pool Tournament
+                    .calendar__table-item-desc 9 pm
+                    .calendar__table-item-link Read More
+
+                  .calendar__table-item.calendar__table-item--violet
+                    a(href='javascript:void(0)').calendar__table-item-plus
+                    .calendar__table-item-title Lazy Pool Tournament
+                    .calendar__table-item-desc 7 am
+                    .calendar__table-item-link Read More
+                td
+                  .calendar__table-number.calendar__table-number--grey 04.06
+
+
+    
