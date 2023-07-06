@@ -1,9 +1,9 @@
 extends ./templates/_layout
 
 block vars
-  - var pageTitle = "Leagues";
-  - var pageClass = "leagues-page";
-  - var pageActive = "leagues-page";
+  - var pageTitle = "Tournaments";
+  - var pageClass = "tournaments-page";
+  - var pageActive = "tournaments-page";
 
 block content
   div.main-wrap
@@ -14,20 +14,14 @@ block content
           .breadcrumbs__item
             a(href='#').breadcrumbs__link Home Page
           .breadcrumbs__item
-            a(href='#').breadcrumbs__link Leagues
+            a(href='#').breadcrumbs__link Tournaments
 
     section.event-top
       .event-top__inner.site-block-inner
         .event-top__main
-          h1.event-top__title Leagues
+          h1.event-top__title Tournaments
           .event-top__row
-            .event-top__col.event-top__col--50
-              .event-top__field-title Choose the type of League
-              .form-select-container
-                select(data-placeholder="Select").form-select-alt.alt-select
-                  option(value='1') Pool
-                  option(value='2') Snooker
-            .event-top__col.event-top__col--50
+            .event-top__col
               .event-top__field-title Choose the day of Week
               .form-select-container
                 select(data-placeholder="Select").form-select-alt.alt-select.alt-select--calendar
@@ -58,7 +52,7 @@ block content
             .event-bottom__content
               h2.event-bottom__title Tell about Leagues
               .event-bottom__text
-                p Rack 'Em Up, Shoot for Glory - Superior Vending, Elevating Pool Leagues to the Next Level. Join our leagues to improve your skills, compete with the best, have fun and pave the way for sanctioning in prestigious VNEA tournaments.
+                p Bullseye Moments, Unleash Your Darting Skills - Superior Vending, Where Champions Rise. Participate in our dart leagues and gain recognition for your talent, opening doors to NADO and sanctioned tournaments with the NDA
           .event-bottom__right
             .event-bottom__img
-              img(src="./img/leagues.jpg" alt='img')
+              img(src="./img/tournaments.jpg" alt='img')

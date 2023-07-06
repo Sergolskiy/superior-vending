@@ -2482,7 +2482,7 @@
 
 /***** leagues & tournaments START ***********/
 
-.leagues-page {
+.leagues-page, .tournaments-page {
   .page__content {
     position: relative;
     overflow: hidden;
@@ -2495,7 +2495,7 @@
     height: 3127.776px;
     transform: rotate(146.051deg);
     position: absolute;
-    left: calc(50% + 160px);
+    left: calc(50% + 190px);
     top: -734px;
     background-color: #F4F4F4;
 
@@ -2616,6 +2616,7 @@
 
   &__col {
     padding: 0 13px;
+    width: 100%;
 
     &--50 {
       width: 50%;
@@ -2878,6 +2879,10 @@
 
 .event-bottom {
   padding: 50px 0 85px;
+  
+  &__wrap {
+    overflow: hidden;
+  }
 
   @include for-1024 {
     padding: 30px 0 60px;
@@ -2920,6 +2925,43 @@
       padding-bottom: 13px;
     }
 
+    .plus-element {
+      position: absolute;
+      display: block;
+      width: 36px;
+      height: 36px;
+      background: url('../img/plus.svg') center center no-repeat;
+      bottom: -41px;
+      right: -19px;
+      z-index: 1;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 17px;
+        height: 500px;
+        width: 1px;
+        background: url(../img/dots.svg) center center no-repeat;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 50px;
+        left: 17px;
+        height: 500px;
+        width: 1px;
+        background: url(../img/dots.svg) center center no-repeat;
+      }
+
+      @include for-1024 {
+        display: none;
+      }
+    }
+
     &::before {
       content: '';
       width: 1000px;
@@ -2929,23 +2971,7 @@
       bottom: -23px;
       display: block;
       position: absolute;
-      right: 0;
-
-      @include for-1024 {
-        content: none;
-      }
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      display: block;
-      width: 60px;
-      height: 60px;
-      background: url('../img/plus.svg') center center no-repeat, #f4f4f4;
-      bottom: -52px;
-      right: -31px;
-      z-index: 1;
+      right: 30px;
 
       @include for-1024 {
         content: none;
@@ -2957,15 +2983,6 @@
     width: 55.015%;
     padding-left: 80px;
     flex-shrink: 0;
-
-    &.dots-vertical:before {
-      height: 100%;
-      background-repeat: repeat;
-
-      @include for-1024 {
-        content: none;
-      }
-    }
 
     @include for-1440 {
       padding-left: 40px;
@@ -3030,6 +3047,93 @@
       object-position: center;
       object-fit: cover;
     }
+  }
+}
+
+.leagues-search-page {
+  .event-top__main {
+    @include for-550 {
+      min-height: unset;
+    }
+  }
+}
+
+.search-result {
+  padding: 34px 0 50px;
+
+  @include for-1024 {
+    padding: 24px 0 16px;
+  }
+
+  @include for-550 {
+    padding: 18px 0 16px;
+  }
+
+  &__title {
+    font-weight: 700;
+    line-height: 65px;
+    letter-spacing: 1.65px;
+    font-family: 'JosefinSans';
+    font-size: 55px;
+    margin-bottom: 32px;
+
+    @include for-1024 {
+      margin-bottom: 22px;
+    }
+
+    @include for-550 {
+      font-size: 24px;
+      line-height: 31px;
+      margin-bottom: 11px;
+    }
+  }
+}
+
+.results-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+
+  @include for-1024 {
+    display: block;
+  }
+
+  &__item {
+    border: 1px dashed #C3C3C3;
+    display: flex;
+    align-items: center;
+    padding: 5px 25px;
+    height: 70px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
+
+    @include for-1024 {
+      margin-bottom: 10px;
+      font-size: 15px;
+      line-height: 24px;
+      padding: 5px 20px;
+      height: 50px;
+    }
+
+    @include for-550 {
+      font-size: 14px;
+      line-height: 21px;
+      padding: 5px 15px;
+      height: 44px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-link {
+    margin-left: auto;
+    display: inline-block;
+    padding-right: 20px;
+    background: url("../img/right-arrow-blue.svg") center right no-repeat;
+    flex-shrink: 0;
   }
 }
 
