@@ -1,0 +1,56 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Leagues";
+  - var pageClass = "leagues-page";
+  - var pageActive = "leagues-page";
+
+block content
+  div.main-wrap
+
+    .breadcrumbs
+      .breadcrumbs__inner.site-block-inner
+        .breadcrumbs__items
+          .breadcrumbs__item
+            a(href='#').breadcrumbs__link Home Page
+          .breadcrumbs__item
+            a(href='#').breadcrumbs__link Leagues
+
+    section.event-top
+      .event-top__inner.site-block-inner
+        .event-top__main
+          h1.event-top__title Leagues
+          .event-top__row
+            .event-top__col.event-top__col--50
+              .event-top__field-title Choose the type of League
+              select.form-select
+                option League’s Name
+                option(value='1') Select one...
+                option(value='2') Select two...
+            .event-top__col.event-top__col--50
+              .event-top__field-title Choose the type of League
+              select.form-select
+                option League’s Name
+                option(value='1') Select one...
+                option(value='2') Select two...
+
+        .event-top__sublist
+          .sublist
+            a(href='#').sublist__item.site-btn
+              .sublist__item-icon
+                include ../img/register-icon.svg
+              .sublist__item-text Registration
+            a(href="#").sublist__item.site-btn
+              .sublist__item-icon
+                include ../img/calendar-icon.svg
+              .sublist__item-text Calendar of Events
+    section.event-bottom
+      .event-bottom__inner.site-block-inner
+        .event-bottom__left
+          .event-bottom__content
+            h2.event-bottom__title Tell about Leagues
+            .event-bottom__text
+              p Rack 'Em Up, Shoot for Glory - Superior Vending, Elevating Pool Leagues to the Next Level. Join our leagues to improve your skills, compete with the best, have fun and pave the way for sanctioning in prestigious VNEA tournaments.
+        .event-bottom__right
+          .event-bottom__img
+            img(src="./img/leagues.jpg" alt='img')
