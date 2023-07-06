@@ -112,6 +112,11 @@
     padding-left: 15px;
     margin-left: 9px;
 
+    &:first-child {
+      padding-left: 0;
+      margin-left: 0;
+    }
+
     &:nth-child(n + 2) {
       &:before {
         content: '';
@@ -2475,9 +2480,200 @@
 
 }
 
+/***** leagues & tournaments START ***********/
 
+.event-top {
+  padding-top: 25px;
+  padding-bottom: 50px;
 
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
 
+  &__sublist {
+    max-width: 282px;
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  &__main {
+    min-height: 306px;
+    padding: 42px 26px 42px 42px;
+    background-color: #0014B8;
+    color: #ffffff;
+    width: 100%;
+    max-width: 1042px;
+    margin-right: 25px;
+  }
+
+  &__title {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 85px;
+    text-transform: uppercase;
+    font-family: 'JosefinSans';
+    margin-bottom: 30px;
+  }
+
+  &__row {
+    display: flex;
+    margin: 0 -13px;
+  }
+
+  &__col {
+    padding: 0 13px;
+
+    &--50 {
+      width: 50%;
+    }
+  }
+
+  &__field-title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+}
+
+.sublist {
+  width: 100%;
+
+  &__item {
+    display: flex;
+    height: 62px;
+    width: 100%;
+    align-items: center;
+    padding: 12px 18px;
+    margin-bottom: 3px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-icon {
+    margin-right: 15px;
+    line-height: 1;
+  }
+
+  &__item-text {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+
+.alt-select {
+  width: 100%;
+
+  + .select2-container {
+
+    .select2-selection {
+      background-color: transparent;
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid #ffffff;
+    }
+
+    .select2-selection .select2-selection__rendered {
+      font-size: 18px;
+      line-height: 32px;
+      color: rgba(237, 237, 237, 0.90);
+      font-weight: 300;
+      padding-bottom: 8px;
+      padding-left: 0;
+    }
+
+    .select2-selection {
+      height: 40px;
+    }
+
+    .select2-selection__arrow {
+
+      background: url("../img/select-arrow-white.svg") center center no-repeat;
+
+      b {
+        opacity: 0;
+      }
+    }
+
+    &--open {
+      .select2-selection__arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &--calendar {
+    + .select2-container {
+      .select2-selection .select2-selection__rendered {
+        padding-left: 26px;
+        background: url("../img/calendar-icon16.svg") top 8px left no-repeat;
+      }
+    }
+  }
+}
+
+.event-bottom {
+  padding: 50px 0 85px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__left {
+    width: 100%;
+  }
+
+  &__right {
+    width: 55.015%;
+    padding-left: 80px;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    line-height: 65px;
+    letter-spacing: 1.65px;
+    font-family: 'JosefinSans';
+    font-size: 55px;
+    margin-bottom: 12px;
+  }
+
+  &__content {
+    max-width: 690px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 32px;
+    color: #353535;
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+
+    &:after {
+      content: '';
+      display: block;
+      padding-bottom: 70.975%;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-position: center;
+      object-fit: cover;
+    }
+  }
+}
+
+/***** leagues & tournaments END ***********/
 
 
 .calendar {
