@@ -1279,7 +1279,7 @@
       width: 36px;
       height: 36px;
       margin-right: -73px;
-      margin-bottom: -17px;
+      margin-bottom: -18px;
       background: url("../img/plus.svg") center center no-repeat;
 
       @include for-1180 {
@@ -1302,7 +1302,7 @@
     &::after {
       left: 0;
       right: auto;
-      width: calc(100% + 33px);
+      width: calc(100% + 27px);
 
       @include for-1180 {
         width: calc(100% + 7px);
@@ -1408,6 +1408,7 @@
       right: 0;
       height: 100%;
       margin-right: -55px;
+      background-position-y: -2px;
 
       @include for-1180 {
         margin-right: -33px;
@@ -1866,7 +1867,7 @@
       right: 0;
       width: 36px;
       height: 36px;
-      margin-right: -52px;
+      margin-right: -47px;
       margin-bottom: -74px;
       background: url("../img/plus.svg") center center no-repeat;
 
@@ -2624,6 +2625,241 @@
 /***** leagues & tournaments END ***********/
 
 
+.calendar {
+
+  &__inner {
+
+  }
+
+  &__head {
+
+  }
+
+  &__head-top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+
+  &__month {
+    display: flex;
+    align-items: center;
+    border: 1px solid #0014B8;
+    padding: 12px;
+    color: #222;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 140%;
+
+    &--before {
+
+    }
+
+    &--after {
+
+    }
+  }
+
+  &__month-before-arr {
+    width: 32px;
+    height: 32px;
+    background: #0014B8 url("../img/white-arrow.svg") center center no-repeat;
+    margin-right: 20px;
+  }
+
+  &__month-txt {
+
+  }
+
+  &__month-after-arr {
+    width: 32px;
+    height: 32px;
+    background: #0014B8 url("../img/white-arrow.svg") center center no-repeat;
+    transform: rotate(180deg);
+    margin-left: 20px;
+  }
+
+  &__head-center {
+    display: flex;
+    justify-content: center;
+    margin-top: -55px;
+  }
+
+  &__date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__date-ico {
+    width: 55px;
+    height: 55px;
+    background: url("../img/calendar/calendar-big-ico.svg") center center no-repeat;
+  }
+
+  &__date-month {
+    margin-top: 18px;
+    color: #222;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+
+  &__date-month-sub {
+    color: #222;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-top: 5px;
+  }
+
+  &__head-bottom {
+    //display: flex;
+    //justify-content: center;
+    margin-top: 24px;
+  }
+
+  &__types {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__type {
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 10px 20px 10px 34px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      top: 18px;
+      left: 14px;
+      border-radius: 50%;
+    }
+
+    &--blue {
+      background: #f3f9ff;
+      color: #0084FF;
+
+      &:before {
+        background: #0084FF;
+      }
+    }
+
+    &--orange {
+      color: #FF9F2D;
+      background: #fffdf9;
+
+      &:before {
+        background: #FF9F2D;
+      }
+    }
+
+    &--green {
+      color: #00BA34;
+      background: #f3fcf5;
+
+      &:before {
+        background: #00BA34;
+      }
+    }
+
+    &--violet {
+      color: #9887EF;
+      background: #f0edfd;
+
+      &:before {
+        background: #9887EF;
+      }
+    }
+
+  }
+
+  &__head-btn {
+    color: #FFF;
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    padding: 15px 28px;
+    background: #0014B8;
+    margin-left: auto;
+    max-width: 244px;
+    margin-top: -52px;
+  }
+
+  &__table {
+    margin-top: 60px;
+
+    table {
+      border-collapse: collapse;
+      border-radius: 10px;
+      border-style: hidden;
+      box-shadow: 0 0 0 1px #ccc;
+    }
+
+    thead {
+      td {
+        color: #7B6D6D;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-transform: uppercase;
+      }
+    }
+
+    td {
+      padding: 15px;
+      border: 1px solid #ccc;
+      vertical-align: top;
+    }
+  }
+
+  &__table-number {
+
+  }
+
+  &__table-circle {
+
+    &--blue {
+
+    }
+
+  }
+
+  &__table-item {
+
+    &--blue {
+
+    }
+
+  }
+
+  &__table-item-plus {
+
+  }
+
+  &__table-item-title {
+
+  }
+
+  &__table-item-desc {
+
+  }
+
+  &__table-item-link {
+
+  }
+
+}
 
 
 
