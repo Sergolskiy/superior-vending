@@ -2563,6 +2563,57 @@
   }
 }
 
+.alt-select {
+  width: 100%;
+
+  + .select2-container {
+
+    .select2-selection {
+      background-color: transparent;
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid #ffffff;
+    }
+
+    .select2-selection .select2-selection__rendered {
+      font-size: 18px;
+      line-height: 32px;
+      color: rgba(237, 237, 237, 0.90);
+      font-weight: 300;
+      padding-bottom: 8px;
+      padding-left: 0;
+    }
+
+    .select2-selection {
+      height: 40px;
+    }
+
+    .select2-selection__arrow {
+
+      background: url("../img/select-arrow-white.svg") center center no-repeat;
+
+      b {
+        opacity: 0;
+      }
+    }
+
+    &--open {
+      .select2-selection__arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &--calendar {
+    + .select2-container {
+      .select2-selection .select2-selection__rendered {
+        padding-left: 26px;
+        background: url("../img/calendar-icon16.svg") top 8px left no-repeat;
+      }
+    }
+  }
+}
+
 .event-bottom {
   padding: 50px 0 85px;
 

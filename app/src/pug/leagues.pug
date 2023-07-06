@@ -23,16 +23,20 @@ block content
           .event-top__row
             .event-top__col.event-top__col--50
               .event-top__field-title Choose the type of League
-              select.form-select
-                option League’s Name
-                option(value='1') Select one...
-                option(value='2') Select two...
+              select.form-select.alt-select
+                option(value='1') Pool
+                option(value='2') Snooker
             .event-top__col.event-top__col--50
-              .event-top__field-title Choose the type of League
-              select.form-select
-                option League’s Name
-                option(value='1') Select one...
-                option(value='2') Select two...
+              .event-top__field-title Choose the day of Week
+              select.form-select.alt-select.alt-select--calendar
+                option Select
+                option(value='1') Monday
+                option(value='2') Tuesday
+                option(value='3') Wednesday
+                option(value='4') Thursday
+                option(value='5') Friday
+                option(value='6') Saturday
+                option(value='7') Sunday
 
         .event-top__sublist
           .sublist
