@@ -23,20 +23,22 @@ block content
           .event-top__row
             .event-top__col.event-top__col--50
               .event-top__field-title Choose the type of League
-              select.form-select.alt-select
-                option(value='1') Pool
-                option(value='2') Snooker
+              .form-select-container
+                select(data-placeholder="Select").form-select-alt.alt-select
+                  option(value='1') Pool
+                  option(value='2') Snooker
             .event-top__col.event-top__col--50
               .event-top__field-title Choose the day of Week
-              select.form-select.alt-select.alt-select--calendar
-                option Select
-                option(value='1') Monday
-                option(value='2') Tuesday
-                option(value='3') Wednesday
-                option(value='4') Thursday
-                option(value='5') Friday
-                option(value='6') Saturday
-                option(value='7') Sunday
+              .form-select-container
+                select(data-placeholder="Select").form-select-alt.alt-select.alt-select--calendar
+                  option
+                  option(value='1') Monday
+                  option(value='2') Tuesday
+                  option(value='3') Wednesday
+                  option(value='4') Thursday
+                  option(value='5') Friday
+                  option(value='6') Saturday
+                  option(value='7') Sunday
 
         .event-top__sublist
           .sublist
@@ -55,6 +57,6 @@ block content
             h2.event-bottom__title Tell about Leagues
             .event-bottom__text
               p Rack 'Em Up, Shoot for Glory - Superior Vending, Elevating Pool Leagues to the Next Level. Join our leagues to improve your skills, compete with the best, have fun and pave the way for sanctioning in prestigious VNEA tournaments.
-        .event-bottom__right
+        .event-bottom__right.dots-vertical
           .event-bottom__img
             img(src="./img/leagues.jpg" alt='img')

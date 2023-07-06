@@ -158,6 +158,15 @@ document.addEventListener('DOMContentLoaded', function() {
         minimumResultsForSearch: -1,
         // placeholder: $(this).data('placeholder'),
     });
+    //запихнул в цикл чтобы нормально можно было дропдаун в контейнер поставить если у нас несколько таких селектов
+    $('.form-select-alt').each(function() {
+        console.log($(this).data('placeholder'));
+        $(this).select2({
+            minimumResultsForSearch: -1,
+            dropdownParent: $(this).closest('.form-select-container'),
+            placeholder: $(this).data('placeholder'),
+        })
+    });
 
     $('.footer__item-title').click(function () {
         $(this).toggleClass('open')
