@@ -179,6 +179,44 @@ document.addEventListener('DOMContentLoaded', function() {
         $('.page').toggleClass('open-menu')
     })
 
+    $(document).on('click', '.calendar__table-item-plus', function () {
+        $(this).toggleClass('open')
+        $(this).next().next().toggleClass('open')
+    })
+
+    $('.calendar__table-number').click(function () {
+
+        /**
+         * Set day
+         */
+        let indexElement = $(this).closest('td').index()
+        let day = $(this).closest('tbody').prev('thead').find('td').eq(indexElement).html()
+        $('.mobile-calendar__day').html(day)
+
+        /**
+         * Set date
+         */
+        let date = $(this).clone()
+        $('.mobile-calendar__date').html(date)
+
+        /**
+         * Set items
+         */
+        let items = $(this).closest('td').find('.calendar__table-item').clone()
+        $('.mobile-calendar__items').html(items).find('.calendar__table-item').show()
+
+        /**
+         * Hide table
+         */
+        $(this).closest('table').hide()
+        $('.mobile-calendar').show()
+    })
+
+    $('.mobile-calendar__back-btn').click(function () {
+        $(this).closest('.calendar__table').find('table').show()
+        $('.mobile-calendar').hide()
+    })
+
     let submenuLink = '.has-sub-menu .m-header__menu-link'
     let submenuLinkLevel2 = '.has-sub-menu-lv2 .m-header__sub-menu-link'
     let submenuLinkLevel3 = '.has-sub-menu-lv3 .m-header__sub-menu-lv2-link'
@@ -188,4 +226,4 @@ document.addEventListener('DOMContentLoaded', function() {
         $(this).next().slideToggle()
     })
 
-});
+})
