@@ -233,18 +233,6 @@
   }
 }
 
-@mixin for-680 {
-  @media (max-width: 680px) {
-    @content;
-  }
-}
-
-@mixin from-680 {
-  @media (min-width: 681px) {
-    @content;
-  }
-}
-
 @mixin from-680-for-992 {
   @media (min-width: 681px) and (max-width: 992px) {
     @content;
