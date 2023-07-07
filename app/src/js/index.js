@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // initShowMobileMenu()
     // initTabs()
     // initFileBtn()
-    // initPopups()
+    initPopups()
 
     $('.form-select').select2({
         minimumResultsForSearch: -1,

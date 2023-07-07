@@ -152,10 +152,15 @@ block content
               input(type='text' placeholder='E-mail').section-contact__input
             .section-contact__form-item
               label(for='select') Choose from the list:
-              select(id='select').section-contact__select
-                option Select
+
+              select(id='select').section-contact__select.site-form__select.form-select
+                option League’s Name
                 option(value='1') Select one...
                 option(value='2') Select two...
+              //select(id='select').section-contact__select
+              //  option Select
+              //  option(value='1') Select one...
+              //  option(value='2') Select two...
             .section-contact__form-item
               label(for='textarea') Message
               textarea(id='textarea' placeholder='Type your message').section-contact__textarea

@@ -67,6 +67,7 @@
     line-height: 85px;
     text-transform: uppercase;
     font-family: 'JosefinSans';
+    text-align: center;
 
     @include for-1180 {
       font-size: 55px;
@@ -808,8 +809,17 @@
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable,
 .select2-container--default .select2-results__option--selected {
-  background-color: #ddd;
+  background-color: white;
 }
+
+.select2-container--default {
+  .select2-dropdown {
+    box-shadow: 0 20px 35px rgba(195, 195, 195, 0.80);
+    border: 0;
+    margin-top: 15px;
+  }
+}
+
 
 
 .site-left-block {
@@ -2294,6 +2304,12 @@
       font-size: 14px;
       padding-bottom: 5px;
     }
+
+    & + .select2 {
+      &.select2-container--default .select2-selection--single {
+        background: transparent;
+      }
+    }
   }
 
   &__textarea {
@@ -2733,7 +2749,9 @@
     }
 
     &--after {
-      padding: 5px 5px 5px 25px;
+      @include for-680 {
+        padding: 5px 5px 5px 25px;
+      }
 
       @include for-550 {
         padding: 5px 5px 5px 15px;

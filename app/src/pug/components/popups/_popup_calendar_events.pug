@@ -1,0 +1,41 @@
+extends ../../templates/_popup
+
+block vars
+    - var popupName = "add-review-product";
+    - var popupClass = "calendar-popup";
+
+block title
+    .popup__title
+        .popup__big-title.popup__big-title--outline Calendar
+        .popup__big-title.popup__big-title--padding-left of events
+block content
+    .popup-txt
+        .calendar__table-number
+            span.mobile-calendar__day Wednesday
+            | 03.05
+            .calendar__table-circle-wrap
+                .calendar__table-circle.calendar__table-circle--orange
+
+        .calendar__table-item.calendar__table-item--orange
+            a(href='javascript:void(0)').calendar__table-item-plus
+            .calendar__table-item-title Third Base Dart Tournament
+            .calendar__table-item-desc
+                | Jul @ 7:00 pm <br>
+                | Sign Up: 7:00 PM <br>
+                | Darts Fly: 8: 00 PM <br><br>
+                | <b>*Times may vary based on date-FB Bronco’s Dart Fun  will have updated weekly Info*</b> <br> <br>
+                | $10 entry per person <br>
+                | 01/cricket based on number of players <br>
+                | <b>Triple Pot - 200% Payback!</b>
+            a(href='#').calendar__table-item-link Read More
+                include ../../../img/arrow.svg
+
+
+
+
+
+
+
+
+
+
