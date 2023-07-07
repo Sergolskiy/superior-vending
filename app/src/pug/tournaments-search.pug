@@ -1,0 +1,170 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Tournaments";
+  - var pageClass = "tournaments-search-page";
+  - var pageActive = "tournaments-search-page";
+
+block content
+  div.main-wrap
+
+    .breadcrumbs
+      .breadcrumbs__inner.site-block-inner
+        .breadcrumbs__items
+          .breadcrumbs__item
+            a(href='#').breadcrumbs__link Home Page
+          .breadcrumbs__item
+            a(href='#').breadcrumbs__link Tournaments
+
+    section.event-top
+      .event-top__inner.site-block-inner
+        .event-top__main
+          h1.event-top__title Tournaments
+          .event-top__row
+            .event-top__col
+              .event-top__field-title Choose the day of Week
+              .form-select-container
+                select(data-placeholder="Select").form-select-alt.alt-select.alt-select--calendar
+                  option
+                  option(value='1') Monday
+                  option(value='2') Tuesday
+                  option(value='3') Wednesday
+                  option(value='4') Thursday
+                  option(value='5') Friday
+                  option(value='6') Saturday
+                  option(value='7') Sunday
+
+        .event-top__sublist
+          .sublist
+            a(href='#').sublist__item.site-btn
+              .sublist__item-icon
+                include ../img/register-icon.svg
+              .sublist__item-text Registration
+            a(href="#").sublist__item.site-btn
+              .sublist__item-icon
+                include ../img/calendar-icon.svg
+              .sublist__item-text Calendar of Events
+    section.search-result
+      .search-result__inner.site-block-inner
+        .search-result__title List of Relevant Leagues
+        .results-list
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+          .results-list__item
+            .results-list__item-name League`s Name
+            a(href="#").results-list__item-link More Info
+    section.event-bottom
+      .event-bottom__wrap
+        .event-bottom__inner.site-block-inner
+          .event-bottom__left
+            .plus-element
+            .event-bottom__content
+              h2.event-bottom__title Tell about Leagues
+              .event-bottom__text
+                p Bullseye Moments, Unleash Your Darting Skills - Superior Vending, Where Champions Rise. Participate in our dart leagues and gain recognition for your talent, opening doors to NADO and sanctioned tournaments with the NDA
+          .event-bottom__right
+            .event-bottom__img
+              img(src="./img/tournaments.jpg" alt='img')

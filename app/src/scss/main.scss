@@ -2482,7 +2482,7 @@
 
 /***** leagues & tournaments START ***********/
 
-.leagues-page, .tournaments-page {
+.leagues-page, .tournaments-page, .leagues-search-page, .tournaments-search-page {
   .page__content {
     position: relative;
     overflow: hidden;
@@ -3050,10 +3050,17 @@
   }
 }
 
-.leagues-search-page {
+.leagues-search-page, .tournaments-search-page {
   .event-top__main {
     @include for-550 {
       min-height: unset;
+    }
+  }
+
+  .page__content:after {
+    @include from-1024 {
+      top: 1036px;
+      right: calc(50% + 180px);
     }
   }
 }
@@ -3100,6 +3107,7 @@
 
   &__item {
     border: 1px dashed #C3C3C3;
+    background-color: #FCFCFC;
     display: flex;
     align-items: center;
     padding: 5px 25px;
