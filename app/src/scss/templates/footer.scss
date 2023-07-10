@@ -150,6 +150,11 @@
 
   &__menu-link {
     color: #353535;
+    transition: 0.3s;
+
+    &:hover {
+      color: #0014b8;
+    }
   }
 
   &__contact {

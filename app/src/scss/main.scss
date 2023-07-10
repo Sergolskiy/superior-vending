@@ -242,6 +242,8 @@
   margin-top: 25px;
 
   .site-btn {
+    position: relative;
+    z-index: 2;
     margin-right: 20px;
 
     &:last-child {
@@ -1047,6 +1049,12 @@
         margin-right: -2px;
       }
 
+      @include for-1400 {
+        width: 145px;
+        margin-bottom: 6px;
+        margin-right: -2px;
+      }
+
       @include for-1180 {
         display: none;
       }
@@ -1224,6 +1232,10 @@
 
 .section-dart {
   margin-top: 105px;
+
+  @include for-1180 {
+    margin-top: 65px;
+  }
 
   @include for-550 {
     margin-top: 37px;
@@ -1404,7 +1416,7 @@
       left: auto;
       right: 0;
       height: 100%;
-      margin-right: -5%;
+      margin-right: 0;
     }
   }
 
@@ -1990,6 +2002,7 @@
     max-width: 745px;
     padding-left: 65px;
     margin-right: auto;
+    margin-top: -120px;
 
     @include for-1800 {
       max-width: 700px;
@@ -2003,10 +2016,12 @@
 
     @include for-1400 {
       max-width: 500px;
+      margin-top: -60px;
     }
 
     @include for-1180 {
       max-width: 100%;
+      margin-top: 0;
     }
   }
 
@@ -3966,19 +3981,56 @@
   margin-top: 35px;
   margin-bottom: 100px;
 
+  @include for-550 {
+    margin-top: 22px;
+  }
+
   .site-sub-title {
     max-width: 915px;
     margin-top: 5px;
+
+    @include for-1800 {
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    @include for-1180 {
+      max-width: 100%;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px;
+    }
+
+    @include for-550 {
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include for-1180 {
+      flex-direction: column;
+    }
   }
 
   &__left {
     width: 100%;
     max-width: 1020px;
+
+    @include for-1800 {
+      max-width: 790px;
+    }
+
+    @include for-1400 {
+      max-width: 577px;
+    }
+
+    @include for-1180 {
+      max-width: 100%;
+    }
   }
 
   &__left-img {
@@ -3991,10 +4043,41 @@
     min-height: 346px;
     margin-bottom: 93px;
 
+    @include for-1800 {
+      min-height: 285px;
+      margin-bottom: 78px;
+    }
+
+    @include for-1180 {
+      margin-bottom: 20px;
+      min-height: auto;
+    }
+
     &::after {
       width: calc(100% + 54px);
       margin-right: -54px;
       margin-bottom: -47px;
+
+      @include for-1800 {
+        width: calc(100% + 160px);
+        margin-right: -155px;
+        margin-bottom: -32px;
+      }
+
+      @include for-1600 {
+        width: calc(100% + 7px);
+        margin-right: -7px;
+        margin-bottom: -32px;
+      }
+
+      @include for-1400 {
+        width: calc(100% + 58px);
+        margin-right: -57px;
+      }
+
+      @include for-1180 {
+        display: none;
+      }
     }
 
     .site-title {
@@ -4003,30 +4086,73 @@
       font-weight: 700;
       line-height: 85px;
       text-transform: uppercase;
+
+      @include for-1180 {
+        font-size: 53px;
+        line-height: 65px;
+      }
+
+      @include for-550 {
+        font-size: 26px;
+        line-height: 32px;
+      }
     }
   }
 
   &__img {
-
-
-
 
   }
 
   &__right {
     width: 100%;
     max-width: 648px;
+
+    @include for-1800 {
+      max-width: 505px;
+    }
+
+    @include for-1400 {
+      max-width: 490px;
+    }
+
+    @include for-1180 {
+      display: flex;
+      gap: 60px;
+      max-width: 100%;
+      margin-top: 70px;
+    }
+
+    @include for-680 {
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    @include for-550 {
+      margin-top: 35px;
+    }
   }
 
   &__right-img {
 
+    @include for-1180 {
+      width: 50%;
+    }
+
     &:before {
       margin-left: -61px;
       height: calc(100% + 15px);
+
+      @include for-1600 {
+        margin-left: -27px;
+      }
     }
 
     &:first-child {
       margin-bottom: 93px;
+
+      @include for-1180 {
+        margin-bottom: 0;
+      }
 
       &:after {
         content: '';
@@ -4039,6 +4165,14 @@
         margin-left: -79px;
         margin-bottom: -65px;
         background: url('../img/plus.svg') center center no-repeat;
+
+        @include for-1600 {
+          margin-left: -44px;
+        }
+
+        @include for-1180 {
+          display: none;
+        }
       }
     }
 
@@ -4057,6 +4191,10 @@
         top: 0;
         margin-top: -46px;
         width: calc(100% + 32px);
+
+        @include for-1600 {
+          width: calc(100% + 0px);
+        }
       }
 
     }
@@ -4090,7 +4228,10 @@
 }
 
 .about-us-txt {
-  margin-bottom: 50px;
+
+  @include for-768 {
+    display: none;
+  }
 
   &__inner {
     display: flex;
@@ -4155,7 +4296,247 @@
 
 }
 
+.about-us-blue {
+  margin-top: 50px;
 
+  &__inner {
+    background: #0014B8;
+  }
+
+  &__txt {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    padding: 35px;
+
+    b {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+  }
+
+}
+
+
+.about-us-highlight {
+  margin-top: 108px;
+  margin-bottom: 114px;
+
+  @include for-1180 {
+    margin-bottom: 60px;
+  }
+
+  @include for-550 {
+    margin-bottom: 40px;
+  }
+
+  &__wrapper {
+
+    @include for-1180 {
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 1px;
+        background: url('../img/dots.svg') center center no-repeat;
+        margin-right: 15px;
+      }
+    }
+
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 42px 0 40px;
+    max-width: 1560px;
+
+    @include for-1180 {
+      flex-direction: column;
+      padding: 36px 0 42px;
+      padding-right: 15px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      height: 1px;
+      background: url('../img/dots-horizontal.svg') center center repeat-x;
+      width: calc(100% + 100px);
+      right: 15px;
+
+      @include for-1180 {
+        right: 0;
+      }
+    }
+
+    &:after {
+      width: calc(100% + 100px);
+      right: 15px;
+      background-repeat: repeat-x;
+
+      @include for-1180 {
+        right: 0;
+      }
+    }
+  }
+
+  &__left {
+    max-width: 740px;
+
+    @include for-1400 {
+      max-width: 640px;
+    }
+
+    @include for-1180 {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    color: #212121;
+    font-family: 'JosefinSans';
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 65px;
+    letter-spacing: 1.65px;
+    max-width: 670px;
+
+    @include for-1400 {
+      font-size: 50px;
+      line-height: 50px;
+      max-width: 600px;
+    }
+
+    @include for-1180 {
+      font-size: 42px;
+      line-height: 50px;
+      max-width: 100%;
+    }
+
+    @include for-550 {
+      font-size: 22px;
+      line-height: 31px;
+    }
+  }
+
+  &__desc {
+    color: #353535;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+
+    @include for-1180 {
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    @include for-550 {
+      font-size: 14px;
+      font-style: normal;
+      line-height: 21px;
+    }
+  }
+
+  &__right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 640px;
+
+    @include for-1180 {
+      max-width: 530px;
+      margin-top: 17px;
+    }
+
+    @include for-550 {
+      margin-top: 10px;
+    }
+
+    &:before {
+      left: auto;
+      right: 0;
+      margin-right: 15px;
+      height: calc(100% + 80px);
+      margin-top: -40px;
+
+      @include for-1180 {
+        display: none;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    @include for-1180 {
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: calc(50% - 40px);
+
+    @include for-1180 {
+      width: 250px;
+    }
+  }
+
+  &__ico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    height: 80px;
+    background: #FFF;
+    box-shadow: 0px 7px 9px 0px rgba(156, 156, 156, 0.30);
+
+    @include for-1180 {
+      min-width: 60px;
+      height: 60px;
+
+      svg {
+        transform: scale(0.7);
+      }
+    }
+
+    @include for-1180 {
+      min-width: 44px;
+      height: 44px;
+
+      svg {
+        transform: scale(0.5);
+      }
+    }
+  }
+
+  &__name {
+    color: #353535;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-left: 20px;
+
+    @include for-550 {
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+
+}
 
 
 
