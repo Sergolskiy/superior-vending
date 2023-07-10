@@ -164,6 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
         $(this).select2({
             minimumResultsForSearch: -1,
             dropdownParent: $(this).closest('.form-select-container'),
+            dropdownPosition: 'below',
             placeholder: $(this).data('placeholder'),
         })
     });
