@@ -1,0 +1,101 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "ATM Services";
+  - var pageClass = "atm-page";
+  - var pageActive = "atm-page";
+
+block content
+  div.main-wrap
+    .breadcrumbs
+      .breadcrumbs__inner.site-block-inner
+        .breadcrumbs__items
+          .breadcrumbs__item
+            a(href='#').breadcrumbs__link Home Page
+          .breadcrumbs__item
+            a(href='#').breadcrumbs__link ATMs
+    section.atm-main
+      .site-block-inner.atm-main__inner
+        .atm-main__left
+          .atm-main__content
+            .block-title ATM Services
+            .block-sub-title.atm-main__text
+              p Convenience at Your Fingertips - Superior Vending ATMs, Making Transactions Seamless. Boost your business sales and customer satisfaction with our reliable ATMs, enhancing the overall experience for patrons.
+            .atm-main__btn
+              a(href="#").site-btn Contact Us
+          .atm-main__left-img
+            img(src="./img/atm/atm-1.jpg" alt='img')
+        .atm-main__right
+          .atm-main__images
+            .atm-main__img
+              img(src="./img/atm/atm-2.jpg" alt='img')
+    section.atm-benefits
+      .site-block-inner
+        .atm-benefits__inner
+          .atm-benefits__left
+            .block-title.block-title--secondary Experience the benefits
+            .block-sub-title
+              p Experience the benefits of having an ATM within your premises and provide your customers with the ultimate convenience. Contact us today to explore our ATM services and unlock the full potential of your business!
+          .atm-benefits__right
+            .benefits-list
+              .benefits-list__item
+                .benefits-list__item-icon
+                  include ../img/atm/atm-icon.svg
+                .benefits-list__item-name Efficient
+              .benefits-list__item
+                .benefits-list__item-icon
+                  include ../img/atm/give-money.svg
+                .benefits-list__item-name Convenient
+              .benefits-list__item
+                .benefits-list__item-icon
+                  include ../img/atm/security-payment.svg
+                .benefits-list__item-name Reliable
+              .benefits-list__item
+                .benefits-list__item-icon
+                  include ../img/atm/secure.svg
+                .benefits-list__item-name Secure
+
+    section.section-contact
+      .section-contact__inner
+        .section-contact__left.site-left-block
+          .section-contact__left-inner
+            .block-title Contact us
+            .block-sub-title
+              p Have Questions? Curious to Know More? Connect with Us and Unleash Your Ultimate Entertainment Journey!
+
+            .section-contact__btn
+              a(href="#").site-btn Learn more
+
+        .section-contact__right.site-right-block
+          .section-contact__title Contact us
+          form.section-contact__form
+            .section-contact__form-item
+              input(type='text' placeholder='Name').section-contact__input
+            .section-contact__form-item
+              input(type='text' placeholder='Phone').section-contact__input
+            .section-contact__form-item
+              input(type='text' placeholder='E-mail').section-contact__input
+            .section-contact__form-item
+              label(for='select') Choose from the list:
+
+              select(id='select').section-contact__select.site-form__select.form-select
+                option League’s Name
+                option(value='1') Select one...
+                option(value='2') Select two...
+              //select(id='select').section-contact__select
+              //  option Select
+              //  option(value='1') Select one...
+              //  option(value='2') Select two...
+            .section-contact__form-item
+              label(for='textarea') Message
+              textarea(id='textarea' placeholder='Type your message').section-contact__textarea
+            .section-contact__form-item
+              input(type='checkbox' id='checkbox' placeholder='E-mail').section-contact__checkbox.custom-checkbox
+              label(for='checkbox') I accept the
+                a(href='#') Terms
+
+            .section-contact__form-item
+              button(type='submit').section-contact__button.site-btn Submit
+
+        
+    

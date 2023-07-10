@@ -404,6 +404,12 @@
       display: block;
     }
   }
+
+  &--secondary {
+    font-size: 55px;
+    line-height: 65px;
+    letter-spacing: 1.65px;
+  }
 }
 
 .block-sub-title {
@@ -3257,6 +3263,62 @@
 }
 
 /***** leagues & tournaments END ***********/
+
+/***** atm page START ***********/
+
+.atm-main {
+  padding: 35px 0 108px;
+
+  .block-title {
+    margin-bottom: 5px;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__left {
+    width: 100%;
+    padding-right: 115px;
+  }
+
+  &__right {
+    flex-shrink: 0;
+    max-width: 648px;
+    width: 36%;
+  }
+
+  &__text {
+    margin-bottom: 22px;
+    max-width: 900px;
+  }
+
+  &__btn {
+    margin-bottom: 40px;
+  }
+}
+
+.atm-benefits {
+  &__inner {
+    max-width: 1500px;
+    display: flex;
+  }
+
+  &__right {
+    width: 42.7%;
+  }
+}
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    width: 50%;
+  }
+}
+
+/***** atm page END ***********/
 
 
 .calendar {
