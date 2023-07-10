@@ -2899,18 +2899,27 @@
 }
 
 .event-bottom {
-  padding: 50px 0 85px;
+  padding: 50px 0 0;
   
   &__wrap {
     overflow: hidden;
+    padding-bottom: 100px;
+
+    @include for-1024 {
+      padding-bottom: 60px;
+    }
+
+    @include for-550 {
+      padding-bottom: 40px;
+    }
   }
 
   @include for-1024 {
-    padding: 30px 0 60px;
+    padding: 30px 0 0;
   }
 
   @include for-550 {
-    padding: 20px 0 40px;
+    padding: 20px 0 0;
   }
 
   &__inner {
@@ -2924,7 +2933,7 @@
 
   &__left {
     width: 100%;
-    padding-bottom: 55px;
+    padding-bottom: 25px;
     padding-right: 80px;
     position: relative;
 
@@ -2952,7 +2961,7 @@
       width: 36px;
       height: 36px;
       background: url('../img/plus.svg') center center no-repeat;
-      bottom: -41px;
+      bottom: -33px;
       right: -19px;
       z-index: 1;
 
@@ -2989,7 +2998,7 @@
       height: 1px;
       background: url(../img/dots-horizontal.svg) center center no-repeat;
       background-repeat: repeat;
-      bottom: -23px;
+      bottom: -15px;
       display: block;
       position: absolute;
       right: 30px;
@@ -3067,6 +3076,90 @@
       height: 100%;
       object-position: center;
       object-fit: cover;
+    }
+  }
+}
+
+.event-additional {
+  padding-bottom: 100px;
+
+  @include for-1024 {
+    padding-bottom: 60px;
+  }
+
+  @include for-550 {
+    padding-bottom: 40px;
+  }
+}
+
+.additional-info {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+
+  &__item {
+    width: 25%;
+    flex-shrink: 0;
+    border: 1px dashed #C3C3C3;
+    padding: 35px 20px 30px 20px;
+    border-right: none;
+
+    &:first-child {
+      @include for-1400 {
+        border-top: 1px dashed #C3C3C3;
+      }
+    }
+
+    &:nth-child(2) {
+      @include for-1400 {
+        border-top: 1px dashed #C3C3C3;
+      }
+      @include for-550 {
+        border-top: none;
+      }
+    }
+
+    &:last-child {
+      border-right: 1px dashed #C3C3C3;
+    }
+
+    &:nth-child(even) {
+      @include for-1400 {
+        border-right: 1px dashed #C3C3C3;
+      }
+    }
+
+    @include for-1400 {
+      width: 50%;
+      border-top: none;
+    }
+
+    @include for-550 {
+      width: 100%;
+      padding: 20px;
+      border-right: 1px dashed #C3C3C3;
+    }
+  }
+
+  &__item-title {
+    font-family: 'JosefinSans';
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 0.9px;
+
+    @include for-680 {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+
+  &__item-text {
+    max-width: 360px;
+    font-size: 16px;
+    line-height: 30px;
+    @include for-680 {
+      font-size: 14px;
+      line-height: 26px;
     }
   }
 }
