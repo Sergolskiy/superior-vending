@@ -1,0 +1,58 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "About us";
+  - var pageClass = "about-us-page";
+  - var pageActive = "about-us";
+
+block content
+  div.main-wrap
+
+  .breadcrumbs
+    .breadcrumbs__inner.site-block-inner
+      .breadcrumbs__items
+        .breadcrumbs__item
+          a(href='#').breadcrumbs__link Home Page
+        .breadcrumbs__item
+          a(href='#').breadcrumbs__link About us
+
+    section.about-us-top.lazyload
+      .about-us-top__inner.site-block-inner
+        .about-us-top__left
+          .about-us-top__title.dots-horizontal
+            .site-title Our Story
+            .site-sub-title
+              p Superior Vending has a long-standing history in the industry, spanning over three decades. With a humble beginning as a small vending company, we quickly evolved into an entertainment company that focuses on ATMs, gaming machines, dart and pool leagues.
+              p We have a diversified portfolio of games, ranging from classic arcade games, pool tables, dart machines, and more. Our passion for gaming and dedication to providing quality customer service has led us to become the go-to vending company in Minnesota and Wisconsin.
+
+          .about-us-top__left-img
+            .about-us-top__img-inner
+              img(src="./img/about-us/about-2.jpg" alt='img')
+
+        .about-us-top__right
+          .about-us-top__right-img.dots-vertical
+            .about-us-top__img-inner
+              img(src="./img/about-us/about.jpg" alt='img')
+          .about-us-top__right-img.dots-vertical.dots-horizontal
+            .about-us-top__img-inner
+              img(src="./img/about-us/about-3.jpg" alt='img')
+
+    section.about-us-txt
+      .about-us-txt__inner.site-block-inner.dots-horizontal
+        .about-us-txt__item.dots-vertical
+          .about-us-txt__title A Team that Takes Your Fun Seriously
+          .about-us-txt__content
+            p At Superior Vending, our skilled team of technicians and employees are dedicated to providing exceptional customer service.
+            p Our technicians hold industry certifications and receive regular training to stay up-to-date with the latest technology and gaming advancements. Our league directors are experts at managing leagues and posting league stats on our website to keep our customers informed and engaged.
+        .about-us-txt__item.dots-vertical
+          .about-us-txt__title Why Choose Us
+          .about-us-txt__content
+            p Superior Vending Inc is the leading provider of amusement entertainment machines for a reason - we take our work seriously.
+            p Our team is committed to providing exceptional customer service to our clients, ensuring that all our machines are well-maintained and operate smoothly.
+        .about-us-txt__item.dots-vertical
+          .about-us-txt__title Our Leadership
+          .about-us-txt__content
+            p Andrew Schmitz, the President and founder of Superior Vending Inc, has been a prominent figure in the industry for many years.
+            p He has served as MOMA President during the COVID-19 pandemic and currently serves on the board of directors for MOMA. Under his leadership, Superior Vending has grown to become one of the most respected and reliable gaming vendors in Minnesota and Wisconsin.
+
+
