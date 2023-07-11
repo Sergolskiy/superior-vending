@@ -173,6 +173,11 @@ document.addEventListener('DOMContentLoaded', function() {
         $(this).toggleClass('open')
     });
 
+    $('.toggle-accordion').click(function () {
+        $(this).toggleClass('toggle-accordion--open')
+        $(this).next().slideToggle()
+    });
+
 
     $('.mobile-menu-btn').click(function () {
         $(this).toggleClass('open')

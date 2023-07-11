@@ -21,6 +21,7 @@
 
 .page__content {
   padding-top: 90px;
+  min-height: calc(100vh - 293px);
 
   @include for-550 {
     padding-top: 65px;
@@ -4538,8 +4539,525 @@
 
 }
 
+.tournament-detail {
+  margin-top: 46px;
+  margin-bottom: 100px;
+
+  @include for-1180 {
+    margin-top: 25px;
+    margin-bottom: 60px;
+  }
+
+  @include for-550 {
+    margin-top: 18px;
+    margin-bottom: 28px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include for-1180 {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__left {
+    width: 100%;
+    max-width: 1346px;
+  }
+
+  &__right {
+    margin-left: 15px;
+
+    @include for-1180 {
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
+
+    @include for-550 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btns {
+    min-width: 283px;
+    max-width: 283px;
+    margin-left: auto;
+
+    @include for-1180 {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__btn-wrap {
+    margin-bottom: 3px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:first-child {
+      svg {
+        position: relative;
+        top: -2px;
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    height: 62px;
+    padding: 10px 18px;
+    width: 100%;
+    background: #0014B8;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    transition: 0.3s;
+
+    @include for-550 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &:hover {
+      background: #0014B8;
+      box-shadow: 0px 10px 25px rgba(0, 20, 184, 0.4);
+    }
+
+    &:active {
+      background: #01118F;
+      box-shadow: 0 0 0 rgba(0, 20, 184, 0.4);
+    }
+
+    svg {
+      margin-right: 15px;
+    }
+  }
+
+  &__right-img {
+    margin-top: 40px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+}
 
 
+.t-article {
+
+  &__inner {
+
+  }
+
+  &__top-img {
+    margin-bottom: 55px;
+
+    @include for-1180 {
+      margin-bottom: 26px;
+    }
+
+    @include for-550 {
+      margin-bottom: 15px;
+    }
+
+    img {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+
+  &__title {
+    color: #212121;
+    font-family: 'JosefinSans';
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 1.8px;
+
+    @include for-1180 {
+      font-size: 45px;
+      line-height: 55px;
+    }
+
+    @include for-550 {
+      font-size: 24px;
+      line-height: 34px;
+    }
+  }
+
+  &__top-items {
+    margin-top: 33px;
+
+    @include for-1180 {
+      margin-top: 14px;
+    }
+
+    @include for-550 {
+      margin-top: 9px;
+    }
+  }
+
+  &__top-item {
+    display: flex;
+    align-items: center;
+    border: 1px dashed #C3C3C3;
+    background: #FCFCFC;
+    margin-bottom: 20px;
+    padding: 10px 11px 12px;
+    max-width: 565px;
+
+    @include for-550 {
+      margin-bottom: 10px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__top-ico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    min-width: 60px;
+    height: 60px;
+    box-shadow: 0px 7px 9px 0px rgba(156, 156, 156, 0.30);
+    
+    @include for-550 {
+      min-width: 46px;
+      height: 46px;
+      
+      svg {
+        transform: scale(0.7);
+      }
+    }
+  }
+
+  &__top-right {
+    margin-left: 20px;
+
+    @include for-550 {
+      margin-left: 10px;
+    }
+  }
+
+  &__top-name {
+    color: #1E1E1E;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+
+    @include for-550 {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  &__top-txt {
+    color: #1E1E1E;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+
+    @include for-550 {
+      font-size: 12px;
+      line-height: 21px;
+    }
+  }
+
+  &__content {
+    margin-top: 50px;
+
+    @include for-1180 {
+      margin-top: 32px;
+    }
+  }
+
+  &__accordion {
+    padding-top: 30px;
+    border-top: 1px solid #0014B8;
+    margin-bottom: 23px;
+
+    @include for-1180 {
+      padding-top: 32px;
+      margin-bottom: 21px;
+    }
+
+    @include for-550 {
+      padding-top: 23px;
+      margin-bottom: 13px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__accordion-inner {
+
+    h2 {
+      color: #212121;
+      font-size: 30px;
+      font-family: 'JosefinSans';
+      font-weight: 700;
+      line-height: 35px;
+      margin-bottom: 8px;
+
+      @include for-550 {
+        font-size: 24px;
+        line-height: 35px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__accordion-content {
 
 
+    p {
+      margin-bottom: 8px;
+      color: #3D3D3D;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 28px;
+
+      @include for-550 {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+
+    ul {
+      margin-bottom: 8px;
+      padding-top: 7px;
+
+      li {
+        position: relative;
+        color: #3D3D3D;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+
+        padding-left: 35px;
+        margin-bottom: 20px;
+
+        @include for-1180 {
+          width: 50%;
+          padding-left: 35px;
+          margin-bottom: 20px;
+        }
+
+        @include for-550 {
+          width: 100%;
+          padding-left: 25px;
+          font-size: 14px;
+          line-height: 21px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: -1px;
+          left: 0;
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          background: url("../img/list-item.svg") center center no-repeat;
+
+          @include for-1180 {
+            width: 24px;
+            height: 24px;
+            background-size: cover;
+          }
+
+          @include for-550 {
+            width: 18px;
+            height: 18px;
+            top: 2px;
+            background-size: cover;
+          }
+        }
+      }
+    }
+
+    ol {
+      list-style: none;
+      counter-reset: item;
+      margin-bottom: 8px;
+
+      li {
+        counter-increment: item;
+        position: relative;
+        color: #3D3D3D;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        margin-bottom: 8px;
+        padding-left: 42px;
+
+        @include for-550 {
+          font-size: 14px;
+          line-height: 21px;
+          margin-bottom: 12px;
+          padding-left: 33px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:before {
+          content: counter(item);
+          position: absolute;
+          top: -2px;
+          left: 0;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          width: 30px;
+          height: 30px;
+          color: #3D3D3D;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 28px;
+          background: #EBEBEB;
+
+          @include for-550 {
+            width: 25px;
+            height: 25px;
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+
+        a {
+          color: #0014B8;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  &__bottom-items {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    @include for-550 {
+      flex-direction: column;
+      gap: 2px;
+    }
+  }
+
+  &__bottom-item {
+    @include for-550 {
+      width: 100%;
+    }
+  }
+
+  &__bottom-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 24px 10px 10px;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    text-decoration-line: underline;
+    background: #0014B8;
+
+    @include for-550 {
+      font-size: 14px;
+      line-height: 150%;
+    }
+  }
+
+  &__bottom-ico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: white;
+  }
+
+  &__bottom-txt {
+    margin-left: 15px;
+  }
+
+}
+
+.toggle-accordion {
+  position: relative;
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: url("../img/right-arrow-blue.svg") center center no-repeat;
+    transform: rotate(90deg);
+    transition: 0.3s;
+  }
+
+  &--open {
+    &::before {
+      transform: rotate(-90deg);
+    }
+  }
+
+}
+
+
+.tournament-detail-page .page__content {
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 591.298px;
+    height: 3127.776px;
+    transform: rotate(144.051deg);
+    background: #F4F4F4;
+    margin-top: -558px;
+    margin-right: -50px;
+
+    @include for-1180 {
+      transform: rotate(147.051deg);
+      margin-top: -431px;
+      margin-right: 5px;
+    }
+
+    @include for-550 {
+      width: 352.265px;
+      height: 3127.776px;
+      transform: rotate(153.051deg);
+      margin-top: -1157px;
+      margin-right: 40px;
+    }
+  }
+}
 

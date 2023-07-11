@@ -1,0 +1,118 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Tournament detail";
+  - var pageClass = "tournament-detail-page";
+  - var pageActive = "tournament-detail";
+
+block content
+  div.main-wrap
+
+    .breadcrumbs
+      .breadcrumbs__inner.site-block-inner
+        .breadcrumbs__items
+          .breadcrumbs__item
+            a(href='#').breadcrumbs__link Home Page
+          .breadcrumbs__item
+            a(href='#').breadcrumbs__link Leagues Page Info
+
+
+    section.tournament-detail
+      .tournament-detail__inner.site-block-inner
+        .tournament-detail__left
+          .t-article
+            .t-article__inner
+              .t-article__title Monday Summer Adult/Youth Pool League
+              .t-article__top-items
+                .t-article__top-item
+                  .t-article__top-ico
+                    include ../img/tournament-details/t-b-calendar.svg
+                  .t-article__top-right
+                    .t-article__top-name Date and Time
+                    .t-article__top-txt.underline May 1, 2023  7:00 am
+                .t-article__top-item
+                  .t-article__top-ico
+                    include ../img/tournament-details/t-pin.svg
+                  .t-article__top-right
+                    .t-article__top-name Location
+                    .t-article__top-txt Bronco's105 3rd St SLa Crosse, WI 54601USA
+
+              .t-article__content
+                .t-article__accordion
+                  .t-article__accordion-inner
+                    h2 League information:
+                    .t-article__accordion-content
+                      ul
+                        li League plays on Monday's at 7 p.m. Starting October 17th, 2022
+                        li Single Player
+                        li Flex schedule, can you shoot Sun-Thurs
+                        li ¢ 7501 D/D Split Bull, 7 Cricket, 1 701 D/D Full Bull
+                      p In an attempt to update the 501 games we had gone into “Match Options” and it only corrected the first game. Afterwards we individually went each single game to make sure that each was set to the proper bullseye in accordance with it either being Split vs.
+
+                .t-article__accordion
+                  .t-article__accordion-inner
+                    h2 Cost Per Player
+                    .t-article__accordion-content
+                      p $20 per player per night including quarters to play the games.
+                .t-article__accordion
+                  .t-article__accordion-inner
+                    h2 Sanctioning
+                    .t-article__accordion-content
+                      p SVI/MOMA ($5 PER PLAYER/8 WEEKS), NDA ($10 PER PLAYER/ 96 GAMES) **PRICE CHANGE FROM $8 TO $10 PER PLAYER**= $15.00 per player
+
+                .t-article__accordion
+                  .t-article__accordion-inner
+                    h2 Instructions For Setting Up The Play
+                    .t-article__accordion-content
+                      p Please remember before putting your money into the dart board to contact the other team and make sure they are at their location and ready to shoot.
+                      ol
+                        li From the main menu on the dart board, select <a href="#">“LEAGUE MODE”</a>.
+                        li In League Mode, select <a href="#">“PLAY LEAGUE (LOCAL OR REMOTE)”</a>
+                        li Select the league you are playing tonight, the league is labeled RFMR22 – <a href="#">REMOTE FALL MSTR SNGLS 22</a>
+                        li Select, <a href="#">“YES, BOTH CAMERAS WORK”</a> in <a href="#">LEAGUE CAMERA CHECK</a> if both cameras are working.
+                        li Choose your team
+                        li Select whether your team is scheduled as the Home/Away team. **Make sure you follow how the schedule reads**
+                        li Choose the team you are playing against.
+                        li Chose <a href="#">“YES, PLAY LOCAL LEAGUE”</a> if your opponent is with you at your location. Otherwise choose <a href="#">“NO, PLAY REMOTE LEAGUE”</a>.
+                        li If the other team is not already set up, the screen will now display that it is waiting to start the remote match.
+                        li Once both teams are connected, you will be able to modify your subs and shooting order if necessary.
+                        li Finally, select START MATCH and you’re ready to shoot!
+
+              .t-article__bottom-items
+                .t-article__bottom-item
+                  a(href='#').t-article__bottom-link
+                    .t-article__bottom-ico
+                      include ../img/tournament-details/t-winning.svg
+                    .t-article__bottom-txt Standings
+                .t-article__bottom-item
+                  a(href='#').t-article__bottom-link
+                    .t-article__bottom-ico
+                      include ../img/tournament-details/t-b-calendar.svg
+                    .t-article__bottom-txt Schedule <br>(Div 1)
+                .t-article__bottom-item
+                  a(href='#').t-article__bottom-link
+                    .t-article__bottom-ico
+                      include ../img/tournament-details/t-user.svg
+                    .t-article__bottom-txt Weekly Player <br>Performance
+
+
+
+        .tournament-detail__right
+          .tournament-detail__btns
+            .tournament-detail__btn-wrap
+              a(href='#').tournament-detail__btn
+                include ../img/tournament-details/t-log-in.svg
+                span Registration
+            .tournament-detail__btn-wrap
+              a(href='#').tournament-detail__btn
+                include ../img/tournament-details/t-calendar.svg
+                span Calendar of Events
+            .tournament-detail__btn-wrap
+              a(href='#').tournament-detail__btn
+                include ../img/tournament-details/t-calculator.svg
+                span Cshedules & Standings
+
+
+          .tournament-detail__right-img
+            img(src='./img/tournament-details/tournament-detail-vertical.jpg')
+
