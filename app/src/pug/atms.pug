@@ -1,0 +1,182 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "ATM Services";
+  - var pageClass = "atm-page";
+  - var pageActive = "atm-page";
+
+block content
+  div.main-wrap
+    .breadcrumbs
+      .breadcrumbs__inner.site-block-inner
+        .breadcrumbs__items
+          .breadcrumbs__item
+            a(href='#').breadcrumbs__link Home Page
+          .breadcrumbs__item
+            a(href='#').breadcrumbs__link ATMs
+    section.atm-main
+      .site-block-inner.atm-main__inner
+        .atm-main__left
+          .atm-main__content
+            h1.block-title ATM Services
+            .block-sub-title.atm-main__text
+              p Convenience at Your Fingertips - Superior Vending ATMs, Making Transactions Seamless. Boost your business sales and customer satisfaction with our reliable ATMs, enhancing the overall experience for patrons.
+            .atm-main__btn
+              a(href="#").site-btn Contact Us
+              .plus-element
+          .atm-main__left-img
+            img(src="./img/atm/atm-1.jpg" alt='img')
+        .atm-main__right
+          .atm-main__images
+            .atm-main__img
+              img(src="./img/atm/atm-2.jpg" alt='img')
+    section.atm-benefits
+      .site-block-inner
+        .atm-benefits__inner
+          .atm-benefits__border
+          .atm-benefits__left
+            h2.block-title.block-title--secondary Experience the benefits
+            .block-sub-title
+              p Experience the benefits of having an ATM within your premises and provide your customers with the ultimate convenience. Contact us today to explore our ATM services and unlock the full potential of your business!
+          .atm-benefits__right
+            .benefits-list
+              .benefits-list__item
+                .benefits-list__item-icon
+                  include ../img/atm/atm-icon.svg
+                .benefits-list__item-title Efficient
+              .benefits-list__item
+                .benefits-list__item-icon
+                  include ../img/atm/give-money.svg
+                .benefits-list__item-title Convenient
+              .benefits-list__item
+                .benefits-list__item-icon
+                  include ../img/atm/security-payment.svg
+                .benefits-list__item-title Reliable
+              .benefits-list__item
+                .benefits-list__item-icon
+                  include ../img/atm/secure.svg
+                .benefits-list__item-title Secure
+    section.atm-locations
+      .site-block-inner
+        h2.block-title.block-title--secondary ATM Installation Locations:
+        .atm-locations__inner
+          .atm-locations__left
+            .locations-list
+              .locations-list__item
+                .locations-list__item-icon
+                  include ../img/atm/hotel.svg
+                .locations-list__item-content
+                  .locations-list__item-title Hospitality Industry:
+                  .locations-list__item-text Enhance the guest experience by placing ATMs in hotels, resorts, bars, and restaurants. Visitors can access cash easily, providing them with the convenience they need for a comfortable stay or dining experience.
+              .locations-list__item
+                .locations-list__item-icon
+                  include ../img/atm/store.svg
+                .locations-list__item-content
+                  .locations-list__item-title Retail Stores:
+                  .locations-list__item-text Increase foot traffic and customer convenience by installing an ATM in your retail store. Customers can withdraw cash conveniently while shopping, resulting in increased sales and customer satisfaction.
+              .locations-list__item
+                .locations-list__item-icon
+                  include ../img/atm/tickets.svg
+                .locations-list__item-content
+                  .locations-list__item-title Event Venues:
+                  .locations-list__item-text Ensure attendees have access to cash at sports events, concerts, and trade shows by installing an ATM on-site. It enables seamless transactions for ticket purchases, concessions, and merchandise.
+              .locations-list__item
+                .locations-list__item-icon
+                  include ../img/atm/barbershop.svg
+                .locations-list__item-content
+                  .locations-list__item-title Salons and Spas:
+                  .locations-list__item-text Enhance customer satisfaction by offering cash withdrawal services within your salon or spa. Clients can conveniently access cash for tipping or other personal expenses during their visit.
+              .locations-list__item
+                .locations-list__item-icon
+                  include ../img/atm/camp.svg
+                .locations-list__item-content
+                  .locations-list__item-title Campgrounds and Outdoor Recreation Areas:
+                  .locations-list__item-text Provide campers and outdoor enthusiasts with the convenience of on-site ATMs. It eliminates the need to leave the premises for cash, enhancing the overall camping experience.
+              .locations-list__item
+                .locations-list__item-icon
+                  include ../img/atm/arcade.svg
+                .locations-list__item-content
+                  .locations-list__item-title Arcades:
+                  .locations-list__item-text Enhance the gaming experience by installing an ATM within arcades. Players can conveniently access cash for token purchases or additional gaming credits, ensuring uninterrupted fun.
+              .locations-list__item
+                .locations-list__item-icon
+                  include ../img/atm/gas-station.svg
+                .locations-list__item-content
+                  .locations-list__item-title Gas Stations:
+                  .locations-list__item-text Increase customer convenience and loyalty by having an ATM at your gas station. Customers can easily access cash for fuel, snacks, or other purchases, making their visit more convenient.
+          .atm-locations__right
+            .atm-locations__images
+              .atm-locations__img
+                img(src="./img/atm/location-1.jpg" alt='img')
+              .atm-locations__img
+                img(src="./img/atm/location-2.jpg" alt='img')
+              .atm-locations__img
+                img(src="./img/atm/location-3.jpg" alt='img')
+    section.atm-pros
+      .site-block-inner
+        h2.block-title.block-title--secondary Unlock Your Financial Convenience:
+        .atm-pros__inner
+          .atm-pros__item
+            .atm-pros__item-icon
+              include ../img/atm/pedestrians.svg
+            .atm-pros__item-title Increased Foot Traffic:
+            .atm-pros__item-text Installing an ATM can attract more customers to your business, resulting in increased foot traffic and potential sales. Customers are more likely to choose a location with convenient cash access.
+          .atm-pros__item
+            .atm-pros__item-icon
+              include ../img/atm/profit.svg
+            .atm-pros__item-title Additional Revenue Stream:
+            .atm-pros__item-text Earn additional revenue through transaction fees when customers use your ATM. With our competitive rates, you can generate income while providing a valuable service.
+          .atm-pros__item
+            .atm-pros__item-icon
+              include ../img/atm/motivation.svg
+            .atm-pros__item-title Customer Convenience:
+            .atm-pros__item-text Offering on-site ATMs saves customers time and effort by eliminating the need to search for an ATM elsewhere. It enhances their overall experience and encourages repeat visits.
+          .atm-pros__item
+            .atm-pros__item-icon
+              include ../img/atm/shield.svg
+            .atm-pros__item-title Enhanced Security:
+            .atm-pros__item-text Our ATMs are equipped with advanced security features, ensuring safe and secure transactions for both your customers and your business. We prioritize data encryption and fraud prevention.
+    section.section-contact
+      .section-contact__inner
+        .section-contact__left.site-left-block
+          .section-contact__left-inner
+            .block-title Contact us
+            .block-sub-title
+              p Have Questions? Curious to Know More? Connect with Us and Unleash Your Ultimate Entertainment Journey!
+
+            .section-contact__btn
+              a(href="#").site-btn Learn more
+
+        .section-contact__right.site-right-block
+          .section-contact__title Contact us
+          form.section-contact__form
+            .section-contact__form-item
+              input(type='text' placeholder='Name').section-contact__input
+            .section-contact__form-item
+              input(type='text' placeholder='Phone').section-contact__input
+            .section-contact__form-item
+              input(type='text' placeholder='E-mail').section-contact__input
+            .section-contact__form-item
+              label(for='select') Choose from the list:
+
+              select(id='select').section-contact__select.site-form__select.form-select
+                option League’s Name
+                option(value='1') Select one...
+                option(value='2') Select two...
+              //select(id='select').section-contact__select
+              //  option Select
+              //  option(value='1') Select one...
+              //  option(value='2') Select two...
+            .section-contact__form-item
+              label(for='textarea') Message
+              textarea(id='textarea' placeholder='Type your message').section-contact__textarea
+            .section-contact__form-item
+              input(type='checkbox' id='checkbox' placeholder='E-mail').section-contact__checkbox.custom-checkbox
+              label(for='checkbox') I accept the
+                a(href='#') Terms
+
+            .section-contact__form-item
+              button(type='submit').section-contact__button.site-btn Submit
+
+        
+    
