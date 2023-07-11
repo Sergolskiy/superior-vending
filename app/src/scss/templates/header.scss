@@ -542,8 +542,13 @@
   transform: translateX(100%);
   transition: 0.3s;
 
+  @include for-1180 {
+    height: calc(100vh - 88px);
+  }
+
   @include for-550 {
     top: 58px;
+    height: calc(100vh - 58px);
   }
 
   &.open-menu {
