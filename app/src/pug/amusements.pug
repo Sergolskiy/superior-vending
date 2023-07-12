@@ -1,0 +1,263 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Amusements";
+  - var pageClass = "amusements-page";
+  - var pageActive = "amusements";
+
+block content
+  div.main-wrap
+
+  .breadcrumbs
+    .breadcrumbs__inner.site-block-inner
+      .breadcrumbs__items
+        .breadcrumbs__item
+          a(href='#').breadcrumbs__link Home Page
+        .breadcrumbs__item
+          a(href='#').breadcrumbs__link Tournaments
+
+    section.amusements-top.lazyload
+      .amusements-top__inner.site-block-inner
+        .amusements-top__title
+          .site-title AMUSEMENT
+            span.site-title--outline &nbsp;services
+          .site-sub-title
+            p Welcome to Superior Vending Inc, your premier provider of exceptional amusement services for bars, taverns, bowling alleys, family entertainment centers, and more. We are your go-to source for installing and servicing a wide range of captivating games, including video games, pool tables, dart machines, pinballs, prize cranes, and an array of redemption and skill games.
+             | <br> With our extensive experience in organizing dart and pool leagues, we bring the thrill of competitive gaming to your establishment. Here's an overview of the exciting amusement services we offer:
+
+        .amusements-top__imgs
+          .amusements-top__img
+            img(src="./img/amusements/a-top.jpg" alt='img')
+          .amusements-top__img.dots-vertical
+            img(src="./img/amusements/a-top-1.jpg" alt='img')
+
+    section.amusements-block-dashed.block-dashed-left
+      .block-dashed-left__wrapper.site-block-inner
+        .block-dashed-left__inner.dots-horizontal
+          .block-dashed-left__left
+            .block-dashed-left__title Game Installation and Service:
+            .block-dashed-left__desc Rest assured that our team of skilled technicians is committed to ensuring that all installed games and machines are maintained to the highest standards. We prioritize the seamless functioning of each game to provide an unforgettable gaming experience for your customers.
+          .block-dashed-left__right.dots-vertical
+            .block-dashed-left__items
+              .block-dashed-left__item
+                .block-dashed-left__ico
+                  include ../img/amusements/g-quality-control.svg
+                .block-dashed-left__name Quality Installation Service
+              .block-dashed-left__item
+                .block-dashed-left__ico
+                  include ../img/amusements/g-technical-support.svg
+                .block-dashed-left__name 24/7 Technical Support
+              .block-dashed-left__item
+                .block-dashed-left__ico
+                  include ../img/amusements/g-slot-machine.svg
+                .block-dashed-left__name Latest Releases and Diverse Selection of Gaming and Amusement Equipment
+              .block-dashed-left__item
+                .block-dashed-left__ico
+                  include ../img/amusements/g-tools.svg
+                .block-dashed-left__name Commercial-grade Highest Quality coin operated Equipment
+
+    section.block-list-img
+      .block-list-img__inner.site-block-inner
+        .block-list-img__title List of Amusement and Vending Machines:
+        .block-list-img__subtitle Video Games and Skill Games: We bring the latest and most engaging video games to your venue, ensuring a dynamic gaming experience for your patrons
+        .block-list-img__btn
+          a(href="#").site-btn Contact Us
+        .block-list-img__content
+          .block-list-img__left
+            .block-list-img__items
+              .block-list-img__item
+                .block-list-img__ico
+                  include ../img/amusements/t-arcade-machine.svg
+                .block-list-img__txt Mario Kart GP DX Arcade
+              .block-list-img__item
+                .block-list-img__ico
+                  include ../img/amusements/t-joystick.svg
+                .block-list-img__txt Halo Arcade
+              .block-list-img__item
+                .block-list-img__ico
+                  include ../img/amusements/t-golf-ball.svg
+                .block-list-img__txt Golden Tee Golf
+              .block-list-img__item
+                .block-list-img__ico
+                  include ../img/amusements/t-air-hockey.svg
+                .block-list-img__txt Air Hockey
+              .block-list-img__item
+                .block-list-img__ico
+                  include ../img/amusements/t-slot-machine.svg
+                .block-list-img__txt Buck Hunter
+              .block-list-img__item
+                .block-list-img__ico
+                  include ../img/amusements/t-backgammon.svg
+                .block-list-img__txt Shuffleboard
+              .block-list-img__item
+                .block-list-img__ico
+                  include ../img/amusements/t-slot-machine-2.svg
+                .block-list-img__txt Jet Pong
+              .block-list-img__item
+                .block-list-img__ico
+                  include ../img/amusements/t-skull.svg
+                .block-list-img__txt Jurassic Park
+              .block-list-img__item
+                .block-list-img__ico
+                  include ../img/amusements/t-bowling.svg
+                .block-list-img__txt Lane Master
+              .block-list-img__item
+                .block-list-img__ico
+                  include ../img/amusements/t-racing-car.svg
+                .block-list-img__txt Nitro Trucks
+          .block-list-img__right
+            .block-list-img__left-img
+              .block-list-img__top-img.dots-vertical.dots-horizontal
+                .block-list-img__wrap-img
+                  img(src="./img/amusements/t-img.jpg" alt='img')
+              .block-list-img__bottom-img.dots-vertical
+                .block-list-img__wrap-img
+                  img(src="./img/amusements/t-img-2.jpg" alt='img')
+            .block-list-img__rigth-img
+              .block-list-img__vertical-img
+                .block-list-img__wrap-img
+                  img(src="./img/amusements/t-img-3.jpg" alt='img')
+
+
+    section.block-table
+      .block-table__inner.site-block-inner
+        .block-table__wrapper.dots-vertical.dots-horizontal
+          .block-table__inner-wrap.dots-vertical.dots-horizontal
+            .block-table__items
+              .block-table__item.dots-vertical.dots-horizontal
+                .block-table__name Pool Tables:
+                .block-table__desc Our pool tables are meticulously maintained and installed to provide an enjoyable playing experience for both casual players and enthusiasts.
+                .block-table__list.block-list
+                  ul
+                    li lack Diamond
+                    li Valley Panther
+              .block-table__item.dots-vertical.dots-horizontal
+                .block-table__name Dart Machines:
+                .block-table__desc Equipped with innovative features and reliable performance to entertain dart enthusiasts of all levels.
+                .block-table__list.block-list
+                  ul
+                    li Arachnid Galaxy 3
+                    li Arachnid Galaxy 3 FIRE
+              .block-table__item.dots-vertical.dots-horizontal
+                .block-table__name Pinball Machines:
+                .block-table__desc Immerse your customers in the timeless charm of pinball with our expertly installed and serviced pinball machines. Some patrons are absolutely crazy about pinball machines, and we cater to their passion with our exceptional selection of unique and thrilling pinball machines. As avid pinball enthusiasts ourselves, we understand the excitement and nostalgia that these machines bring. Our route boasts a collection of carefully curated pinball machines, including classic favorites and rare gems, guaranteed to captivate players of all skill levels!
+
+              .block-table__item.dots-vertical.dots-horizontal
+                .block-table__name Prize Cranes and Redemption Machines:
+                .block-table__desc Delight your patrons with our captivating prize cranes and redemption games, offering an exciting chance to win coveted prizes and keep them coming back for more. - Candy Crane
+                .block-table__list.block-list
+                  ul
+                    li Candy Crane
+                    li My Little Ducks
+                    li My Little Pets
+                    li Grab-N-Win
+                    li Fun Zone
+              .block-table__item.dots-vertical.dots-horizontal
+                .block-table__name Jukeboxes:
+                .block-table__desc Introduce an irresistible beat to your establishment with our collection of jukeboxes. Allow your customers to curate their own personalized soundtracks, creating an inviting and lively atmosphere that keeps them coming back for more. Choose from a range of jukebox options that cater to diverse musical preferences, providing a memorable and immersive musical experience for your patrons.
+                .block-table__list.block-list
+                  ul
+                    li Angelina
+                    li Virtuo
+                    li Fusion
+                    li NGX Curve
+              .block-table__item.dots-vertical.dots-horizontal
+                .block-table__name Pull tab and Sweepstake Ticket Dispensers:
+                .block-table__desc Reduce your labor costs and increase your level of security by putting pull tab ticket dispenser to work for you. Acting as automatic salesperson, Grand Master vending machine takes up under four square feet of floor space and never takes a break. Stop worrying and start letting the Grand Master do the work for you.
+                .block-table__list.block-list
+                  ul
+                    li Grand Master 8-Column
+                    li Master 4-Column
+
+
+    section.block-two-columns
+      .block-two-columns__inner.site-block-inner
+        .block-two-columns__title Benefits of Our Services:
+        .block-two-columns__items
+          .block-two-columns__item.dots-vertical.dots-horizontal
+            .block-two-columns__ico
+              include ../img/amusements/b-user.svg
+            .block-two-columns__name Increased Foot Traffic:
+            .block-two-columns__desc Our engaging games and exciting leagues attract a loyal customer base, bringing more people to your establishment and boosting foot traffic.
+          .block-two-columns__item.dots-vertical.dots-horizontal
+            .block-two-columns__ico
+              include ../img/amusements/b-controller.svg
+            .block-two-columns__name Enhanced Social Experience:
+            .block-two-columns__desc Our amusement services create a vibrant and social atmosphere, fostering connections and interactions among players and enthusiasts.
+          .block-two-columns__item.dots-vertical.dots-horizontal
+            .block-two-columns__ico
+              include ../img/amusements/b-history.svg
+            .block-two-columns__name Extended Stay and Repeat Visits:
+            .block-two-columns__desc By providing captivating games and leagues, we create an enticing environment that encourages patrons to stay longer and return for future gaming experiences.
+          .block-two-columns__item.dots-vertical.dots-horizontal
+            .block-two-columns__ico
+              include ../img/amusements/b-competition.svg
+            .block-two-columns__name Competitive Edge:
+            .block-two-columns__desc Stand out from the competition by offering top-notch amusement services that cater to the entertainment preferences of your target audience.
+          .block-two-columns__item.dots-vertical.dots-horizontal
+            .block-two-columns__ico
+              include ../img/amusements/b-competition-2.svg
+            .block-two-columns__name Engaging Leagues:
+            .block-two-columns__desc Our dart and pool leagues are designed to create a vibrant community of players, fostering friendly competition and camaraderie among participants.
+          .block-two-columns__item.dots-vertical.dots-horizontal
+            .block-two-columns__ico
+              include ../img/amusements/b-competition-3.svg
+            .block-two-columns__name Sanctioning for National Tournaments:
+            .block-two-columns__desc Our leagues provide official sanctioning for national tournaments (WAMO, VNEA, NDA, NADO, etc.), allowing players to showcase their skills on a larger stage and compete with the best in the country.
+          .block-two-columns__item.dots-vertical.dots-horizontal
+            .block-two-columns__ico
+              include ../img/amusements/b-profit.svg
+            .block-two-columns__name Revenue Generation:
+            .block-two-columns__desc Our services not only attract more customers but also generate additional revenue through increased game plays, league fees, and food and beverage sales.
+          .block-two-columns__item.dots-vertical.dots-horizontal
+            .block-two-columns__ico
+              include ../img/amusements/b-popular.svg
+            .block-two-columns__name At Superior Vending Inc
+            .block-two-columns__desc we are dedicated to providing unparalleled amusement services that breathe new life into your establishment. We ensure that your venue becomes a go-to destination for gaming enthusiasts and individuals seeking a fun and competitive social experience.
+
+
+
+    section.section-contact
+      .section-contact__inner
+        .section-contact__left.site-left-block
+          .section-contact__left-inner
+            .block-title Contact us
+            .block-sub-title
+              p Have Questions? Curious to Know More? Connect with Us and Unleash Your Ultimate Entertainment Journey!
+
+            .section-contact__btn
+              a(href="#").site-btn Learn more
+
+        .section-contact__right.site-right-block
+          .section-contact__title Contact us
+          form.section-contact__form
+            .section-contact__form-item
+              input(type='text' placeholder='Name').section-contact__input
+            .section-contact__form-item
+              input(type='text' placeholder='Phone').section-contact__input
+            .section-contact__form-item
+              input(type='text' placeholder='E-mail').section-contact__input
+            .section-contact__form-item
+              label(for='select') Choose from the list:
+
+              select(id='select' data-placeholder="Select one...").section-contact__select.site-form__select.form-select
+                option
+                option League’s Name
+                option(value='1') Select one...
+                option(value='2') Select two...
+              //select(id='select').section-contact__select
+              //  option Select
+              //  option(value='1') Select one...
+              //  option(value='2') Select two...
+            .section-contact__form-item
+              label(for='textarea') Message
+              textarea(id='textarea' placeholder='Type your message').section-contact__textarea
+            .section-contact__form-item
+              input(type='checkbox' id='checkbox' placeholder='E-mail').section-contact__checkbox.custom-checkbox
+              label(for='checkbox') I accept the
+                a(href='#') Terms
+
+            .section-contact__form-item
+              a(href='javascript:void()' data-open="thank-you").section-contact__button.site-btn Submit
+
+
