@@ -5887,12 +5887,64 @@
 .amusements-top {
   padding-top: 35px;
 
+  @include for-550 {
+    padding-top: 22px;
+  }
+
   &__inner {
 
   }
 
   &__title {
+    .site-title {
+      @include for-1180 {
+        font-size: 55px;
+        line-height: 85px;
+      }
 
+      @include for-680 {
+        line-height: 54px;
+      }
+
+      @include for-550 {
+        font-size: 26px;
+        line-height: 32px;
+      }
+
+      &--outline {
+        @include for-1180 {
+          font-size: 55px;
+          line-height: 85px;
+        }
+
+        @include for-680 {
+          line-height: 54px;
+        }
+
+        @include for-550 {
+          font-size: 26px;
+          line-height: 32px;
+        }
+
+      }
+    }
+
+    .site-sub-title {
+      @include for-1180 {
+        margin-top: 0;
+        font-size: 16px;
+        line-height: 26px;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      @include for-550 {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
   }
 
   &__imgs {
@@ -5900,6 +5952,17 @@
     margin-top: 40px;
     gap: 33px;
     padding-bottom: 64px;
+
+    @include for-1180 {
+      gap: 13px;
+      margin-top: 15px;
+      padding-bottom: 50px;
+    }
+
+    @include for-550 {
+      gap: 30px;
+      padding-bottom: 20px;
+    }
   }
 
   &__img {
@@ -5909,6 +5972,16 @@
       &:before {
         height: calc(100% + 64px);
         margin-left: -17px;
+
+        @include for-1180 {
+          height: calc(100% + 50px);
+          margin-left: -7px;
+        }
+
+        @include for-1180 {
+          margin-left: -15px;
+          height: calc(100% + 20px);
+        }
       }
     }
 
@@ -5926,17 +5999,76 @@
   margin-top: 0;
   margin-bottom: 76px;
 
+  @include for-1180 {
+    margin-bottom: 60px;
+  }
+
+  @include for-550 {
+    margin-bottom: 40px;
+  }
+
+  .block-dashed-left__inner:before {
+    right: 0;
+  }
+
+  .block-dashed-left__inner:after {
+    right: 0;
+  }
+
+  .block-dashed-left__right:before {
+    margin-right: 0;
+  }
+
   .block-dashed-left__inner {
     max-width: 100%;
+
+    @include for-1180 {
+      padding: 25px 15px 24px 0;
+    }
+
+    @include for-1180 {
+      padding: 30px 15px 20px 0;
+    }
   }
 
   .block-dashed-left__right {
     width: 100%;
     max-width: 930px;
+
+    @include for-1180 {
+      max-width: 100%;
+    }
+  }
+
+  .block-dashed-left__item {
+    @include for-1180 {
+      width: calc(50% - 20px);
+    }
+
+    @include for-550 {
+      width: 100%;
+    }
   }
 
   .block-dashed-left__title {
     max-width: 610px;
+  }
+
+  .block-dashed-left__left {
+    @include for-1400 {
+      max-width: 515px;
+    }
+
+    @include for-1180 {
+      max-width: 100%;
+    }
+  }
+
+  .block-dashed-left__items {
+    @include for-550 {
+      gap: 10px;
+      flex-direction: column;
+    }
   }
 }
 
@@ -5946,6 +6078,15 @@
   padding-top: 90px;
   padding-bottom: 90px;
   background: #FCFCFC;
+
+  @include for-1180 {
+    padding-top: 36px;
+    padding-bottom: 58px;
+  }
+
+  @include for-550 {
+    padding-bottom: 40px;
+  }
 
   &__inner {
 
@@ -5958,6 +6099,16 @@
     font-weight: 700;
     line-height: 65px;
     letter-spacing: 1.65px;
+
+    @include for-1180 {
+      font-size: 44px;
+      line-height: 55px;
+    }
+
+    @include for-550 {
+      font-size: 24px;
+      line-height: 31px;
+    }
   }
 
   &__subtitle {
@@ -5967,16 +6118,34 @@
     font-weight: 400;
     line-height: 32px;
     max-width: 768px;
+
+    @include for-550 {
+      font-size: 14px;
+      line-height: 21px;
+      margin-top: 0;
+    }
   }
 
   &__btn {
     margin-top: 30px;
+
+    @include for-550 {
+      margin-top: 6px;
+    }
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
+
+    @include for-1180 {
+      flex-direction: column;
+    }
+
+    @include for-550 {
+      margin-top: 20px;
+    }
   }
 
   &__left {
@@ -5987,10 +6156,27 @@
     @include for-1800 {
       padding-top: 0;
     }
+
+    @include for-1400 {
+      max-width: 388px;
+    }
+
+    @include for-1180 {
+      max-width: 100%;
+    }
   }
 
   &__items {
+    @include for-1180 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
+    @include for-550 {
+      flex-direction: column;
+      gap: 17px;
+    }
   }
 
   &__item {
@@ -5999,6 +6185,20 @@
     margin-bottom: 20px;
     padding: 8px;
     border: 1px dashed #c3c3c3;
+
+    @include for-1180 {
+      width: calc(50% - 10px);
+      margin-bottom: -5px;
+
+      &:nth-last-child(2):nth-child(odd) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include for-550 {
+      width: 100%;
+      margin-bottom: 0;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -6021,6 +6221,10 @@
     font-weight: 500;
     line-height: 150%;
     margin-left: 12px;
+
+    @include for-1180 {
+      font-size: 14px;
+    }
   }
 
   &__right {
@@ -6033,6 +6237,17 @@
 
     @include for-1800 {
       gap: 60px;
+    }
+
+    @include for-1180 {
+      max-width: 100%;
+      margin-left: 0;
+      margin-top: 40px;
+    }
+
+    @include for-550 {
+      margin-top: 20px;
+      gap: 25px;
     }
 
     img {
@@ -6070,6 +6285,15 @@
     @include for-1800 {
       max-width: 440px;
     }
+
+    @include for-1180 {
+      max-width: 60%;
+      gap: 47px;
+    }
+
+    @include for-550 {
+      gap: 18px;
+    }
   }
 
   &__top-img {
@@ -6079,12 +6303,33 @@
       left: auto;
       right: 0;
       margin-right: -50px;
+
+      @include for-1800 {
+        margin-right: -31px;
+      }
+
+      @include for-550 {
+        margin-right: -13px;
+      }
     }
 
     &::after {
       width: calc(100% + 25px);
       right: -25px;
       margin-bottom: -30px;
+
+      @include for-1800 {
+        width: calc(100% + 10px);
+        right: -10px;
+      }
+
+      @include for-1180 {
+        margin-bottom: -24px;
+      }
+
+      @include for-550 {
+        margin-bottom: -9px;
+      }
     }
 
     .block-list-img__wrap-img:after {
@@ -6100,6 +6345,14 @@
       left: auto;
       right: 0;
       margin-right: -50px;
+
+      @include for-1800 {
+        margin-right: -31px;
+      }
+
+      @include for-550 {
+        margin-right: -13px;
+      }
     }
 
     &::after {
@@ -6114,6 +6367,18 @@
       height: 36px;
       background: url("../img/plus.svg") center center no-repeat;
       background-size: cover;
+
+      @include for-1800 {
+        margin-right: -49px;
+      }
+
+      @include for-1180 {
+        margin-top: -41px;
+      }
+
+      @include for-550 {
+        display: none;
+      }
     }
 
     .block-list-img__wrap-img:after {
@@ -6128,6 +6393,10 @@
     @include for-1800 {
       max-width: 309px;
     }
+
+    @include for-1180 {
+      max-width: 40%;
+    }
   }
 
   &__vertical-img {
@@ -6135,6 +6404,14 @@
 
     .block-list-img__wrap-img:after {
       padding: 0 0 194.6%;
+
+      @include for-1800 {
+        padding: 0 0 170%;
+      }
+
+      @include for-1180 {
+        padding: 0 0 177.3%;
+      }
     }
   }
 
@@ -6143,6 +6420,14 @@
 
 .block-table {
   margin-top: 170px;
+
+  @include for-1180 {
+    margin-top: 56px;
+  }
+
+  @include for-550 {
+    margin-top: 40px;
+  }
 
   &__inner {
 
@@ -6188,19 +6473,57 @@
     width: 33.33%;
     padding: 30px;
 
-    &:nth-child(3n) {
-      &:before {
-        display: none;
+    @include for-1180 {
+      width: 50%;
+      padding: 25px 20px;
+    }
+
+    @include for-550 {
+      width: 100%;
+      padding: 15px;
+    }
+
+    @include from-1180 {
+      &:nth-child(3n) {
+        &:before {
+          display: none;
+        }
+      }
+
+      &:nth-last-child(1),
+      &:nth-last-child(2),
+      &:nth-last-child(3) {
+        &:after {
+          display: none;
+        }
       }
     }
 
-    &:nth-last-child(1),
-    &:nth-last-child(2),
-    &:nth-last-child(3) {
-      &:after {
-        display: none;
+    @include for-1180 {
+      &:nth-child(2n) {
+        &:before {
+          display: none;
+        }
+      }
+
+      &:nth-last-child(1),
+      &:nth-last-child(2) {
+        &:after {
+          display: none;
+        }
       }
     }
+
+    @include for-550 {
+      &:before {
+        display: none;
+      }
+
+      &:nth-last-child(2)::after {
+        display: block;
+      }
+    }
+
 
     &:before {
       height: 100%;
@@ -6222,6 +6545,17 @@
     font-weight: 700;
     line-height: 50px;
     letter-spacing: 1.05px;
+
+    @include for-1180 {
+      font-size: 30px;
+      line-height: 35px;
+      letter-spacing: 0;
+    }
+
+    @include for-550 {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   &__desc {
@@ -6229,6 +6563,15 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 32px;
+
+    @include for-1180 {
+      font-size: 14px;
+      line-height: 26px;
+    }
+
+    @include for-550 {
+      line-height: 21px;
+    }
   }
 
   &__list {
@@ -6237,6 +6580,18 @@
 
 }
 
+.amusements-block-table {
+  .block-list {
+    @include for-1180 {
+      font-size: 14px;
+
+      ul li {
+        width: 100%;
+        padding-left: 26px;
+      }
+    }
+  }
+}
 
 .block-two-columns {
   margin-top: 83px;
@@ -6254,25 +6609,67 @@
     font-weight: 700;
     line-height: 65px;
     letter-spacing: 1.65px;
+
+    @include for-1180 {
+      font-size: 44px;
+      line-height: 55px;
+    }
+
+    @include for-550 {
+      font-size: 24px;
+      line-height: 31px;
+    }
   }
 
   &__items {
     display: flex;
     flex-wrap: wrap;
     margin-top: 71px;
+
+    @include for-1180 {
+      margin-top: 27px;
+    }
+
+    @include for-550 {
+      margin-top: 14px;
+    }
   }
 
   &__item {
     width: 50%;
     padding-bottom: 41px;
 
+    @include for-1180 {
+      padding-bottom: 28px;
+    }
+
+    @include for-550 {
+      padding-bottom: 16px;
+    }
+
+    @include for-550 {
+      width: 100%;
+    }
+
     &:nth-child(n + 3) {
       padding-top: 51px;
+
+      @include for-1180 {
+        padding-top: 28px;
+      }
+
+      @include for-550 {
+        padding-top: 16px;
+      }
     }
 
     &:before {
       height: 100%;
       background-repeat: repeat-y;
+
+      @include for-550 {
+        display: none;
+      }
     }
 
     &:after {
@@ -6281,6 +6678,12 @@
     }
 
     &:nth-child(odd) {
+      padding-right: 15px;
+
+      @include for-550 {
+        padding-right: 0;
+      }
+
       &:before {
         display: block;
         width: 36px;
@@ -6292,16 +6695,33 @@
         margin-bottom: -18px;
         margin-right: -19px;
         background: url("../img/plus.svg") center center no-repeat;
+
+        @include for-550 {
+          display: none;
+        }
       }
 
       &:after {
         width: calc(100% - 24px);
         margin-right: 24px;
+
+        @include for-550 {
+          width: calc(100%);
+          margin-right: 0;
+        }
       }
     }
 
     &:nth-child(even) {
       padding-left: 70px;
+
+      @include for-1180 {
+        padding-left: 11px;
+      }
+
+      @include for-550 {
+        padding-left: 0;
+      }
 
       &:before {
         height: calc(100% - 48px);
@@ -6310,6 +6730,17 @@
 
       &:after {
         width: calc(100% - 24px);
+
+        @include for-550 {
+          width: calc(100%);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      &:before {
+        height: calc(100% - 24px);
+        margin-top: 0;
       }
     }
 
@@ -6338,8 +6769,23 @@
   }
 
   &__ico {
-    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 55px;
+    max-width: 55px;
     height: 55px;
+    background: #FFF;
+    box-shadow: 0 7px 9px 0 rgba(156, 156, 156, 0.30);
+
+    @include for-1180 {
+      min-width: 44px;
+      max-width: 44px;
+      height: 44px;
+      svg {
+        transform: scale(0.7);
+      }
+    }
   }
 
   &__name {
@@ -6370,6 +6816,18 @@
 
   .block-two-columns {
     padding-bottom: 100px;
+
+    @include for-1180 {
+      margin-top: 10px;
+      padding-top: 105px;
+      padding-bottom: 60px;
+      margin-bottom: 54px;
+    }
+
+    @include for-550 {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
   }
 
 }

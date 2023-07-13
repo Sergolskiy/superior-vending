@@ -131,6 +131,12 @@
   }
 }
 
+@mixin from-1180 {
+  @media (min-width: 1180px) {
+    @content;
+  }
+}
+
 @mixin from-1100-for-1300 {
   @media (min-width: 1101px) and (max-width: 1320px) {
     @content;
