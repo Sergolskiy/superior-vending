@@ -221,6 +221,14 @@
         display: none;
       }
     }
+
+    a {
+      transition: all 0.3s;
+    }
+
+    a:hover {
+      color: #0014b8;
+    }
   }
 
   &__bottom-left {

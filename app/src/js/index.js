@@ -189,11 +189,13 @@ function registerFormHandler() {
         $('.site-form__button button').text('Checkout')
     }
 
-    if (competition.val() === 'tournament' && evType.val() === 'darts' && evSelect.val() !== 'League’s Name') {
+    if (competition.val() === 'tournament' && evType.val() && evSelect.val() !== 'League’s Name') {
         $('#addEventBtnBlock').show()
+        $('#selectEventBlock').show()
     }
     else {
         $('#addEventBtnBlock').hide()
+        $('#selectEventBlock').hide()
     }
 
     if (numPlayers.val() === 'team') {

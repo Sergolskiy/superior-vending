@@ -2370,6 +2370,7 @@
     line-height: 24px;
     height: 37px;
     margin-left: -3px;
+    resize: none;
 
     @include for-550 {
       font-size: 14px;

@@ -49,8 +49,20 @@ block content
               .site-form__form-item
                 select(id='select').site-form__select.form-select
                   option League’s Name
-                  option(value='1') Select one...
-                  option(value='2') Select two...
+                  option(value='1') MOMA State Dart Tournament
+                  option(value='2') NDA Las Vegas Nationals
+                  option(value='3') Superior Vending Year End Tournament
+            .site-form__item(id="selectEventBlock" style="display: none;")
+              .site-form__title Select event type:
+              .site-form__form-item
+                select(id='selectEvent').site-form__select.form-select
+                  option Event Type
+                  option(value='1') Singles 501 - $50
+                  option(value='2') Master Singles 501 - $60
+                  option(value='3') Singles Cricket - $50
+                  option(value='4') Master Singles Cricket - $60
+                  option(value='5') Mixed Doubles 501 - $100
+                  option(value='6') Mixed Doubles Cricket - $100
             .site-form__item(id="addEventBtnBlock" style="display: none;")
               .d-flex.f-align-end
                 a(href='#').site-form__add-players
