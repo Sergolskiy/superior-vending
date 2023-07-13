@@ -25,6 +25,11 @@
   align-items: center;
 }
 
+@mixin flexJustifyEnd {
+  display: flex;
+  justify-content: flex-end;
+}
+
 @mixin dFlex {
   display: flex;
 }
@@ -40,4 +45,8 @@
 
 .align-center {
   @include flexAlignCenter;
+}
+
+.f-align-end {
+  @include flexJustifyEnd;
 }

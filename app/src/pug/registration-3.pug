@@ -30,20 +30,20 @@ block content
               .site-form__title Select the competition:
               .site-form__form-item
                 .site-form__radio
-                  input(type='radio' id='league' name='radio1')
+                  input(type='radio' id='league' name='radio1' value="league")
                   label(for='league') League
                 .site-form__radio
-                  input(type='radio' id='tournament' name='radio1')
+                  input(type='radio' id='tournament' name='radio1' value="tournament" checked)
                   label(for='tournament') Tournament
             .site-form__item
-              .site-form__title Select sport type:
+              .site-form__title Select an event type:
               .site-form__form-item
                 .site-form__radio
-                  input(type='radio' id='player' name='radio2')
-                  label(for='player') 1 Player
+                  input(type='radio' id='pool' name='radio2' value="pool" checked)
+                  label(for='pool') Pool
                 .site-form__radio
-                  input(type='radio' id='team' name='radio2')
-                  label(for='team') Team
+                  input(type='radio' id='darts' name='radio2' value="darts")
+                  label(for='darts') Darts
             .site-form__item
               .site-form__title Select sport type:
               .site-form__form-item
@@ -51,6 +51,11 @@ block content
                   option League’s Name
                   option(value='1') Select one...
                   option(value='2') Select two...
+            .site-form__item(id="addEventBtnBlock" style="display: none;")
+              .d-flex.f-align-end
+                a(href='#').site-form__add-players
+                  include ../img/plus-btn.svg
+                  | Add Event
             .site-form__item
               .site-form__title Choose the number of players:
               .site-form__form-item
@@ -58,26 +63,30 @@ block content
                   input(type='radio' id='player2' name='radio3')
                   label(for='player2') 1 Player
                 .site-form__radio
-                  input(type='radio' id='team2' name='radio3')
+                  input(type='radio' id='team2' name='radio3' checked)
                   label(for='team2') Team
 
             .site-form__section
-              .site-form__section-title Player’s Info
+              .site-form__section-title Captain’s Info
               .site-form__row
                 .site-form__col.site-form__col--50.site-form__col--sm-100
                   .site-form__form-input
-                    input(type='text' placeholder='Player’s First name').site-form__input
+                    input(type='text' placeholder='Captain’s First name').site-form__input
                 .site-form__col.site-form__col--50.site-form__col--sm-100
                   .site-form__form-input
-                    input(type='text' placeholder='Player’s Last name').site-form__input
+                    input(type='text' placeholder='Captain’s Last name').site-form__input
                 .site-form__col.site-form__col--50.site-form__col--sm-100
                   .site-form__form-input
-                    input(type='text' placeholder='Player’s E-mail').site-form__input
+                    input(type='text' placeholder='Captain’s E-mail').site-form__input
                 .site-form__col.site-form__col--50.site-form__col--sm-100
                   .site-form__form-input
-                    input(type='text' placeholder='Player’s Phone number').site-form__input
-
-            .site-form__section
+                    input(type='text' placeholder='Captain’s Phone number').site-form__input
+            .d-flex.flex-space-between.align-center.site-form__add-players-wrap(id="addPlayersBtnBlock")
+              div
+              a(href='#').site-form__add-players
+                include ../img/plus-btn.svg
+                | Add More Players
+            .site-form__section(id="teamMembersBlock")
               .site-form__section-title Team Members
               .site-form__row
                 .site-form__col.site-form__col--50.site-form__col--sm-100
@@ -85,19 +94,15 @@ block content
                     input(type='text' placeholder='Players 1 First Name').site-form__input
                 .site-form__col.site-form__col--50.site-form__col--sm-100
                   .site-form__form-input
-                    input(type='text' placeholder='Player 2 Last Name').site-form__input
+                    input(type='text' placeholder='Player 1 Last Name').site-form__input
                 .site-form__col.site-form__col--50.site-form__col--sm-100
                   .site-form__form-input
-                    input(type='text' placeholder='Players 3 Email').site-form__input
+                    input(type='text' placeholder='Players 1 Email').site-form__input
                 .site-form__col.site-form__col--50.site-form__col--sm-100
                   .site-form__form-input
-                    input(type='text' placeholder='Player 3 Phone number').site-form__input
+                    input(type='text' placeholder='Player 1 Phone number').site-form__input
 
-            .d-flex.flex-space-between.align-center.site-form__add-players-wrap
-              .site-form__price $ 165
-              a(href='#').site-form__add-players
-                include ../img/plus-btn.svg
-                | Add More Players
+            .site-form__price $ 165
 
             .site-form__button
               button Checkout

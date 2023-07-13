@@ -145,6 +145,68 @@ function initPopups() {
     });
 }
 
+function initRegisterForm() {
+    if (!document.querySelector('.registration')) return
+    let competitionTypes = document.querySelectorAll('input[name="radio1"]')
+    competitionTypes.forEach(item => {
+        item.addEventListener('change', function() {
+            registerFormHandler()
+        })
+    })
+
+    let eventTypes = document.querySelectorAll('input[name="radio2"]')
+    eventTypes.forEach(item => {
+        item.addEventListener('change', function() {
+            registerFormHandler()
+        })
+    })
+
+    let numPlayers = document.querySelectorAll('input[name="radio3"]')
+    numPlayers.forEach(item => {
+        item.addEventListener('change', function() {
+            registerFormHandler()
+        })
+    })
+
+    let tournamentSelect = $('#select')
+    tournamentSelect.on('change', function(e) {
+        registerFormHandler()
+    })
+}
+
+function registerFormHandler() {
+    let competition = $('[name="radio1"]:checked')
+    let evType = $('[name="radio2"]:checked')
+    let numPlayers = $('[name="radio3"]:checked')
+    let evSelect = $('#select')
+
+    if (competition.val() === 'league') {
+        $('.registration__form .site-form__price').css('visibility', 'hidden')
+        $('.site-form__button button').text('Confirm registration')
+    }
+    else {
+        $('.registration__form .site-form__price').css('visibility', 'visible')
+        $('.site-form__button button').text('Checkout')
+    }
+
+    if (competition.val() === 'tournament' && evType.val() === 'darts' && evSelect.val() !== 'League’s Name') {
+        $('#addEventBtnBlock').show()
+    }
+    else {
+        $('#addEventBtnBlock').hide()
+    }
+
+    if (numPlayers.val() === 'team') {
+        $('#addPlayersBtnBlock').show()
+        $('#teamMembersBlock').show()
+    }
+    else {
+        $('#addPlayersBtnBlock').hide()
+        $('#teamMembersBlock').hide()
+    }
+
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 
     // initLanguageMenu()
@@ -231,5 +293,7 @@ document.addEventListener('DOMContentLoaded', function() {
         $(this).toggleClass('open')
         $(this).next().slideToggle()
     })
+
+    initRegisterForm()
 
 })
