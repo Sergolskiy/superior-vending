@@ -333,4 +333,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     initRegisterForm()
 
+    $(".article__nav-link").click(function() {
+        $("html").animate(
+            {
+                scrollTop: $($(this).attr('href')).offset().top - 100
+            },
+            800
+        );
+    });
 })
