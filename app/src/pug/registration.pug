@@ -108,12 +108,13 @@ block content
               //    .site-form__form-input
               //      input(type='text' placeholder='Player 1 Phone number').site-form__input
             .site-form__item(id="additionalEventsBlock" style="display: none;")
-            .site-form__price $ 55
-            .site-form__item(id="addEventBtnBlock" style="display: none; margin-bottom:20px;")
-              .d-flex.f-align-end
-                a(href='javascript:void(0);' data-number="1" id="addEventBtn").site-form__add-players.site-form__add-players--alt
-                  include ../img/plus-btn.svg
-                  | Add Another Event
+            .site-form__item
+              .d-flex.flex-space-between.align-center.site-form__add-players-wrap
+                .site-form__price $ 55
+                div(id="addEventBtnBlock" style="display: none;")
+                  a(href='javascript:void(0);' data-number="1" id="addEventBtn").site-form__add-players
+                    include ../img/plus-btn.svg
+                    | Add Another Event
 
             .site-form__button
               button Checkout

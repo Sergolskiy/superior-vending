@@ -785,11 +785,6 @@
     font-weight: 500;
     line-height: 30px;
 
-    &--alt {
-      padding: 14px 24px;
-      width: 100%;
-    }
-
     @include for-1180 {
       padding: 13px 20px;
       font-size: 14px;
