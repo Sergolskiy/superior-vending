@@ -207,6 +207,32 @@ function initRegisterForm() {
         $('#teamMembersBlock').append(playerBlock)
         this.setAttribute('data-number', +this.getAttribute('data-number') + 1)
     })
+
+    let addEventBtn = $('#addEventBtn')
+    addEventBtn.on('click', function() {
+        let eventBlock = document.createElement('div')
+        eventBlock.classList.add('site-form__form-item')
+        let htmlContent = `<select class="site-form__select form-select">
+                      <option>Event Type</option>
+                      <option value="1">Singles 501 - $50</option>
+                      <option value="2">Master Singles 501 - $60</option>
+                      <option value="3">Singles Cricket - $50</option>
+                      <option value="4">Master Singles Cricket - $60</option>
+                      <option value="5">Mixed Doubles 501 - $100</option>
+                      <option value="6">Mixed Doubles Cricket - $100</option>
+                    </select>`
+        eventBlock.innerHTML = htmlContent
+        $('#additionalEventsBlock').append(eventBlock)
+        $(eventBlock).find('.form-select').select2({
+            minimumResultsForSearch: -1,
+            // placeholder: $(this).data('placeholder'),
+        })
+        if (+this.getAttribute('data-number') > 1) {
+            $(eventBlock).css('margin-top', '20px')
+        }
+        $('#additionalEventsBlock').show()
+        this.setAttribute('data-number', +this.getAttribute('data-number') + 1)
+    })
 }
 
 function registerFormHandler() {

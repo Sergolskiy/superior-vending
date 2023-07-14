@@ -63,11 +63,6 @@ block content
                   option(value='4') Master Singles Cricket - $60
                   option(value='5') Mixed Doubles 501 - $100
                   option(value='6') Mixed Doubles Cricket - $100
-            .site-form__item(id="addEventBtnBlock" style="display: none;")
-              .d-flex.f-align-end
-                a(href='#').site-form__add-players
-                  include ../img/plus-btn.svg
-                  | Add Another Event
             .site-form__item
               .site-form__title Choose the number of players:
               .site-form__form-item
@@ -112,7 +107,13 @@ block content
               //  .site-form__col.site-form__col--50.site-form__col--sm-100
               //    .site-form__form-input
               //      input(type='text' placeholder='Player 1 Phone number').site-form__input
+            .site-form__item(id="additionalEventsBlock" style="display: none;")
             .site-form__price $ 55
+            .site-form__item(id="addEventBtnBlock" style="display: none; margin-bottom:20px;")
+              .d-flex.f-align-end
+                a(href='javascript:void(0);' data-number="1" id="addEventBtn").site-form__add-players
+                  include ../img/plus-btn.svg
+                  | Add Another Event
 
             .site-form__button
               button Checkout
