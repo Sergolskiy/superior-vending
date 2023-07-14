@@ -1,9 +1,9 @@
 extends ./templates/_layout
 
 block vars
-  - var pageTitle = "Registration-2";
+  - var pageTitle = "Registration";
   - var pageClass = "registration-page";
-  - var pageActive = "registration-2";
+  - var pageActive = "registration";
 
 block content
   div.main-wrap
@@ -30,7 +30,7 @@ block content
               .site-form__title Select the competition:
               .site-form__form-item
                 .site-form__radio
-                  input(type='radio' id='league' name='radio1' value="league" checked)
+                  input(type='radio' id='league' name='radio1' value="league")
                   label(for='league') League
                 .site-form__radio
                   input(type='radio' id='tournament' name='radio1' value="tournament")
@@ -42,30 +42,36 @@ block content
                   input(type='radio' id='pool' name='radio2' value="pool")
                   label(for='pool') Pool
                 .site-form__radio
-                  input(type='radio' id='darts' name='radio2' value="darts" checked)
+                  input(type='radio' id='darts' name='radio2' value="darts")
                   label(for='darts') Darts
             .site-form__item
               .site-form__title Select sport type:
-              .site-form__form-item
+              .site-form__form-item.mt-0
                 select(id='select').site-form__select.form-select
                   option League’s Name
-                  option(value='1') Select one...
-                  option(value='2') Select two...
-            .site-form__item(id="addEventBtnBlock" style="display: none;")
-              .d-flex.f-align-end
-                a(href='#').site-form__add-players
-                  include ../img/plus-btn.svg
-                  | Add Event
+                  option(value='1') MOMA State Dart Tournament
+                  option(value='2') NDA Las Vegas Nationals
+                  option(value='3') Superior Vending Year End Tournament
+            .site-form__item(id="selectEventBlock" style="display: none;")
+              .site-form__title Select event:
+              .site-form__form-item
+                select(id='selectEvent').site-form__select.form-select
+                  option Event Type
+                  option(value='1') Singles 501 - $50
+                  option(value='2') Master Singles 501 - $60
+                  option(value='3') Singles Cricket - $50
+                  option(value='4') Master Singles Cricket - $60
+                  option(value='5') Mixed Doubles 501 - $100
+                  option(value='6') Mixed Doubles Cricket - $100
             .site-form__item
               .site-form__title Choose the number of players:
               .site-form__form-item
                 .site-form__radio
-                  input(type='radio' id='player2' name='radio3' checked)
+                  input(type='radio' id='player2' name='radio3' value="one")
                   label(for='player2') 1 Player
                 .site-form__radio
-                  input(type='radio' id='team2' name='radio3')
+                  input(type='radio' id='team2' name='radio3' value="team")
                   label(for='team2') Team
-
             .site-form__section
               .site-form__section-title Captain’s Info
               .site-form__row
@@ -81,30 +87,34 @@ block content
                 .site-form__col.site-form__col--50.site-form__col--sm-100
                   .site-form__form-input
                     input(type='text' placeholder='Captain’s Phone number').site-form__input
-
             .d-flex.flex-space-between.align-center.site-form__add-players-wrap(id="addPlayersBtnBlock" style="display: none;")
               div
-              a(href='#').site-form__add-players
+              a(href='javascript:void(0);' data-number="1" id="addPlayerBtn").site-form__add-players
                 include ../img/plus-btn.svg
                 | Add More Players
             .site-form__section(id="teamMembersBlock" style="display: none;")
-              .site-form__section-title Team Members
-              .site-form__row
-                .site-form__col.site-form__col--50.site-form__col--sm-100
-                  .site-form__form-input
-                    input(type='text' placeholder='Players 1 First Name').site-form__input
-                .site-form__col.site-form__col--50.site-form__col--sm-100
-                  .site-form__form-input
-                    input(type='text' placeholder='Player 1 Last Name').site-form__input
-                .site-form__col.site-form__col--50.site-form__col--sm-100
-                  .site-form__form-input
-                    input(type='text' placeholder='Players 1 Email').site-form__input
-                .site-form__col.site-form__col--50.site-form__col--sm-100
-                  .site-form__form-input
-                    input(type='text' placeholder='Player 1 Phone number').site-form__input
-            .site-form__price(style="display: none;") $ 55
+              .site-form__section-title(style="display: none;") Team Members
+              //.site-form__row
+              //  .site-form__col.site-form__col--50.site-form__col--sm-100
+              //    .site-form__form-input
+              //      input(type='text' placeholder='Player 1 First Name').site-form__input
+              //  .site-form__col.site-form__col--50.site-form__col--sm-100
+              //    .site-form__form-input
+              //      input(type='text' placeholder='Player 1 Last Name').site-form__input
+              //  .site-form__col.site-form__col--50.site-form__col--sm-100
+              //    .site-form__form-input
+              //      input(type='text' placeholder='Player 1 Email').site-form__input
+              //  .site-form__col.site-form__col--50.site-form__col--sm-100
+              //    .site-form__form-input
+              //      input(type='text' placeholder='Player 1 Phone number').site-form__input
+            .site-form__item(id="additionalEventsBlock" style="display: none;")
+            .site-form__item
+              .d-flex.flex-space-between.align-center.site-form__add-players-wrap
+                .site-form__price $ 55
+                div(id="addEventBtnBlock" style="display: none;")
+                  a(href='javascript:void(0);' data-number="1" id="addEventBtn").site-form__add-players
+                    include ../img/plus-btn.svg
+                    | Add Another Event
 
             .site-form__button
-              button Confirm registration
-
-
+              button Checkout
