@@ -3727,6 +3727,9 @@
     }
 
     &:nth-child(1) {
+      @include for-550 {
+        order: -1;
+      }
       svg {
         @include for-1200 {
           height: auto;
@@ -3753,6 +3756,9 @@
     }
 
     &:nth-child(3) {
+      @include for-550 {
+        order: -1;
+      }
       svg {
         @include for-1200 {
           height: auto;
