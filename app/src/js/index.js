@@ -172,6 +172,41 @@ function initRegisterForm() {
     tournamentSelect.on('change', function(e) {
         registerFormHandler()
     })
+
+    let addPlayerBtn = $('#addPlayerBtn')
+    addPlayerBtn.on('click', function() {
+        if (+this.getAttribute('data-number') === 1) {
+            $('#teamMembersBlock .site-form__section-title').show()
+        }
+        let playerBlock = document.createElement('div')
+        playerBlock.classList.add('site-form__row')
+        let htmlContent = `<div class="site-form__col site-form__col--50 site-form__col--sm-100">
+                              <div class="site-form__form-input">
+                                <input class="site-form__input" type="text" placeholder="Player ${this.getAttribute('data-number')} First Name">
+                              </div>
+                            </div>
+                            <div class="site-form__col site-form__col--50 site-form__col--sm-100">
+                              <div class="site-form__form-input">
+                                <input class="site-form__input" type="text" placeholder="Player ${this.getAttribute('data-number')} Last Name">
+                              </div>
+                            </div>
+                            <div class="site-form__col site-form__col--50 site-form__col--sm-100">
+                              <div class="site-form__form-input">
+                                <input class="site-form__input" type="text" placeholder="Player ${this.getAttribute('data-number')} Email">
+                              </div>
+                            </div>
+                            <div class="site-form__col site-form__col--50 site-form__col--sm-100">
+                              <div class="site-form__form-input">
+                                <input class="site-form__input" type="text" placeholder="Player ${this.getAttribute('data-number')} Phone number">
+                              </div>
+                            </div>`
+        if (+this.getAttribute('data-number') > 1) {
+            $(playerBlock).css('margin-top', '20px')
+        }
+        playerBlock.innerHTML = htmlContent
+        $('#teamMembersBlock').append(playerBlock)
+        this.setAttribute('data-number', +this.getAttribute('data-number') + 1)
+    })
 }
 
 function registerFormHandler() {

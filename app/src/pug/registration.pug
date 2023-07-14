@@ -94,24 +94,24 @@ block content
                     input(type='text' placeholder='Captain’s Phone number').site-form__input
             .d-flex.flex-space-between.align-center.site-form__add-players-wrap(id="addPlayersBtnBlock" style="display: none;")
               div
-              a(href='#').site-form__add-players
+              a(href='javascript:void(0);' data-number="1" id="addPlayerBtn").site-form__add-players
                 include ../img/plus-btn.svg
                 | Add More Players
             .site-form__section(id="teamMembersBlock" style="display: none;")
-              .site-form__section-title Team Members
-              .site-form__row
-                .site-form__col.site-form__col--50.site-form__col--sm-100
-                  .site-form__form-input
-                    input(type='text' placeholder='Players 1 First Name').site-form__input
-                .site-form__col.site-form__col--50.site-form__col--sm-100
-                  .site-form__form-input
-                    input(type='text' placeholder='Player 1 Last Name').site-form__input
-                .site-form__col.site-form__col--50.site-form__col--sm-100
-                  .site-form__form-input
-                    input(type='text' placeholder='Players 1 Email').site-form__input
-                .site-form__col.site-form__col--50.site-form__col--sm-100
-                  .site-form__form-input
-                    input(type='text' placeholder='Player 1 Phone number').site-form__input
+              .site-form__section-title(style="display: none;") Team Members
+              //.site-form__row
+              //  .site-form__col.site-form__col--50.site-form__col--sm-100
+              //    .site-form__form-input
+              //      input(type='text' placeholder='Player 1 First Name').site-form__input
+              //  .site-form__col.site-form__col--50.site-form__col--sm-100
+              //    .site-form__form-input
+              //      input(type='text' placeholder='Player 1 Last Name').site-form__input
+              //  .site-form__col.site-form__col--50.site-form__col--sm-100
+              //    .site-form__form-input
+              //      input(type='text' placeholder='Player 1 Email').site-form__input
+              //  .site-form__col.site-form__col--50.site-form__col--sm-100
+              //    .site-form__form-input
+              //      input(type='text' placeholder='Player 1 Phone number').site-form__input
             .site-form__price $ 55
 
             .site-form__button
