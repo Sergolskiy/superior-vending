@@ -210,6 +210,10 @@ function initRegisterForm() {
 
     let addEventBtn = $('#addEventBtn')
     addEventBtn.on('click', function() {
+        if (+this.getAttribute('data-number') > 1) {
+            return
+        }
+
         let eventBlock = document.createElement('div')
         eventBlock.classList.add('site-form__form-item')
         let htmlContent = `<select class="site-form__select form-select">
