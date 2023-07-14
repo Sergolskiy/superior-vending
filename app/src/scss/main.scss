@@ -951,8 +951,8 @@
       @include for-1180 {
         height: 4404px;
         margin-right: 17px;
-        margin-top: 480px;
-        transform: rotate(25.83deg);
+        margin-top: 411px;
+        transform: rotate(28.83deg);
       }
 
       @include for-768 {
@@ -961,8 +961,9 @@
 
       @include for-550 {
         margin-right: 161px;
-        margin-top: -400px;
         width: 216px;
+        margin-top: -456px;
+        transform: rotate(24.83deg);
       }
     }
 
@@ -2222,6 +2223,10 @@
     justify-content: flex-start;
     padding-top: 82px;
 
+    @include for-1400 {
+      margin-right: 10px;
+    }
+
     @include for-1180 {
       padding-top: 0;
       max-width: 100%;
@@ -2309,6 +2314,13 @@
 
     label {
       display: block;
+      font-size: 16px;
+      color: #1E1E1E;
+      margin-bottom: 2px;
+
+      @include for-1180 {
+        font-size: 14px;
+      }
     }
   }
 
@@ -2366,7 +2378,7 @@
     border: 0;
     border-bottom: 1px solid #CECECE;
     padding-bottom: 10px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 24px;
     height: 37px;
     margin-left: -3px;
@@ -2389,6 +2401,14 @@
 
   &__button {
     width: 172px;
+
+    @include for-1600 {
+      width: 160px;
+    }
+
+    @include for-1180 {
+      width: 146px;
+    }
 
     @include for-550 {
       font-size: 12px;
@@ -5295,6 +5315,7 @@
 
     @include for-680 {
       padding: 15px 15px 22px;
+      margin-right: 15px;
     }
   }
 
@@ -6056,6 +6077,7 @@
     @include for-550 {
       font-size: 24px;
       line-height: 34px;
+      letter-spacing: 0;
     }
   }
 
@@ -6198,6 +6220,10 @@
       line-height: 35px;
       margin-bottom: 8px;
 
+      &.toggle-accordion {
+        padding-right: 15px;
+      }
+
       @include for-550 {
         font-size: 24px;
         line-height: 35px;
@@ -6237,7 +6263,7 @@
         margin-bottom: 20px;
 
         @include for-1180 {
-          width: 50%;
+          width: 100%;
           padding-left: 35px;
           margin-bottom: 20px;
         }
@@ -6542,7 +6568,7 @@
           margin-left: -7px;
         }
 
-        @include for-1180 {
+        @include for-550 {
           margin-left: -15px;
           height: calc(100% + 20px);
         }
@@ -6852,7 +6878,8 @@
 
     @include for-1180 {
       max-width: 60%;
-      gap: 47px;
+      gap: 60px;
+      //gap: 47px;
     }
 
     @include for-550 {
@@ -6888,7 +6915,7 @@
       }
 
       @include for-1180 {
-        margin-bottom: -24px;
+        margin-bottom: -33px;
       }
 
       @include for-550 {
@@ -6937,7 +6964,7 @@
       }
 
       @include for-1180 {
-        margin-top: -41px;
+        margin-top: -46px;
       }
 
       @include for-550 {
@@ -6947,6 +6974,18 @@
 
     .block-list-img__wrap-img:after {
       padding: 0 0 62.4%;
+
+      @include for-550 {
+        padding: 0 0 64.4%;
+      }
+
+      @include for-480 {
+        padding: 0 0 65.4%;
+      }
+
+      @include for-350 {
+        padding: 0 0 66.4%;
+      }
     }
   }
 
@@ -6969,12 +7008,13 @@
     .block-list-img__wrap-img:after {
       padding: 0 0 194.6%;
 
-      @include for-1800 {
+      @include for-1600 {
         padding: 0 0 170%;
       }
 
       @include for-1180 {
-        padding: 0 0 177.3%;
+        //padding: 0 0 177.3%;
+        padding: 0 0 181.5%;
       }
     }
   }
