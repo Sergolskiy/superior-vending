@@ -3747,6 +3747,9 @@
     }
 
     &:nth-child(1) {
+      @include for-550 {
+        order: -1;
+      }
       svg {
         @include for-1200 {
           height: auto;
@@ -3773,6 +3776,9 @@
     }
 
     &:nth-child(3) {
+      @include for-550 {
+        order: -1;
+      }
       svg {
         @include for-1200 {
           height: auto;
@@ -6412,6 +6418,55 @@
     margin-left: 15px;
   }
 
+  &__info-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  &__info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 40px;
+    margin-bottom: 20px;
+  }
+
+  &__info-item-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    margin-right: 20px;
+    background: #FFF;
+    box-shadow: 0px 7px 9px 0px rgba(156, 156, 156, 0.30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__info-item-content {
+    padding-top: 5px;
+    color: #1E1E1E;
+  }
+
+  &__info-item-title {
+    font-size: 16px;
+    line-height: 27px;
+  }
+
+  &__info-item-text {
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 600;
+  }
+
+  &__info-item-text a {
+    color: #1E1E1E;
+
+    &:hover {
+      color: #0014b8;
+    }
+  }
 }
 
 .toggle-accordion {
