@@ -248,10 +248,13 @@ function registerFormHandler() {
     if (competition.val() === 'league') {
         $('.registration__form .site-form__price').css('visibility', 'hidden')
         $('.site-form__button button').text('Confirm registration')
+        $('#hideForLeague').hide()
+        console.log(44444);
     }
     else {
         $('.registration__form .site-form__price').css('visibility', 'visible')
         $('.site-form__button button').text('Checkout')
+        $('#hideForLeague').show()
     }
 
     if (competition.val() === 'tournament' && evType.val() && evSelect.val() !== 'League’s Name') {

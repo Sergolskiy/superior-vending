@@ -2563,6 +2563,27 @@
 
   }
 
+  &__terms {
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+    label {
+      display: inline-block;
+      font-size: 16px;
+      color: #1E1E1E;
+
+      @include for-1180 {
+        font-size: 14px;
+      }
+    }
+
+    & > label a {
+      margin-left: 5px;
+      text-decoration: underline;
+      color: #1E1E1E;
+    }
+  }
+
 }
 
 /***** leagues & tournaments START ***********/
@@ -7492,10 +7513,26 @@
 }
 
 .stats-section {
-  padding: 50px 0;
+  padding: 50px 0 80px;
+
+  @include for-800 {
+    padding: 40px 0;
+  }
 
   @include for-550 {
-    padding: 34px 0 42px;
+    padding: 20px 0 30px;
+  }
+
+  &__block {
+    margin-bottom: 30px;
+
+    @include for-800 {
+      margin-bottom: 25px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__title {
@@ -7511,12 +7548,13 @@
       font-size: 45px;
       line-height: 55px;
       margin-bottom: 30px;
+      letter-spacing: 1.35px;
     }
 
     @include for-550 {
       font-size: 24px;
-      line-height: 34px;
-      margin-bottom: 24px;
+      line-height: 31px;
+      margin-bottom: 11px;
     }
   }
 }
@@ -7541,7 +7579,7 @@
 
     @include for-550 {
       width: 100%;
-      margin-bottom: 12px;
+      margin-bottom: 11px;
     }
   }
 }
@@ -7587,7 +7625,7 @@
   color: #353535;
 
   @include for-550 {
-    padding: 10px;
+    padding: 8px;
   }
 
   &:hover {
@@ -7597,6 +7635,13 @@
   &__icon {
     font-size: 0;
     margin-right: 10px;
+
+    svg {
+      @include for-550 {
+        height: auto;
+        width: 31px;
+      }
+    }
   }
   
   &__name {
@@ -7608,7 +7653,7 @@
 
     @include for-550 {
       font-size: 15px;
-      line-height: 21px;
+      line-height: 24px;
     }
   }
 }
