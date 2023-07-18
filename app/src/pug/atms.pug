@@ -161,10 +161,12 @@ block content
             .section-contact__form-item
               label(for='select') Choose from the list:
 
-              select(id='select').section-contact__select.site-form__select.form-select
-                option League’s Name
-                option(value='1') Select one...
-                option(value='2') Select two...
+              select(id='select' data-placeholder="League's name").section-contact__select.site-form__select.form-select
+                option
+                option(value='1') Leagues
+                option(value='2') Sales
+                option(value='3') Accounting
+                option(value='4') Other
               //select(id='select').section-contact__select
               //  option Select
               //  option(value='1') Select one...
