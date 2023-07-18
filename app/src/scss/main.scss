@@ -5397,8 +5397,13 @@
   margin-top: 35px;
   margin-bottom: 100px;
 
+  @include for-1180 {
+    margin-bottom: 53px;
+  }
+
   @include for-550 {
     margin-top: 22px;
+    margin-bottom: 40px;
   }
 
   .site-sub-title {
@@ -5437,11 +5442,15 @@
     max-width: 1020px;
 
     @include for-1800 {
+      max-width: 915px;
+    }
+
+    @include for-1600 {
       max-width: 790px;
     }
 
     @include for-1400 {
-      max-width: 577px;
+      max-width: 605px;
     }
 
     @include for-1180 {
@@ -5452,6 +5461,18 @@
   &__left-img {
     .about-us-top__img-inner:after {
       padding: 0 0 35%;
+
+      @include for-1800 {
+        padding: 0 0 30.2%;
+      }
+
+      @include for-1600 {
+        padding: 0 0 35%;
+      }
+
+      @include for-1400 {
+        padding: 0 0 34%;
+      }
     }
   }
 
@@ -5475,8 +5496,8 @@
       margin-bottom: -47px;
 
       @include for-1800 {
-        width: calc(100% + 160px);
-        margin-right: -155px;
+        width: calc(100% + 30px);
+        margin-right: -30px;
         margin-bottom: -32px;
       }
 
@@ -5487,8 +5508,8 @@
       }
 
       @include for-1400 {
-        width: calc(100% + 58px);
-        margin-right: -57px;
+        width: calc(100% + 28px);
+        margin-right: -28px;
       }
 
       @include for-1180 {
@@ -5538,12 +5559,13 @@
       margin-top: 70px;
     }
 
-    @include for-680 {
-      gap: 30px;
-      margin-top: 40px;
-    }
+    //@include for-680 {
+    //  gap: 30px;
+    //  margin-top: 70px;
+    //}
 
     @include for-550 {
+      gap: 30px;
       margin-top: 35px;
     }
   }
@@ -5570,6 +5592,18 @@
         margin-bottom: 0;
       }
 
+      &:before {
+        width: 100%;
+        height: 1px;
+        background: url('../img/dots-horizontal.svg') center center no-repeat;
+        margin-top: -34px;
+        margin-left: 0;
+
+        @include for-550 {
+          margin-top: -18px;
+        }
+      }
+
       &:after {
         content: '';
         display: block;
@@ -5587,7 +5621,19 @@
         }
 
         @include for-1180 {
-          display: none;
+          //display: none;
+          bottom: auto;
+          top: 0;
+          left: auto;
+          right: 0;
+          margin-top: -51px;
+          margin-right: -48px;
+        }
+
+        @include for-550 {
+          margin-top: -35px;
+          margin-right: -33px;
+          transform: scale(0.6);
         }
       }
     }
@@ -5600,6 +5646,16 @@
       &:before {
         margin-top: -16px;
         height: calc(100% + 115px);
+
+        @include for-1180 {
+          margin-left: -31px;
+          margin-top: 0;
+          height: calc(100% + 40px);
+        }
+
+        @include for-550 {
+          margin-left: -15px;
+        }
       }
 
       &:after {
@@ -5610,6 +5666,14 @@
 
         @include for-1600 {
           width: calc(100% + 0px);
+        }
+
+        @include for-1180 {
+          margin-top: -34px;
+        }
+
+        @include for-550 {
+          margin-top: -18px;
         }
       }
 
@@ -5645,12 +5709,12 @@
 
 .about-us-txt {
 
-  @include for-768 {
-    display: none;
-  }
-
   &__inner {
     display: flex;
+
+    @include for-1180 {
+      flex-direction: column;
+    }
 
     &:before {
       content: '';
@@ -5674,11 +5738,53 @@
     width: 33.33%;
     padding: 68px 0 50px;
 
+    @include for-1180 {
+      width: 100%;
+      padding: 24px 20px 20px 15px;
+
+      &:first-child {
+        padding-top: 42px;
+      }
+    }
+
+    @include for-550 {
+      padding: 15px 8px 15px 0;
+
+      &:first-child {
+        padding-top: 15px;
+      }
+    }
+
     &:before {
       height: 100%;
       left: auto;
       right: 0;
       margin-right: 30px;
+
+      @include for-1400 {
+        background-repeat: repeat-y;
+      }
+
+      @include for-1180 {
+        margin-right: 0;
+      }
+    }
+
+    @include for-1180 {
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        height: 1px;
+        background: url('../img/dots-horizontal.svg') center center repeat-x;
+        width: calc(100% + 100px);
+        right: 0;
+      }
+
+      &:last-child::after {
+        display: none;
+      }
     }
 
     &:last-child:before {
@@ -5691,6 +5797,15 @@
     font-size: 30px;
     font-weight: 600;
     line-height: 30px;
+
+    @include for-1180 {
+      font-size: 26px;
+    }
+
+    @include for-550 {
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
 
   &__content {
@@ -5701,8 +5816,21 @@
     margin-top: 10px;
     padding-right: 64px;
 
+    @include for-1180 {
+      padding-right: 0;
+    }
+
+    @include for-550 {
+      font-size: 12px;
+      line-height: 21px;
+    }
+
     p {
       margin-bottom: 25px;
+
+      @include for-550 {
+        margin-bottom: 10px;
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -5714,6 +5842,17 @@
 
 .about-us-blue {
   margin-top: 50px;
+  margin-bottom: 100px;
+
+  @include for-1180 {
+    padding: 0 15px;
+    margin-bottom: 60px;
+    margin-top: 40px;
+  }
+
+  @include for-550 {
+    margin-bottom: 40px;
+  }
 
   &__inner {
     background: #0014B8;
@@ -5725,6 +5864,16 @@
     font-weight: 400;
     line-height: 32px;
     padding: 35px;
+
+    @include for-1180 {
+      padding: 24px 15px;
+    }
+
+    @include for-550 {
+      font-size: 14px;
+      line-height: 22px;
+      padding: 10px 0;
+    }
 
     b {
       display: block;
@@ -6977,6 +7126,7 @@
 
       @include for-550 {
         margin-right: -13px;
+        height: calc(100% + 16px);
       }
     }
 
@@ -6996,6 +7146,8 @@
 
       @include for-550 {
         margin-bottom: -9px;
+        width: calc(100% + 12px);
+        right: -12px;
       }
     }
 
@@ -7338,6 +7490,12 @@
         padding-top: 28px;
       }
 
+      @include for-550 {
+        padding-top: 16px;
+      }
+    }
+
+    &:nth-child(2) {
       @include for-550 {
         padding-top: 16px;
       }
