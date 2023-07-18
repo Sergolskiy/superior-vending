@@ -59,8 +59,8 @@ block content
       .block-list-img__inner.site-block-inner
         .block-list-img__title List of Amusement and Vending Machines:
         .block-list-img__subtitle Video Games and Skill Games: We bring the latest and most engaging video games to your venue, ensuring a dynamic gaming experience for your patrons
-        .block-list-img__btn
-          a(href="#").site-btn Contact Us
+        //.block-list-img__btn
+        //  a(href="#").site-btn Contact Us
         .block-list-img__content
           .block-list-img__left
             .block-list-img__items
@@ -213,5 +213,47 @@ block content
               include ../img/amusements/b-popular.svg
             .block-two-columns__name At Superior Vending Inc
             .block-two-columns__desc we are dedicated to providing unparalleled amusement services that breathe new life into your establishment. We ensure that your venue becomes a go-to destination for gaming enthusiasts and individuals seeking a fun and competitive social experience.
+    section.section-contact
+      .section-contact__inner
+        .section-contact__left.site-left-block
+          .section-contact__left-inner
+            .block-title Contact us
+            .block-sub-title
+              p Have Questions? Curious to Know More? Connect with Us and Unleash Your Ultimate Entertainment Journey!
 
+            .section-contact__btn
+              a(href="#").site-btn Learn more
+
+        .section-contact__right.site-right-block
+          .section-contact__title Contact us
+          form.section-contact__form
+            .section-contact__form-item
+              input(type='text' placeholder='Name').section-contact__input
+            .section-contact__form-item
+              input(type='text' placeholder='Phone').section-contact__input
+            .section-contact__form-item
+              input(type='text' placeholder='E-mail').section-contact__input
+            .section-contact__form-item
+              label(for='select') Choose from the list:
+
+              select(id='select' data-placeholder="").section-contact__select.site-form__select.form-select
+                option
+                  option(value='1') Leagues
+                  option(value='2') Sales
+                  option(value='3') Accounting
+                  option(value='4') Other
+              //select(id='select').section-contact__select
+              //  option Select
+              //  option(value='1') Select one...
+              //  option(value='2') Select two...
+            .section-contact__form-item
+              label(for='textarea') Message
+              textarea(id='textarea' placeholder='Type your message').section-contact__textarea
+            .section-contact__form-item
+              input(type='checkbox' id='checkbox' placeholder='E-mail').section-contact__checkbox.custom-checkbox
+              label(for='checkbox') I agree with the
+                a(href='terms-of-service.html') Terms and Conditions
+
+            .section-contact__form-item
+              a(href='javascript:void()' data-open="thank-you").section-contact__button.site-btn Submit
 
