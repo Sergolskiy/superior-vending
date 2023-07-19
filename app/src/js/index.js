@@ -161,11 +161,55 @@ function initRegisterForm() {
         })
     })
 
-    let numPlayers = document.querySelectorAll('input[name="radio3"]')
-    numPlayers.forEach(item => {
-        item.addEventListener('change', function() {
-            registerFormHandler()
+    $(document).on('change', '.registration__event-select', function() {
+        let selectedOption = null
+        if ($(this).find(':selected').length > 0) {
+            selectedOption = $(this).find(':selected')[0]
+        }
+        else {
+            return
+        }
+
+        let block = $(this).closest('.registration__main-event-block, .registration__additional-event-block')
+        let teamInput = block.find('.registration__num-player-options input[value="team"]')
+        let oneInput = block.find('.registration__num-player-options input[value="one"]')
+
+        if (selectedOption.getAttribute('data-single') === '1') {
+            teamInput.parent('.site-form__radio').addClass('disabled')
+
+            if (teamInput.is(':checked')) {
+                teamInput.prop('checked', false)
+                oneInput.prop('checked', true)
+                oneInput.trigger('change')
+            }
+        }
+        else {
+            teamInput.parent('.site-form__radio').removeClass('disabled')
+        }
+
+        //recalc price
+        let allSelectedEvents = $('.registration__event-select :selected')
+        let eventsPrice = 0
+        allSelectedEvents.each(function () {
+            eventsPrice += +($(this).attr('data-price') || 0)
         })
+
+        $('.js__tournament-price').text('$ ' + eventsPrice)
+        //recalc price end
+    })
+
+    $(document).on('change', '.registration__num-player-options input', function () {
+        let numPlayers = $(this).closest('.registration__num-player-options').find('input:checked')
+        let addPlayersBtnBlock = $(this).closest('.registration__player-options-block').find('.registration__add-players-btn-block')
+        let teamMembersBlock = $(this).closest('.registration__player-options-block').find('.registration__team-members-block')
+        if (numPlayers.val() === 'team') {
+            addPlayersBtnBlock.show()
+            teamMembersBlock.show()
+        }
+        else {
+            addPlayersBtnBlock.hide()
+            teamMembersBlock.hide()
+        }
     })
 
     let tournamentSelect = $('#select')
@@ -173,10 +217,10 @@ function initRegisterForm() {
         registerFormHandler()
     })
 
-    let addPlayerBtn = $('#addPlayerBtn')
-    addPlayerBtn.on('click', function() {
+    $(document).on('click', '.js__add-player-btn', function() {
+        let teamMembersBlock = $(this).closest('.registration__player-options-block').find('.registration__team-members-block')
         if (+this.getAttribute('data-number') === 1) {
-            $('#teamMembersBlock .site-form__section-title').show()
+            teamMembersBlock.find('.site-form__section-title').show()
         }
         let playerBlock = document.createElement('div')
         playerBlock.classList.add('site-form__row')
@@ -204,27 +248,78 @@ function initRegisterForm() {
             $(playerBlock).css('margin-top', '20px')
         }
         playerBlock.innerHTML = htmlContent
-        $('#teamMembersBlock').append(playerBlock)
+        teamMembersBlock.append(playerBlock)
         this.setAttribute('data-number', +this.getAttribute('data-number') + 1)
     })
 
     let addEventBtn = $('#addEventBtn')
     addEventBtn.on('click', function() {
-        if (+this.getAttribute('data-number') > 1) {
-            return
-        }
 
         let eventBlock = document.createElement('div')
-        eventBlock.classList.add('site-form__form-item')
-        let htmlContent = `<select class="site-form__select form-select">
-                      <option>Event Type</option>
-                      <option value="1">Singles 501 - $50</option>
-                      <option value="2">Master Singles 501 - $60</option>
-                      <option value="3">Singles Cricket - $50</option>
-                      <option value="4">Master Singles Cricket - $60</option>
-                      <option value="5">Mixed Doubles 501 - $100</option>
-                      <option value="6">Mixed Doubles Cricket - $100</option>
-                    </select>`
+        eventBlock.classList.add('registration__additional-event-block')
+        let htmlContent = `<div class="site-form__form-item">
+                                <div class="registration__player-options-block">
+                                  <div class="site-form__item registration__num-player-options">
+                                    <div class="site-form__title">Choose the number of players:</div>
+                                    <div class="site-form__form-item">
+                                      <div class="site-form__radio">
+                                          <input type="radio" id="player${2 + +$(this).attr('data-number')}" name="radio${3 + +$(this).attr('data-number')}" value="one">
+                                          <label for="player${2 + +$(this).attr('data-number')}">1 Player</label>
+                                      </div>
+                                      <div class="site-form__radio">
+                                          <input type="radio" id="team${2 + +$(this).attr('data-number')}" name="radio${3 + +$(this).attr('data-number')}" value="team">
+                                          <label for="team${2 + +$(this).attr('data-number')}">Team</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="site-form__section">
+                                    <div class="site-form__section-title">Captain’s Info</div>
+                                    <div class="site-form__row">
+                                      <div class="site-form__col site-form__col--50 site-form__col--sm-100">
+                                        <div class="site-form__form-input"><input class="site-form__input" type="text" placeholder="Captain’s First name"></div>
+                                      </div>
+                                      <div class="site-form__col site-form__col--50 site-form__col--sm-100">
+                                        <div class="site-form__form-input"><input class="site-form__input" type="text" placeholder="Captain’s Last name"></div>
+                                      </div>
+                                      <div class="site-form__col site-form__col--50 site-form__col--sm-100">
+                                        <div class="site-form__form-input"><input class="site-form__input" type="text" placeholder="Captain’s E-mail"></div>
+                                      </div>
+                                      <div class="site-form__col site-form__col--50 site-form__col--sm-100">
+                                        <div class="site-form__form-input"><input class="site-form__input" type="text" placeholder="Captain’s Phone number"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="d-flex flex-space-between align-center site-form__add-players-wrap registration__add-players-btn-block" style="display: none;">
+                                    <div></div><a class="site-form__add-players js__add-player-btn" href="javascript:void(0);" data-number="1"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="plus (26) 1" clip-path="url(#clip0_464_12666)">
+                                          <g id="Group">
+                                            <g id="Group_2">
+                                              <path id="Vector" d="M8.43585 6.56415V0H6.56415V6.56415H0V8.43585H6.56415V15H8.43585V8.43585H15V6.56415H8.43585Z" fill="#0014B8"></path>
+                                            </g>
+                                          </g>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_464_12666">
+                                            <rect width="15" height="15" fill="white"></rect>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                      Add More Players</a>
+                                  </div>
+                                  <div class="site-form__section registration__team-members-block" style="display: none;">
+                                    <div class="site-form__section-title" style="display: none;">Team Members</div>
+                                  </div>
+                                </div>
+                                <select class="site-form__select form-select registration__event-select" data-placeholder="Event Type">
+                                  <option></option>
+                                  <option data-single="1" value="1" data-price="50">Singles 501 - $50</option>
+                                  <option data-single="1" value="2" data-price="60">Master Singles 501 - $60</option>
+                                  <option data-single="1" value="3" data-price="50">Singles Cricket - $50</option>
+                                  <option data-single="1" value="4" data-price="60">Master Singles Cricket - $60</option>
+                                  <option data-single="0" value="5" data-price="100">Mixed Doubles 501 - $100</option>
+                                  <option data-single="0" value="6" data-price="100">Mixed Doubles Cricket - $100</option>
+                                </select>
+                            </div>`
         eventBlock.innerHTML = htmlContent
         $('#additionalEventsBlock').append(eventBlock)
         $(eventBlock).find('.form-select').select2({
@@ -242,19 +337,15 @@ function initRegisterForm() {
 function registerFormHandler() {
     let competition = $('[name="radio1"]:checked')
     let evType = $('[name="radio2"]:checked')
-    let numPlayers = $('[name="radio3"]:checked')
     let evSelect = $('#select')
 
     if (competition.val() === 'league') {
-        $('.registration__form .site-form__price').css('visibility', 'hidden')
-        $('.site-form__button button').text('Confirm registration')
-        $('#hideForLeague').hide()
-        console.log(44444);
+        $('#league_form').show()
+        $('#tournament_form').hide()
     }
     else {
-        $('.registration__form .site-form__price').css('visibility', 'visible')
-        $('.site-form__button button').text('Checkout')
-        $('#hideForLeague').show()
+        $('#league_form').hide()
+        $('#tournament_form').show()
     }
 
     if (competition.val() === 'tournament' && evType.val() && evSelect.val() !== 'League’s Name') {
@@ -265,16 +356,6 @@ function registerFormHandler() {
         $('#addEventBtnBlock').hide()
         $('#selectEventBlock').hide()
     }
-
-    if (numPlayers.val() === 'team') {
-        $('#addPlayersBtnBlock').show()
-        $('#teamMembersBlock').show()
-    }
-    else {
-        $('#addPlayersBtnBlock').hide()
-        $('#teamMembersBlock').hide()
-    }
-
 }
 
 document.addEventListener('DOMContentLoaded', function() {

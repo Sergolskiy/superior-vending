@@ -561,6 +561,10 @@
     }
   }
 
+  &__subform {
+    margin-top: 38px;
+  }
+
   &__title {
     font-size: 20px;
     font-weight: 600;
@@ -587,6 +591,12 @@
 
     &:first-child {
       margin-left: 0;
+    }
+
+    &.disabled {
+      pointer-events: none;
+      user-select: none;
+      opacity: 0.5;
     }
 
     input:checked + label {
@@ -2584,6 +2594,11 @@
     }
   }
 
+  &__player-options-block,
+  &__main-event-block {
+    width: 100%;
+    margin-top: 38px;
+  }
 }
 
 /***** leagues & tournaments START ***********/

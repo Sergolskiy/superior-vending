@@ -25,7 +25,7 @@ block content
     .registration
       .registration__inner
         .registration__form
-          form.site-form
+          .site-form
             .site-form__item
               .site-form__title Select the competition:
               .site-form__form-item
@@ -35,90 +35,151 @@ block content
                 .site-form__radio
                   input(type='radio' id='tournament' name='radio1' value="tournament")
                   label(for='tournament') Tournament
-            .site-form__item
-              .site-form__title Select an event type:
-              .site-form__form-item
-                .site-form__radio
-                  input(type='radio' id='pool' name='radio2' value="pool")
-                  label(for='pool') Pool
-                .site-form__radio
-                  input(type='radio' id='darts' name='radio2' value="darts")
-                  label(for='darts') Darts
-            .site-form__item
-              .site-form__title Select sport type:
-              .site-form__form-item.mt-0
-                select(id='select').site-form__select.form-select
-                  option League’s Name
-                  option(value='1') MOMA State Dart Tournament
-                  option(value='2') NDA Las Vegas Nationals
-                  option(value='3') Superior Vending Year End Tournament
-            .site-form__item(id="selectEventBlock" style="display: none;")
-              .site-form__title Select event:
-              .site-form__form-item
-                select(id='selectEvent').site-form__select.form-select
-                  option Event Type
-                  option(value='1') Singles 501 - $50
-                  option(value='2') Master Singles 501 - $60
-                  option(value='3') Singles Cricket - $50
-                  option(value='4') Master Singles Cricket - $60
-                  option(value='5') Mixed Doubles 501 - $100
-                  option(value='6') Mixed Doubles Cricket - $100
-            .site-form__item
-              .site-form__title Choose the number of players:
-              .site-form__form-item
-                .site-form__radio
-                  input(type='radio' id='player2' name='radio3' value="one")
-                  label(for='player2') 1 Player
-                .site-form__radio
-                  input(type='radio' id='team2' name='radio3' value="team")
-                  label(for='team2') Team
-            .site-form__section
-              .site-form__section-title Captain’s Info
-              .site-form__row
-                .site-form__col.site-form__col--50.site-form__col--sm-100
-                  .site-form__form-input
-                    input(type='text' placeholder='Captain’s First name').site-form__input
-                .site-form__col.site-form__col--50.site-form__col--sm-100
-                  .site-form__form-input
-                    input(type='text' placeholder='Captain’s Last name').site-form__input
-                .site-form__col.site-form__col--50.site-form__col--sm-100
-                  .site-form__form-input
-                    input(type='text' placeholder='Captain’s E-mail').site-form__input
-                .site-form__col.site-form__col--50.site-form__col--sm-100
-                  .site-form__form-input
-                    input(type='text' placeholder='Captain’s Phone number').site-form__input
-            .d-flex.flex-space-between.align-center.site-form__add-players-wrap(id="addPlayersBtnBlock" style="display: none;")
-              div
-              a(href='javascript:void(0);' data-number="1" id="addPlayerBtn").site-form__add-players
-                include ../img/plus-btn.svg
-                | Add More Players
-            .site-form__section(id="teamMembersBlock" style="display: none;")
-              .site-form__section-title(style="display: none;") Team Members
-              //.site-form__row
-              //  .site-form__col.site-form__col--50.site-form__col--sm-100
-              //    .site-form__form-input
-              //      input(type='text' placeholder='Player 1 First Name').site-form__input
-              //  .site-form__col.site-form__col--50.site-form__col--sm-100
-              //    .site-form__form-input
-              //      input(type='text' placeholder='Player 1 Last Name').site-form__input
-              //  .site-form__col.site-form__col--50.site-form__col--sm-100
-              //    .site-form__form-input
-              //      input(type='text' placeholder='Player 1 Email').site-form__input
-              //  .site-form__col.site-form__col--50.site-form__col--sm-100
-              //    .site-form__form-input
-              //      input(type='text' placeholder='Player 1 Phone number').site-form__input
-            .site-form__item(id="additionalEventsBlock" style="display: none;")
-            div(id="hideForLeague" style="margin-top: 20px;")
-              .d-flex.flex-space-between.align-center
-                .site-form__price $ 55
-                div(id="addEventBtnBlock" style="display: none;")
-                  a(href='javascript:void(0);' data-number="1" id="addEventBtn").site-form__add-players
-                    include ../img/plus-btn.svg
-                    | Add Another Event
-            .registration__terms
-              input(type='checkbox' id='checkbox' placeholder='E-mail').custom-checkbox
-              label(for='checkbox') I agree with the
-                a(href='terms-of-service.html') Terms and Conditions
+            form(id="league_form").site-form__subform
+              .site-form__item
+                .site-form__title Select an event type:
+                .site-form__form-item
+                  .site-form__radio
+                    input(type='radio' id='pool1' name='radio2' value="pool")
+                    label(for='pool1') Pool
+                  .site-form__radio
+                    input(type='radio' id='darts1' name='radio2' value="darts")
+                    label(for='darts1') Darts
+              .site-form__item
+                .site-form__title Select sport type:
+                .site-form__form-item.mt-0
+                  select(data-placeholder="League’s Name").site-form__select.form-select
+                    option
+                    option(value='1') MOMA State Dart Tournament
+                    option(value='2') NDA Las Vegas Nationals
+                    option(value='3') Superior Vending Year End Tournament
+              .registration__main-event-block
+                .registration__player-options-block
+                  .site-form__item.registration__num-player-options
+                    .site-form__title Choose the number of players:
+                    .site-form__form-item
+                      .site-form__radio
+                        input(type='radio' id='player1' name='radio3' value="one")
+                        label(for='player1') 1 Player
+                      .site-form__radio
+                        input(type='radio' id='team1' name='radio3' value="team")
+                        label(for='team1') Team
+                  .site-form__section
+                    .site-form__section-title Captain’s Info
+                    .site-form__row
+                      .site-form__col.site-form__col--50.site-form__col--sm-100
+                        .site-form__form-input
+                          input(type='text' placeholder='Captain’s First name').site-form__input
+                      .site-form__col.site-form__col--50.site-form__col--sm-100
+                        .site-form__form-input
+                          input(type='text' placeholder='Captain’s Last name').site-form__input
+                      .site-form__col.site-form__col--50.site-form__col--sm-100
+                        .site-form__form-input
+                          input(type='text' placeholder='Captain’s E-mail').site-form__input
+                      .site-form__col.site-form__col--50.site-form__col--sm-100
+                        .site-form__form-input
+                          input(type='text' placeholder='Captain’s Phone number').site-form__input
+                  .d-flex.flex-space-between.align-center.site-form__add-players-wrap.registration__add-players-btn-block( style="display: none;")
+                    div
+                    a(href='javascript:void(0);' data-number="1").site-form__add-players.js__add-player-btn
+                      include ../img/plus-btn.svg
+                      | Add More Players
+                  .site-form__section.registration__team-members-block(style="display: none;")
+                    .site-form__section-title(style="display: none;") Team Members
+              .registration__terms
+                input(type='checkbox' id='checkbox2' placeholder='E-mail').custom-checkbox
+                label(for='checkbox2') I agree with the
+                  a(href='terms-of-service.html') Terms and Conditions
 
-            .site-form__button
-              button Checkout
+              .site-form__button
+                button Confirm registration
+            form(id="tournament_form" style="display: none;").site-form__subform
+              .site-form__item
+                .site-form__title Select an event type:
+                .site-form__form-item
+                  .site-form__radio
+                    input(type='radio' id='pool' name='radio2' value="pool")
+                    label(for='pool') Pool
+                  .site-form__radio
+                    input(type='radio' id='darts' name='radio2' value="darts")
+                    label(for='darts') Darts
+              .site-form__item
+                .site-form__title Select sport type:
+                .site-form__form-item.mt-0
+                  select(id='select' data-placeholder="League’s Name").site-form__select.form-select
+                    option
+                    option(value='1') MOMA State Dart Tournament
+                    option(value='2') NDA Las Vegas Nationals
+                    option(value='3') Superior Vending Year End Tournament
+              .registration__main-event-block
+                .site-form__item(id="selectEventBlock" style="display: none;")
+                  .site-form__title Select event:
+                  .site-form__form-item
+                    select(id='selectEvent' data-placeholder="Event Type").site-form__select.form-select.registration__event-select
+                      option
+                      option(value='1' data-single="1" data-price="50") Singles 501 - $50
+                      option(value='2' data-single="1" data-price="60") Master Singles 501 - $60
+                      option(value='3' data-single="1" data-price="50") Singles Cricket - $50
+                      option(value='4' data-single="1" data-price="60") Master Singles Cricket - $60
+                      option(value='5' data-single="0" data-price="100") Mixed Doubles 501 - $100
+                      option(value='6' data-single="0" data-price="100") Mixed Doubles Cricket - $100
+                .registration__player-options-block
+                  .site-form__item.registration__num-player-options
+                    .site-form__title Choose the number of players:
+                    .site-form__form-item
+                      .site-form__radio
+                        input(type='radio' id='player2' name='radio3' value="one")
+                        label(for='player2') 1 Player
+                      .site-form__radio
+                        input(type='radio' id='team2' name='radio3' value="team")
+                        label(for='team2') Team
+                  .site-form__section
+                    .site-form__section-title Captain’s Info
+                    .site-form__row
+                      .site-form__col.site-form__col--50.site-form__col--sm-100
+                        .site-form__form-input
+                          input(type='text' placeholder='Captain’s First name').site-form__input
+                      .site-form__col.site-form__col--50.site-form__col--sm-100
+                        .site-form__form-input
+                          input(type='text' placeholder='Captain’s Last name').site-form__input
+                      .site-form__col.site-form__col--50.site-form__col--sm-100
+                        .site-form__form-input
+                          input(type='text' placeholder='Captain’s E-mail').site-form__input
+                      .site-form__col.site-form__col--50.site-form__col--sm-100
+                        .site-form__form-input
+                          input(type='text' placeholder='Captain’s Phone number').site-form__input
+                  .d-flex.flex-space-between.align-center.site-form__add-players-wrap.registration__add-players-btn-block( style="display: none;")
+                    div
+                    a(href='javascript:void(0);' data-number="1").site-form__add-players.js__add-player-btn
+                      include ../img/plus-btn.svg
+                      | Add More Players
+                  .site-form__section.registration__team-members-block(style="display: none;")
+                    .site-form__section-title(style="display: none;") Team Members
+                //.site-form__row
+                //  .site-form__col.site-form__col--50.site-form__col--sm-100
+                //    .site-form__form-input
+                //      input(type='text' placeholder='Player 1 First Name').site-form__input
+                //  .site-form__col.site-form__col--50.site-form__col--sm-100
+                //    .site-form__form-input
+                //      input(type='text' placeholder='Player 1 Last Name').site-form__input
+                //  .site-form__col.site-form__col--50.site-form__col--sm-100
+                //    .site-form__form-input
+                //      input(type='text' placeholder='Player 1 Email').site-form__input
+                //  .site-form__col.site-form__col--50.site-form__col--sm-100
+                //    .site-form__form-input
+                //      input(type='text' placeholder='Player 1 Phone number').site-form__input
+              div(id="additionalEventsBlock" style="display: none;")
+              div(id="hideForLeague" style="margin-top: 20px;")
+                .d-flex.flex-space-between.align-center
+                  .site-form__price.js__tournament-price $ 0
+                  div(id="addEventBtnBlock" style="display: none;")
+                    a(href='javascript:void(0);' data-number="1" id="addEventBtn").site-form__add-players
+                      include ../img/plus-btn.svg
+                      | Add Another Event
+              .registration__terms
+                input(type='checkbox' id='checkbox' placeholder='E-mail').custom-checkbox
+                label(for='checkbox') I agree with the
+                  a(href='terms-of-service.html') Terms and Conditions
+
+              .site-form__button
+                button Checkout
