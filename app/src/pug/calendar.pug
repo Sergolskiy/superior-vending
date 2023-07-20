@@ -43,6 +43,8 @@ block content
               .calendar__type.calendar__type--orange Dart Tournament
               .calendar__type.calendar__type--green Pool League
               .calendar__type.calendar__type--violet Pool Tournament
+              .calendar__type.calendar__type--cyan Banquet
+              .calendar__type.calendar__type--rose Other
             a(href='#').calendar__head-btn Show One Week Only
 
 
@@ -157,6 +159,15 @@ block content
                     .calendar__table-number 04.05
                   td
                     .calendar__table-number 05.05
+                      .calendar__table-circle-wrap
+                        .calendar__table-circle.calendar__table-circle--rose
+                    .calendar__table-item.calendar__table-item--rose
+                      .calendar__table-item-title Lazy Pool Tournament
+                      .calendar__table-item-desc 01.07.2023
+                      .calendar__table-item-desc 7 pm
+                      .calendar__table-item-desc Location
+                      a(href='#').calendar__table-item-link Read More
+                        include ../img/arrow.svg
                   td
                     .calendar__table-number 06.05
                       .calendar__table-circle-wrap
@@ -273,6 +284,7 @@ block content
                     .calendar__table-number 12.05
                       .calendar__table-circle-wrap
                         .calendar__table-circle.calendar__table-circle--green
+                        .calendar__table-circle.calendar__table-circle--cyan
 
                     .calendar__table-item.calendar__table-item--green
                       a(href='javascript:void(0)').calendar__table-item-plus
@@ -280,6 +292,13 @@ block content
                       .calendar__table-item-desc 7 pm
                       a(href='#').calendar__table-item-link Read More
                         include ../img/arrow.svg
+
+                    .calendar__table-item.calendar__table-item--cyan
+                      a(href='javascript:void(0)' data-open="add-review-product").calendar__table-item-plus
+                      .calendar__table-item-title League Name
+                      .calendar__table-item-desc 01.07.2023
+                      .calendar__table-item-desc 7 pm
+                      .calendar__table-item-desc Location
                   td
                     .calendar__table-number 13.05
                   td

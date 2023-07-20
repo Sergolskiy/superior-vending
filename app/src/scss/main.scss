@@ -5006,7 +5006,7 @@
     justify-content: center;
     gap: 10px;
 
-    @include for-680 {
+    @include for-800 {
       flex-wrap: wrap;
       gap: 15px;
       justify-content: space-between;
@@ -5022,7 +5022,7 @@
     border-radius: 5px;
     cursor: pointer;
 
-    @include for-680 {
+    @include for-800 {
       font-size: 13px;
       padding: 4px 18px 4px 24px;
       width: 43%;
@@ -5043,7 +5043,7 @@
       left: 14px;
       border-radius: 50%;
 
-      @include for-680 {
+      @include for-800 {
         width: 7px;
         height: 7px;
         top: 13px;
@@ -5091,6 +5091,24 @@
       }
     }
 
+    &--cyan {
+      color: #58C6C7;
+      background: #e6f6f7;
+
+      &:before {
+        background: #58C6C7;
+      }
+    }
+
+    &--rose {
+      color: #C081B8;
+      background: #f6ecf4;
+
+      &:before {
+        background: #C081B8;
+      }
+    }
+
   }
 
   &__head-btn {
@@ -5105,13 +5123,13 @@
     max-width: 244px;
     margin-top: -52px;
 
-    @include for-1400 {
+    @include for-1600 {
       font-size: 15px;
       max-width: 212px;
       text-align: center;
     }
 
-    @include for-1180 {
+    @include for-1400 {
       display: none;
     }
   }
@@ -5297,6 +5315,14 @@
       background: #9887EF;
     }
 
+    &--rose {
+      background: #C081B8;
+    }
+
+    &--cyan {
+      background: #58C6C7;
+    }
+
     &--orange {
       background: #FF9F2D;
     }
@@ -5389,6 +5415,40 @@
         fill: #00ba34;
       }
 
+    }
+
+    &--rose {
+      color: #C081B8;
+      background: #f6ecf4;
+
+      .calendar__table-item-plus {
+        background: #C081B8 url("../img/calendar/table-plus.svg") center center no-repeat;
+
+        &.open {
+          background: #C081B8 url("../img/calendar/table-minus.svg") center center no-repeat;
+        }
+      }
+
+      .calendar__table-item-link svg path{
+        fill: #C081B8;
+      }
+    }
+
+    &--cyan {
+      color: #58C6C7;
+      background: #e6f6f7;
+
+      .calendar__table-item-plus {
+        background: #58C6C7 url("../img/calendar/table-plus.svg") center center no-repeat;
+
+        &.open {
+          background: #58C6C7 url("../img/calendar/table-minus.svg") center center no-repeat;
+        }
+      }
+
+      .calendar__table-item-link svg path{
+        fill: #58C6C7;
+      }
     }
 
   }
