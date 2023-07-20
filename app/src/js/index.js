@@ -258,6 +258,15 @@ function initRegisterForm() {
         let eventBlock = document.createElement('div')
         eventBlock.classList.add('registration__additional-event-block')
         let htmlContent = `<div class="site-form__form-item">
+                                <select class="site-form__select form-select registration__event-select" data-placeholder="Event Type">
+                                  <option></option>
+                                  <option data-single="1" value="1" data-price="50">Singles 501 - $50</option>
+                                  <option data-single="1" value="2" data-price="60">Master Singles 501 - $60</option>
+                                  <option data-single="1" value="3" data-price="50">Singles Cricket - $50</option>
+                                  <option data-single="1" value="4" data-price="60">Master Singles Cricket - $60</option>
+                                  <option data-single="0" value="5" data-price="100">Mixed Doubles 501 - $100</option>
+                                  <option data-single="0" value="6" data-price="100">Mixed Doubles Cricket - $100</option>
+                                </select>
                                 <div class="registration__player-options-block">
                                   <div class="site-form__item registration__num-player-options">
                                     <div class="site-form__title">Choose the number of players:</div>
@@ -310,15 +319,6 @@ function initRegisterForm() {
                                     <div class="site-form__section-title" style="display: none;">Team Members</div>
                                   </div>
                                 </div>
-                                <select class="site-form__select form-select registration__event-select" data-placeholder="Event Type">
-                                  <option></option>
-                                  <option data-single="1" value="1" data-price="50">Singles 501 - $50</option>
-                                  <option data-single="1" value="2" data-price="60">Master Singles 501 - $60</option>
-                                  <option data-single="1" value="3" data-price="50">Singles Cricket - $50</option>
-                                  <option data-single="1" value="4" data-price="60">Master Singles Cricket - $60</option>
-                                  <option data-single="0" value="5" data-price="100">Mixed Doubles 501 - $100</option>
-                                  <option data-single="0" value="6" data-price="100">Mixed Doubles Cricket - $100</option>
-                                </select>
                             </div>`
         eventBlock.innerHTML = htmlContent
         $('#additionalEventsBlock').append(eventBlock)
