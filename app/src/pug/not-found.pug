@@ -1,0 +1,18 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Not-found";
+  - var pageClass = "not-found-page";
+  - var pageActive = "not-found";
+
+block content
+  div.main-wrap
+
+    section.not-found
+      .not-found__inner.site-block-inner
+        .not-found__block
+          .not-found__top-txt Oooops...!
+          .not-found__txt 404
+          .not-found__sub.site-sub-title The page you were looking for is not on our site. <br> You may have entered the wrong address or the page has been deleted.
+          a(href="#").site-btn Main page
+    
