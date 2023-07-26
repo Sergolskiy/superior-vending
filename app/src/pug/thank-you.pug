@@ -1,0 +1,21 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Thank-you";
+  - var pageClass = "thank-you-page";
+  - var pageActive = "thank-you";
+
+block content
+  div.main-wrap
+
+    section.thank-you
+      .thank-you__inner.site-block-inner
+        .thank-you__block
+          .site-title
+            .site-title--outline Thank you
+            .site-title--line2 for the order!
+          .thank-you__sub
+            b Your order number:
+            span 320332
+          .thank-you__btn
+            a(href="#").site-btn Main page
