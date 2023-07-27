@@ -8010,25 +8010,24 @@
 
 .not-found {
   position: relative;
-  padding-top: 150px;
-  padding-bottom: 120px;
+  padding-top: 50px;
+  padding-bottom: 45px;
   overflow: hidden;
 
   @include for-1600 {
-    padding-top: 60px;
-    padding-bottom: 80px;
+    padding-top: 40px;
+    padding-bottom: 50px;
   }
 
   @include for-1180 {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
   }
 
   &:after {
     content: '';
     display: block;
     position: absolute;
-    top: 300px;
+    top: 50px;
     left: 50%;
     margin-left: -50%;
     width: 2487.774px;
@@ -8037,9 +8036,22 @@
     flex-shrink: 0;
     background: #EDEDED;
 
+    @include for-1400 {
+      top: 150px;
+    }
+
+    @include for-992 {
+      top: 250px;
+    }
+
     @include for-550 {
-      height: 193px;
-      top: 550px;
+      height: 190px;
+      top: 500px;
+    }
+
+    @include for-420 {
+      height: 190px;
+      top: 540px;
     }
   }
 
@@ -8057,18 +8069,19 @@
 
   &__top-txt {
     position: relative;
-    left: 275px;
+    left: 207px;
     color: #212121;
     font-family: 'JosefinSans';
-    font-size: 45px;
+    font-size: 33px;
     font-style: normal;
     font-weight: 700;
-    line-height: 75px;
+    line-height: 55px;
     text-align: right;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 
     @include for-1600 {
-      font-size: 40px;
+      font-size: 28px;
+      left: 165px;
     }
 
     @include for-1180 {
@@ -8082,15 +8095,15 @@
     color: #0014B8;
     text-align: center;
     font-family: 'JosefinSans';
-    font-size: 800px;
+    font-size: 370px;
     font-style: normal;
     font-weight: 700;
-    line-height: 600px;
+    line-height: 250px;
     text-transform: uppercase;
 
     @include for-1600 {
-      font-size: 400px;
-      line-height: 300px;
+      font-size: 300px;
+      line-height: 200px;
     }
 
     @include for-1180 {
