@@ -3304,6 +3304,18 @@ h1 {
     padding: 18px 0 16px;
   }
 
+  &__no-result {
+    font-size: 22px;
+
+    @include for-768 {
+      font-size: 20px;
+    }
+
+    @include for-550 {
+      font-size: 18px;
+    }
+  }
+
   &__title {
     font-weight: 700;
     line-height: 65px;
