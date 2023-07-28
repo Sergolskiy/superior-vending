@@ -127,6 +127,7 @@ function initPopups() {
             if (popup) {
                 document.querySelector('body').classList.add('hide-overflow');
                 popup.classList.add('open');
+                popup.classList.add('add-transition');
             }
         });
     });
