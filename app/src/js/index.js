@@ -395,6 +395,7 @@ document.addEventListener('DOMContentLoaded', function() {
     $('.mobile-menu-btn').click(function () {
         $(this).toggleClass('open')
         $('.m-header').toggleClass('open-menu')
+        $('.m-header').addClass('add-transition')
         $('.page').toggleClass('open-menu')
     })
 

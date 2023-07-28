@@ -552,7 +552,6 @@
   overflow: hidden;
   overflow-y: scroll;
   transform: translateX(100%);
-  transition: 0.3s;
 
   @include for-1180 {
     height: calc(100vh - 88px);
@@ -565,6 +564,10 @@
 
   &.open-menu {
     transform: translateX(0);
+  }
+
+  &.add-transition {
+    transition: 0.3s;
   }
 
   &__inner {

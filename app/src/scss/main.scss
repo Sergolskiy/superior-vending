@@ -2820,8 +2820,14 @@
   }
 }
 
+//opacity fixes initial default select showing up on page load
+.form-select {
+  opacity: 0;
+}
+
 .alt-select {
   width: 100%;
+  opacity: 0;
 
   + .select2-container {
 
