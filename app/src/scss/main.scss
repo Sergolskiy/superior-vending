@@ -5027,7 +5027,7 @@
     line-height: 24px;
     padding: 10px 20px 10px 34px;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: default;
 
     @include for-800 {
       font-size: 13px;
@@ -5468,6 +5468,7 @@
     height: 24px;
     border-radius: 50%;
     overflow: hidden;
+    cursor: pointer;
   }
 
   &__table-item-title {
