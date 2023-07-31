@@ -457,4 +457,12 @@ document.addEventListener('DOMContentLoaded', function() {
             800
         );
     });
+
+    if (localStorage.getItem("cookies") !== 'true') {
+        $(".cookies").removeClass("hidden")
+        $(document).on("click", ".cookies__btn", function() {
+            localStorage.setItem("cookies", 'true')
+            $(".cookies").addClass("hidden")
+        })
+    }
 })
