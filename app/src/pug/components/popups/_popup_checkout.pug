@@ -1,0 +1,38 @@
+extends ../../templates/_popup
+
+block vars
+    - var popupName = "checkout";
+    - var popupClass = "checkout-popup";
+
+block title
+    .popup__title
+        .popup__big-title Cheсkout
+block content
+    .checkout-popup__text Select your Payment Method
+    .payment-method
+        .payment-method__item
+            input(type="radio" name="payment_method" id="credit_card" value="credit_card")
+            label(for="credit_card").payment-method__label
+                span.payment-method__icon.payment-method__icon--cc
+                    include ../../../img/cc.svg
+                span.payment-method__name Credit card
+        .payment-method__item
+            input(type="radio" name="payment_method" id="paypal" value="paypal")
+            label(for="paypal").payment-method__label
+                span.payment-method__icon.payment-method__icon--paypal
+                    include ../../../img/paypal.svg
+    .checkout-popup__sum
+        .checkout-popup__sum-title Sub Total
+        .checkout-popup__sum-value $ 55
+    button.site-btn.checkout-popup__btn(type="button") Checkout
+
+
+
+
+
+
+
+
+
+
+

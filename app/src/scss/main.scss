@@ -8332,4 +8332,203 @@ h1 {
   }
 }
 
+.checkout-popup {
+  .popup__inner {
+    max-width: 1194px;
+
+    @include for-1200 {
+      max-width: calc(100% - 30px);
+    }
+  }
+  .popup__title {
+    text-align: center;
+    width: 100%;
+  }
+
+  .popup__head {
+    margin-top: 50px;
+  }
+
+  .popup__close {
+    @include for-550 {
+      height: 60px;
+    }
+  }
+
+  .popup__content {
+    max-width: 645px;
+    margin: 0 auto;
+    padding: 0 15px 52px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include for-550 {
+      padding: 0 15px 16px 15px;
+    }
+  }
+
+  .popup__content-wrap {
+    overflow: hidden;
+  }
+
+  &__text {
+    line-height: 26px;
+    color: #212121;
+    font-size: 16px;
+    margin-bottom: 22px;
+    position: relative;
+
+    @include for-550 {
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: calc(100% + 20px);
+      bottom: 50%;
+      width: 700px;
+      height: 1px;
+      background: url("../img/dots-horizontal.svg") center center no-repeat;
+
+      @include for-992 {
+        width: 195px;
+      }
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: calc(100% + 20px);
+      bottom: 50%;
+      width: 700px;
+      height: 1px;
+      background: url("../img/dots-horizontal.svg") center center no-repeat;
+
+      @include for-992 {
+        width: 195px;
+      }
+    }
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  &__sum {
+    margin-bottom: 22px;
+    display: flex;
+    align-items: baseline;
+
+    @include for-550 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__sum-title {
+    color: #212121;
+    line-height: 26px;
+    font-weight: 500;
+    font-size: 16px;
+    margin-right: 10px;
+
+    @include for-550 {
+      margin-right: 8px;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &__sum-value {
+    font-size: 33px;
+    color: #0014B8;
+    font-weight: 700;
+    line-height: 52px;
+
+    @include for-550 {
+      font-size: 26px;
+      line-height: 42px;
+    }
+  }
+}
+
+.payment-method {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 34px;
+
+  @include for-680 {
+    gap: 20px;
+    margin-bottom: 18px;
+  }
+
+  input {
+    display: none;
+
+    &:checked + .payment-method__label {
+      border: 2px solid #0014B8;
+    }
+  }
+
+  &__label {
+    width: 142px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #0014B8;
+    cursor: pointer;
+
+    @include for-680 {
+      width: 110px;
+      height: 75px;
+    }
+  }
+
+  &__icon--cc {
+    svg {
+      @include for-680 {
+        width: 34px;
+        height: auto;
+      }
+    }
+  }
+
+  &__icon--paypal {
+    svg {
+      @include for-680 {
+        width: 53px;
+        height: auto;
+      }
+    }
+  }
+
+  &__name {
+    line-height: 27px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #353535;
+
+    @include for-680 {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}
+
+.minus-icon {
+  width: 15px;
+  height: 2px;
+  background-color: #0014b8;
+  display: inline-block;
+}
+
+
 
