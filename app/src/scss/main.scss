@@ -2673,6 +2673,7 @@ h1 {
   &__inner {
     display: flex;
     justify-content: space-between;
+    position: relative;
 
     @include for-1024 {
       flex-direction: column-reverse;
@@ -2774,6 +2775,112 @@ h1 {
     @include for-550 {
       font-size: 14px;
       line-height: 24px;
+    }
+  }
+
+  &__no-result {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 15px;
+    width: 100%;
+    max-width: 740px;
+    padding-top: 14px;
+    z-index: 4;
+
+    @include for-1024 {
+      position: relative;
+      order: -1;
+      left: 0;
+      top: 0;
+      margin-top: 8px;
+    }
+  }
+
+  &__no-result-inner {
+    background-color: #0014b8;
+    padding: 75px 52px 32px 28px;
+    position: relative;
+
+    @include for-680 {
+      padding: 70px 20px 24px 20px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: none;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-bottom: 12px solid #0014b8;
+      position: absolute;
+      top: -12px;
+      left: 27px;
+    }
+  }
+
+  &__no-result-close {
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+    background-color: #2539E1;
+  }
+
+  &__no-result_content {
+    h2, h3, h4 {
+      text-transform: uppercase;
+      color: #ffffff;
+      font-family: 'JosefinSans';
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 35px;
+      margin-bottom: 4px;
+
+      @include for-1024 {
+        font-size: 22px;
+        line-height: 30px;
+      }
+
+      @include for-680 {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      color: #ffffff;
+      font-weight: 500;
+      line-height: 26px;
+
+      @include for-680 {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+
+  &__no-result-icon {
+    position: absolute;
+    top: 5px;
+    left: 22px;
+    width: 38px;
+    height: 38px;
+    background-color: #1B2FD0;
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      transform: rotate(-45deg);
     }
   }
 }

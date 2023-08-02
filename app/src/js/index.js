@@ -465,4 +465,8 @@ document.addEventListener('DOMContentLoaded', function() {
             $(".cookies").addClass("hidden")
         })
     }
+
+    $('.event-top__no-result-close').on('click', function() {
+        $(this).closest('.event-top__no-result').remove()
+    })
 })

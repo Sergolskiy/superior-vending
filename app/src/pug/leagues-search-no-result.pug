@@ -1,0 +1,89 @@
+extends ./templates/_layout
+
+block vars
+  - var pageTitle = "Search Leagues";
+  - var pageClass = "leagues-search-page";
+  - var pageActive = "leagues-search-page";
+
+block content
+  div.main-wrap
+
+    .breadcrumbs
+      .breadcrumbs__inner.site-block-inner
+        .breadcrumbs__items
+          .breadcrumbs__item
+            a(href='#').breadcrumbs__link Home Page
+          .breadcrumbs__item
+            a(href='#').breadcrumbs__link Leagues
+
+    section.event-top
+      .event-top__inner.site-block-inner
+        .event-top__main
+          h1.event-top__title Leagues
+          .event-top__row
+            .event-top__col.event-top__col--50
+              .event-top__field-title Choose the type of League
+              .form-select-container
+                select(data-placeholder="Select").form-select-alt.alt-select
+                  option(value='1') Pool
+                  option(value='2') Darts
+            .event-top__col.event-top__col--50
+              .event-top__field-title Choose the day of Week
+              .form-select-container
+                select(data-placeholder="Select").form-select-alt.alt-select.alt-select--calendar
+                  option
+                  option(value='7') Sunday
+                  option(value='1') Monday
+                  option(value='2') Tuesday
+                  option(value='3') Wednesday
+                  option(value='4') Thursday
+                  option(value='5') Friday
+                  option(value='6') Saturday
+
+        .event-top__sublist
+          .sublist
+            a(href='#').sublist__item.site-btn
+              .sublist__item-icon
+                include ../img/register-icon.svg
+              .sublist__item-text Registration
+            a(href="#").sublist__item.site-btn
+              .sublist__item-icon
+                include ../img/calendar-icon.svg
+              .sublist__item-text Calendar of Events
+        .event-top__no-result
+          .event-top__no-result-inner
+            .event-top__no-result-close
+              include ../img/close_no-result.svg
+            .event-top__no-result-icon
+              include ../img/search-glass.svg
+            .event-top__no-result_content
+              h3 Unfortunately, no relevant Leagues were found based on your</strong> filter.
+              p Try adjusting your filter parameters or come back later. Thank you for understanding!
+
+    section.event-bottom
+      .event-bottom__wrap
+        .event-bottom__inner.site-block-inner
+          .event-bottom__left
+            .plus-element
+            .event-bottom__content
+              h2.event-bottom__title Superior Vending&trade; Leagues
+              .event-bottom__text
+                p Welcome to our Dart & Pool Programs page, where we take pride in being the premier supporters of dart and pool leagues, tournaments, and associations throughout the region. We are deeply involved in the dart and pool community, actively participating in various organizations and staying connected with the latest industry trends and developments. Here's what sets our programs apart:
+          .event-bottom__right
+            .event-bottom__img
+              img(src="./img/leagues.jpg" alt='img')
+    section.event-additional
+      .event-additional__inner.site-block-inner
+        .additional-info
+          .additional-info__item
+            .additional-info__item-title Our Affiliations:
+            .additional-info__item-text As active members of the Minnesota Operators of Music & Amusements (MOMA), the Wisconsin Amusement and Music Operators (WAMO), and the Valley National 8-Ball League Association (VNEA) we remain at the forefront of the industry. We are also proud to be part of the North American Dart Organization (NADO) and the National Dart Association (NDA), allowing us to offer unique programs and rewards to our players.
+          .additional-info__item
+            .additional-info__item-title Participation is the Name of the Game:
+            .additional-info__item-text We strongly believe in fostering a sense of community and participation in our dart and pool leagues. Our leagues are designed to be inclusive, welcoming players of all skill levels. We create an environment where even those with modest levels of skill can earn substantial rewards, making our leagues more rewarding than typical events.
+          .additional-info__item
+            .additional-info__item-title Our Leagues:
+            .additional-info__item-text Our leagues and tournaments are designed to suit different playing styles and skill levels, and our focus on participation-based rewards ensures that everyone has a chance to reap the benefits. Join us today and experience the thrill of our programs for yourself!
+          .additional-info__item
+            .additional-info__item-title Our Tournaments:
+            .additional-info__item-text Our tournaments are another reason why we stand out from the rest. We gather the best players from our leagues for exciting and intense tournament play. Our players are rewarded for their hard work and dedication, and our year-end company tournament is held at renowned venues, such as Treasure Island Casino, attracting over 550+ participants.
