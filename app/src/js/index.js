@@ -146,6 +146,23 @@ function initPopups() {
     });
 }
 
+function reInitPopupOpenTriggers(block = null) {
+    if (!block) return
+
+    let popupOpenTriggersInBlock = block.querySelectorAll('[data-open]');
+    popupOpenTriggersInBlock.forEach(function (item) {
+        item.addEventListener('click', function () {
+            let popup = document.querySelector("[data-popup=\"".concat(item.getAttribute('data-open'), "\"]"));
+
+            if (popup) {
+                document.querySelector('body').classList.add('hide-overflow');
+                popup.classList.add('open');
+                popup.classList.add('add-transition');
+            }
+        });
+    });
+}
+
 function initRegisterForm() {
     if (!document.querySelector('.registration')) return
     let competitionTypes = document.querySelectorAll('input[name="radio1"]')
@@ -425,6 +442,7 @@ document.addEventListener('DOMContentLoaded', function() {
          */
         let items = $(this).closest('td').find('.calendar__table-item').clone()
         $('.mobile-calendar__items').html(items).find('.calendar__table-item').show()
+        reInitPopupOpenTriggers(document.querySelector('.mobile-calendar__items'))
 
         /**
          * Hide table
