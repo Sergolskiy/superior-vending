@@ -708,7 +708,7 @@ h1 {
   }
 
   &__row {
-    width: 100%;
+    width: calc(100% + 24px);
     display: flex;
     flex-wrap: wrap;
     margin: 0 -12px;
@@ -2607,6 +2607,55 @@ h1 {
   &__main-event-block {
     width: 100%;
     margin-top: 38px;
+  }
+
+  &__added-player-block {
+    padding-top: 45px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 12px;
+      bottom: 0;
+      width: calc(100% - 24px);
+      height: 1px;
+      background: url(../img/dots-horizontal.svg) center center repeat-x;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      margin-bottom: 30px;
+
+      &:before {
+        content: none;
+      }
+    }
+  }
+
+  &__added-player-block-close,
+  &__additional-event-block-close {
+    position: absolute;
+    right: 12px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #0014B8;
+  }
+
+  &__additional-event-block {
+    position: relative;
+    padding-top: 20px;
+  }
+
+  &__additional-event-block-close {
+    right: 0;
   }
 }
 
