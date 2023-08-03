@@ -8563,6 +8563,14 @@ h1 {
       line-height: 42px;
     }
   }
+
+  &__paypal-container {
+    width: 100%;
+
+    iframe {
+      width: 100%;
+    }
+  }
 }
 
 .payment-method {
