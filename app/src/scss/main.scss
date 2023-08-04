@@ -2439,7 +2439,11 @@ h1 {
 
 }
 
-
+.contact-us {
+  .section-contact__btn {
+    display: none;
+  }
+}
 
 .contact-top {
   background: #FCFCFC;
