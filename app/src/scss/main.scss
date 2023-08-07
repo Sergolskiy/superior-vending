@@ -8791,5 +8791,11 @@ h1 {
   margin-bottom: 6px;
 }
 
+form[data-ajax-wait] {
+  .site-form__button button[type="submit"] {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
 
 
