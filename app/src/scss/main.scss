@@ -107,7 +107,8 @@ a:active {
     ol {
       list-style: none;
       counter-reset: item;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+      margin-top: 10px;
       text-align: left;
 
       @include for-1024 {
@@ -167,7 +168,8 @@ a:active {
 
     ul {
       list-style: none;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+      margin-top: 10px;
       text-align: left;
 
       @include for-1024 {
@@ -1512,8 +1514,8 @@ h1 {
     }
 
     img {
-      height: auto;
       width: 100%;
+      height: auto;
     }
   }
 
@@ -1553,6 +1555,7 @@ h1 {
 
     img {
       width: 100%;
+      height: auto;
       max-width: 100%;
 
       @include for-1180 {
@@ -1749,6 +1752,10 @@ h1 {
       max-width: 500px;
     }
 
+    img {
+      height: auto;
+    }
+
     @include for-1180 {
       max-width: calc(100% - 50px);
 
@@ -1784,7 +1791,6 @@ h1 {
 
     img {
       width: 100%;
-      height: auto;
       max-width: 100%;
     }
   }
@@ -2107,7 +2113,6 @@ h1 {
 
     img {
       width: 100%;
-      height: auto;
       max-width: 100%;
     }
   }
